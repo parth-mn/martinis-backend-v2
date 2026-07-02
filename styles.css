@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <link rel="stylesheet" href="styles.css"> -->
-   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&display=swap');
 
 * { box-sizing:border-box; margin:0; padding:0; }
 html { scroll-behavior:smooth; }
@@ -16,10 +8,7 @@ body {
   color:#1a0a03;
   overflow-x:hidden;
 }
-a {
-  text-decoration: none;
-  color: inherit;
-}
+
 
 .topbar {
   background:#be6c9e;
@@ -426,7 +415,7 @@ a {
   box-shadow:0 16px 40px rgba(108,8,32,.12);
   justify-self:center;
 }
-.issue-cover-mini img {
+.issue-cover-mini-img {
   width:100%;
   display:block;
   border-radius:10px;
@@ -500,7 +489,7 @@ a {
   padding:18px;
   box-shadow:0 14px 28px rgba(26,10,14,.05);
 }
-.contents-card img {
+.contents-card-img {
   width:100%;
   display:block;
   border-radius:14px;
@@ -642,9 +631,8 @@ a {
   transform:rotate(-4deg);
   position:relative;
 }
-.photo-box{
+.photo-box {
   aspect-ratio:3/4;
-  object-fit: cover;
   background:linear-gradient(135deg,#FFCAD4,#BE6C9E);
   display:flex;
   align-items:center;
@@ -654,13 +642,6 @@ a {
   font-size:12px;
   border-radius:3px;
 }
-
-.photo-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
 .polaroid-label {
   position:absolute;
   bottom:-10px;
@@ -692,7 +673,6 @@ a {
   color:white;
   position:relative;
   overflow:hidden;
-  min-height: 350px;
 }
 .newsletter-grid {
   position:absolute;
@@ -705,7 +685,6 @@ a {
 .newsletter .container {
   position:relative;
   z-index:2;
-  margin:40px;
 }
 .news-grid {
   display:grid;
@@ -1290,440 +1269,3 @@ a {
     padding:26px 22px;
   }
 }
-   </style>
-</head>
-
-<body>
-  <div class="topbar">✦ Launch Issue is live · Main Character Syndrome Kit · Read free at yourlnm.com ✦</div>
-
-  <nav class="nav">
-    <div class="logo">L<span class="amp">&</span>M</div>
-    <div class="nav-links">
-      <span class="nav-links-span"><a href="Magazine.html">The Magazine</a></span>
-      <span class="nav-links-span"><a href="Journal.html">L&M Journal</a></span>
-      <span class="nav-links-span"><a href="Blogs.html">Blogs</a></span>
-      <span class="nav-links-span"><a href="Universe-Catalog.html">L&M Universe</a></span>
-      <span class="nav-links-span"><a href="Martini-Mondays.html">Martini Files</a></span>
-      <span class="nav-links-span"><a href="Studio.html">The Studio</a></span>
-      <span class="nav-links-span"><a href="About.html">About</a></span>
-    </div>
-    <a class="nav-cta link-cta" href="Magazine.html">Read Issue 01</a>
-  </nav>
-
-  <section class="hero">
-    <div class="hero-grid"></div>
-    <div class="hero-shell">
-      <div class="hero-text">
-        <div class="eyebrow">
-           <span class="eyebrow-star">✦</span>The L&M Magazine · Free Digital Issues</div>
-
-        <h1 class="hero-title">
-          For the girl<br>
-          who <span class="romanticises">romanticises</span>
-          <span class="everything">everything.</span>
-        </h1>
-
-        <p class="hero-copy">
-          A digital magazine for girls becoming the main character of their own life — one issue, one ritual, one
-          outfit, one reset at a time.
-          Read the latest issue online, download the PDF, and browse the archive as L&amp;M grows.
-        </p>
-
-        <div class="hero-actions">
-          <a href="Magazine.html" class="btn primary link-btn-pri">Read Issue 01</a>
-          <a href="Magazine.html" class="btn secondary link-btn-sec">Download PDF</a>
-        </div>
-
-        <div class="hero-note"><strong class="hero-note-strong">Launch issue now live</strong> · Saturday, 4 July 2026 · Free forever</div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="magazine-stage">
-          <div class="micro-pill one">main character energy</div>
-          <div class="micro-pill two">free digital issue</div>
-
-          <div class="cover-shadow"></div>
-
-          <div class="cover-frame">
-            <img class="cover-frame-img" src="assets/magazine-cover.jpg" alt="Issue 01 cover">
-          </div>
-
-          <div class="sticker free">Free PDF</div>
-          <div class="sticker launch">Launch Issue</div>
-          <div class="sticker kit">Main Character Kit</div>
-          <div class="sticker date">July 04</div>
-          <div class="deco-word">martinis</div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-wave"></div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="journal-head">
-        <div>
-          <div class="sec-eyebrow">L&amp;M Journal</div>
-          <h2 class="sec-title">Read the magazine. <span class="italic">Live it in the Journal.</span></h2>
-          <p class="sec-sub">
-            The L&amp;M Journal is the interactive companion to the magazine — a soft, beautiful place for structure.
-            Think morning check-ins, night rituals, reflections, mood tracking, tiny prompts and pages that help her
-            actually live what she reads.
-          </p>
-        </div>
-        <div class="journal-window">
-          <div class="window-dots"><span class="window-dots-span"></span><span class="window-dots-span"></span><span class="window-dots-span"></span></div>
-          <div class="journal-window-title">today’s soft structure</div>
-          <div class="journal-progress"><span class="journal-progress-span"></span></div>
-          <div class="journal-window-row"><b class="journal-window-row-b">mood</b><em class="journal-window-row-em">becoming her</em></div>
-          <div class="journal-window-row"><b class="journal-window-row-b">ritual</b><em class="journal-window-row-em">morning reset</em></div>
-          <div class="journal-window-row"><b class="journal-window-row-b">prompt</b><em class="journal-window-row-em">what would she choose?</em></div>
-        </div>
-      </div>
-
-      <div class="journal-grid">
-        <div class="journal-card tall">
-          <div class="journal-topline">
-            <div class="journal-icon">☀️</div>
-            <div class="journal-chip">Daily ritual</div>
-          </div>
-          <div class="journal-title">Morning Check-In</div>
-          <div class="journal-copy">Set the tone of the day with intention, mood, focus and one small promise to
-            yourself.</div>
-          <div class="journal-mini">
-            <span class="journal-mini-span">mood</span><span class="journal-mini-span">focus</span><span class="journal-mini-span">intention</span>
-          </div>
-          <div class="journal-script">begin softly</div>
-        <div class="journal-card-line"></div>
-        </div>
-
-        <div class="journal-card">
-          <div class="journal-topline">
-            <div class="journal-icon">🌙</div>
-            <div class="journal-chip">Night reset</div>
-          </div>
-          <div class="journal-title">Night Rituals</div>
-          <div class="journal-copy">Wind down softly with reflection, gratitude, brain-dump and tomorrow’s reset.</div>
-        <div class="journal-card-line"></div>
-        </div>
-
-        <div class="journal-card accent">
-          <div class="journal-topline">
-            <div class="journal-icon">💭</div>
-            <div class="journal-chip">Self awareness</div>
-          </div>
-          <div class="journal-title">Mood Logs</div>
-          <div class="journal-copy">Track patterns, energy, feelings and the little things shaping your day-to-day life.
-          </div>
-        <div class="journal-card-line"></div>
-        </div>
-
-        <div class="journal-card">
-          <div class="journal-topline">
-            <div class="journal-icon">✍️</div>
-            <div class="journal-chip">Inner world</div>
-          </div>
-          <div class="journal-title">Reflections</div>
-          <div class="journal-copy">Short guided questions that help you notice what you are feeling, needing and
-            becoming.</div>
-          <div class="journal-card-line"></div>
-        </div>
-
-        <div class="journal-card wide">
-          <div class="journal-topline">
-            <div class="journal-icon">✦</div>
-            <div class="journal-chip">Tiny prompts</div>
-          </div>
-          <div class="journal-title">Pages for Becoming Her</div>
-          <div class="journal-copy">A rotating set of prompts for confidence, softness, routines, style and
-            main-character thinking — so the journal feels alive, not repetitive.</div>
-          <div class="journal-dots"><span class="journal-dots-span"></span><span class="journal-dots-span"></span><span class="journal-dots-span"></span></div>
-        <div class="journal-card-line"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="issue-band">
-    <div class="container issue-layout">
-      <div class="issue-cover-mini">
-        <img src="assets/magazine-cover.jpg" alt="Issue 01">
-      </div>
-      <div>
-        <div class="sec-eyebrow">Latest issue · live now</div>
-        <div class="issue-title">Main Character Syndrome Kit</div>
-        <div class="issue-copy">
-          The launch issue that frames L&amp;M perfectly: a reset disguised as a magazine. Diagnosis, psychology,
-          alter-egos,
-          daily shifts, rules she lives by, and a playbook for becoming her — without chaos, without shouting, and
-          without losing softness.
-        </div>
-        <div class="pill-row">
-          <div class="pill">Diagnosis</div>
-          <div class="pill">The Science of Her</div>
-          <div class="pill">The Reset</div>
-          <div class="pill">Alter-Ego Archive</div>
-          <div class="pill">The Playbook</div>
-          <div class="pill">Cosmic Horoscope</div>
-        </div>
-        <div class="hero-actions">
-          <a class="btn primary">Read the Issue</a>
-          <a class="btn secondary">Browse Magazine</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="ticker">
-    <div class="ticker-track">
-      <span class="ticker-span">The Magazine is Live ✦</span>
-      <span class="ticker-span">Main Character Energy ✦</span>
-      <span class="ticker-span">Free. Always. ✦</span>
-      <span class="ticker-span">Martini Files every Monday ✦</span>
-      <span class="ticker-span">@yourlnm.com ✦</span>
-      <span class="ticker-span">The Magazine is Live ✦</span>
-      <span class="ticker-span">Main Character Energy ✦</span>
-      <span class="ticker-span">Free. Always. ✦</span>
-      <span class="ticker-span">Martini Files every Monday ✦</span>
-      <span class="ticker-span">@yourlnm.com ✦</span>
-    </div>
-  </div>
-
-  <section class="section inside">
-    <div class="container">
-      <div class="sec-eyebrow">Inside the launch issue</div>
-      <h2 class="sec-title">What we <span class="italic">packed for you</span>.</h2>
-      <p class="sec-sub">
-        This makes the homepage instantly richer: not just “read the issue,” but a teaser of what kind of reading
-        experience she is getting inside L&amp;M.
-      </p>
-
-      <div class="inside-layout">
-        <div class="contents-card">
-          <img src="assets/contents-preview.jpg" alt="Issue contents preview">
-          <div class="contents-note">
-            A visual preview of the contents page gives the homepage a proper editorial feel and makes L&amp;M look like
-            a true publication, not just a content brand.
-          </div>
-        </div>
-
-        <div class="inside-grid">
-          <div class="inside-card">
-            <div class="page-tag">Pages 01–02</div>
-            <div class="inside-title">The Diagnosis</div>
-            <div class="inside-copy">For the girl whose weeks have started blending together. A cinematic unpacking of
-              autopilot living and the first opening toward change.</div>
-            <div class="inside-card-line"></div>
-          </div>
-          <div class="inside-card">
-            <div class="page-tag">Pages 03–04</div>
-            <div class="inside-title">The Science of Her</div>
-            <div class="inside-copy">The psychology behind main character energy — how reframing ordinary life changes
-              how it feels to live it.</div>
-          <div class="inside-card-line"></div>
-          </div>
-          <div class="inside-card">
-            <div class="page-tag">Pages 05–07</div>
-            <div class="inside-title">The Reset Chapter</div>
-            <div class="inside-copy">Before you build a new version of yourself, you clear storage. Old habits,
-              emotional clutter, and the phases you may be moving through.</div>
-          <div class="inside-card-line"></div>
-          </div>
-          <div class="inside-card">
-            <div class="page-tag">Pages 08–09</div>
-            <div class="inside-title">The Alter-Ego Archive</div>
-            <div class="inside-copy">Six cinematic versions of “her” to try on — because trial rooms were never meant to
-              be limited to clothes.</div>
-          <div class="inside-card-line"></div>
-          </div>
-          <div class="inside-card">
-            <div class="page-tag">Pages 10–12</div>
-            <div class="inside-title">The Daily Shifts</div>
-            <div class="inside-copy">The subtle changes that style life from the inside out: pace, rituals, posture,
-              objects, and how she moves through a day.</div>
-          <div class="inside-card-line"></div>
-          </div>
-          <div class="inside-card">
-            <div class="page-tag">Pages 13 onward</div>
-            <div class="inside-title">The Playbook</div>
-            <div class="inside-copy">L&amp;M Café, soundtrack prescriptions, bingo, rules she lives by, and a cosmic
-              horoscope designed for playful self-expression.</div>
-          <div class="inside-card-line"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section route">
-    <div class="container">
-      <div class="sec-eyebrow">What does she need today?</div>
-      <h2 class="sec-title">Find the blog your <span class="italic">mood needs</span>.</h2>
-      <p class="sec-sub">
-        Choose how you are feeling and L&amp;M will take you to a short 1–2 minute read made for that exact moment —
-        confidence, outfit inspo, a soft reset, or something that simply makes you feel understood.
-      </p>
-
-      <div class="route-grid">
-        <div class="route-card">
-          <div class="route-kicker">Blog route</div>
-          <div class="route-title">I need confidence</div>
-          <div class="route-copy">Quick confidence reads: main character files, power dressing, audacity and the tiny
-            scripts that help her take up space.</div>
-        </div>
-        <div class="route-card">
-          <div class="route-kicker">Blog route</div>
-          <div class="route-title">I need a soft reset</div>
-          <div class="route-copy">Soft 1–2 minute resets: night rituals, slow mornings, gentle structure and emotional
-            rewiring without overwhelm.</div>
-        </div>
-        <div class="route-card">
-          <div class="route-kicker">Blog route</div>
-          <div class="route-title">I need to feel understood</div>
-          <div class="route-copy">Short essays, 3AM thoughts and emotional pages that feel like an elder sister finally
-            gets it.</div>
-        </div>
-        <div class="route-card">
-          <div class="route-kicker">Blog route</div>
-          <div class="route-title">I need outfit inspo</div>
-          <div class="route-copy">Fast style reads: wardrobe formulas, shopping edits, outfit notes and looks she
-            actually wants to live in.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container story-split">
-      <div class="story-card">
-        <div class="sec-eyebrow">Why L&amp;M exists</div>
-        <div class="story-quote">“A reset disguised as a magazine.”</div>
-        <div class="story-body">
-          L&amp;M is not just a newsletter, not just a blog, and not just a pretty homepage.
-          It is a publication world for girls who want to live more intentionally, more beautifully, and more like the
-          lead in their own lives.
-        </div>
-        <div class="story-link">Explore the magazine →</div>
-      </div>
-
-      <div class="founder-card">
-        <div class="polaroid">
-          <div class="photo-box"><img src="assets/founderpicedited.jpg"></div>
-          <div class="polaroid-label">Deepanshi ✦ Founder</div>
-        </div>
-
-        <div>
-          <div class="sec-eyebrow founder">Meet the founder</div>
-          <div class="founder-title">BITS Pilani
-            grad.<br>Poetry book author.<br><span class="italic">Magazine builder.</span></div>
-          <div class="founder-copy">
-            I skipped my placement to build a publication for women who want their lives to feel more intentional and
-            more considered.
-            L&amp;M is everything I wish existed when I was figuring myself out.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section martini">
-    <div class="martini-grid"></div>
-    <div class="container martini-wrap">
-      <div>
-        <div class="sec-eyebrow monday">Martini Mondays</div>
-        <div class="martini-title">Five picks, <span class="italic">every week</span>, in your inbox.</div>
-        <div class="martini-copy">
-          A tiny Monday edit from L&amp;M: the outfit note, the beauty or ritual find, the book line, the mood-lifting
-          recommendation and one small thought that makes the week feel more considered.
-        </div>
-        <div class="martini-mini">
-          <div class="martini-pill">Free weekly letter</div>
-          <div class="martini-pill">5 curated picks</div>
-          <div class="martini-pill">No noise</div>
-        </div>
-      </div>
-
-      <div class="martini-board">
-        <div class="board-sticker">Monday Drop</div>
-        <div class="board-top">
-          <div>
-            <div class="board-title">What lands in her inbox</div>
-            <div class="board-sub">A quick, stylish, useful little note she can read in under two minutes.</div>
-          </div>
-          <div class="board-date">Every<br>Monday</div>
-        </div>
-
-        <div class="pick-grid">
-          <div class="pick-card">
-            <div class="pick-icon">👗</div>
-            <div class="pick-title">A fit</div>
-            <div class="pick-copy">One outfit idea or style note worth saving.</div>
-          </div>
-          <div class="pick-card">
-            <div class="pick-icon">💄</div>
-            <div class="pick-title">A find</div>
-            <div class="pick-copy">Beauty, ritual, desk or wardrobe picks.</div>
-          </div>
-          <div class="pick-card">
-            <div class="pick-icon">📖</div>
-            <div class="pick-title">A line</div>
-            <div class="pick-copy">A sentence from a book, essay or page.</div>
-          </div>
-          <div class="pick-card">
-            <div class="pick-icon">🎧</div>
-            <div class="pick-title">A mood</div>
-            <div class="pick-copy">A song, watch, walk or tiny reset.</div>
-          </div>
-          <div class="pick-card">
-            <div class="pick-icon">✦</div>
-            <div class="pick-title">A thought</div>
-            <div class="pick-copy">One little main-character move for the week.</div>
-          </div>
-        </div>
-
-        <div class="board-footer">
-          <div class="board-note">Style, beauty, books, rituals and one tiny thought — every week.</div>
-          <div class="board-cta"><a href="Martini-Mondays.html">Get Martini Mondays</a></div>
-        </div>
-      <div class="martini-board-border"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section newsletter">
-    <div class="newsletter-grid"</div>
-    <div class="container news-grid">
-      <div>
-        <div class="sec-eyebrow join">Join the L&amp;M world</div>
-        <div class="news-title">Never miss an issue, a note, or a new L&amp;M drop.</div>
-        <div class="news-copy">
-          Free magazine. Free newsletter. Free forever. The homepage should end with one clear invitation: join the
-          girls romanticising their everyday lives.
-        </div>
-      </div>
-
-      <div class="news-box">
-        <h4 class="news-box-h4">Join the list ✦</h4>
-        <p class="news-box-p">Get issue drops, Journal updates, Martini Mondays and L&amp;M notes in your inbox.</p>
-        <div class="form">
-          <input class="input" placeholder="your@email.com" type="email">
-          <a class="btn light">Subscribe</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="logo-lower">L<span class="amp"> & </span>M</div>
-      <div class="footer-copy">© 2026 Lipsticks &amp; Martinis</div>
-      <div class="footer-links">
-        <span>Instagram</span>
-        <span>Newsletter</span>
-        <span>Privacy</span>
-      </div>
-    </div>
-  </footer>
-</body>
-
-</html>

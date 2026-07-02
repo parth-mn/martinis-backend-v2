@@ -443,11 +443,16 @@
       linear-gradient(135deg, #6f0820 0%, #ac4b76 55%, #d798b5 100%);
     background-size:20px 20px, 20px 20px, auto;
     color:#fff;
-    padding:20px;
+    padding: 20px;
+    max-width: 100%;
+    max-height: 100%;
     display:flex;
     flex-direction:column;
     justify-content:flex-end;
     box-shadow:10px 10px 0 rgba(120,9,34,.16);
+  }
+  .book-mock img {
+    object-fit: cover;
   }
   .book-mock .tiny{
     font-size:10px;
@@ -587,6 +592,7 @@
   .subscribe-box{
     background:rgba(255,255,255,.12);
     border:1.2px solid rgba(255,255,255,.28);
+    border-radius: 20px;
     padding:22px;
   }
   .subscribe-box h3{
@@ -639,22 +645,22 @@
     <header class="topbar">
       <div class="brand">L<em>&amp;</em>M</div>
       <nav class="navlinks">
-        <span>The Magazine</span>
-        <span>L&amp;M Journal</span>
-        <span>Blogs</span>
-        <span>L&amp;M Universe</span>
-        <span>Martini Mondays</span>
-        <span>The Studio</span>
-        <span>About</span>
+        <span><a href="Magazine.html">The Magazine</a></span>
+        <span><a href="Journal.html">L&amp;M Journal</a></span>
+        <span><a href="Blogs.html">Blogs</a></span>
+        <span><a href="Universe-Catalog.html">L&amp;M Universe</a></span>
+        <span><a href="Martini-Mondays.html">Martini Mondays</a></span>
+        <span><a href="Studio.html">The Studio</a></span>
+        <span><a href="About.html">About</a></span>
       </nav>
-      <a class="navcta">Start reading</a>
+      <a class="navcta" href="Magazine.html">Start reading</a>
     </header>
 
     <section class="hero">
       <div class="hero-photo-col">
         <div class="founder-frame">
           <div class="founder-image">
-            <img src="lnm_about_founder_photo_v2.jpg" alt="Deepanshi, founder of Lipsticks &amp; Martinis">
+            <img src="assets/founderpicedited.jpg" alt="Deepanshi, founder of Lipsticks &amp; Martinis">
           </div>
           <div class="founder-label">
             <strong>Deepanshi ✦</strong>
@@ -664,7 +670,7 @@
       </div>
 
       <div class="hero-copy-col">
-        <div class="breadcrumb">yourlnm.com / About</div>
+        <div class="breadcrumb"><a href="yourlnm.com">yourlnm.com</a> / About</div>
         <div class="pill">The Founder</div>
         <h1>It’s time to build a world that feels <em>like her.</em></h1>
         <p>
@@ -685,8 +691,8 @@
         </div>
 
         <div class="hero-cta-row">
-          <a class="btn primary">Read Issue 01</a>
-          <a class="btn secondary">Join Martini Mondays</a>
+          <a href="Magazine.html" class="btn primary">Read Issue 01</a>
+          <a href="Martini-Mondays.html" class="btn secondary">Join Martini Mondays</a>
         </div>
 
         <div class="hero-note">
@@ -770,13 +776,14 @@
         </p>
 
         <div class="book-actions">
-          <a class="btn primary" href="https://www.amazon.in/s?k=Fathoming+My+3AM+Thoughts" target="_blank" rel="noopener noreferrer">Find the book on Amazon</a>
+          <a class="btn primary" href="https://amzn.in/d/05zogC9d" target="_blank" rel="noopener noreferrer">Find the book on Amazon</a>
           <a class="btn secondary">Read the story behind it</a>
         </div>
 
         <div class="book-mock">
-          <div class="tiny">Poetry book</div>
-          <h4>Fathoming<br>My 3AM<br>Thoughts</h4>
+          <!-- <div class="tiny">Poetry book</div>
+          <h4>Fathoming<br>My 3AM<br>Thoughts</h4> -->
+          <img src="assets/book-cover.png">
         </div>
       </div>
 
@@ -818,7 +825,7 @@
           </div>
           <div class="right">
             <div class="handle">Instagram / @yourhandle</div>
-            <a class="btn soft" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
+            <a class="btn soft" href="https://instagram.com/lipsticksandmartinis" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
           </div>
         </div>
       </div>

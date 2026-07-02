@@ -382,11 +382,11 @@ h1 em {
   <main class="mock-browser">
     <div class="top-announcement">Issue 01 is now live · Read online or download the free PDF</div>
     <nav class="nav">
-      <div class="nav-left"><a>Magazine</a><a>Martini Files</a><a>Studio</a></div>
+      <div class="nav-left"><a href="Magazine.html">Magazine</a><a href="Martini-Mondays.html">Martini Files</a><a href="Studio.html">Studio</a></div>
       <div class="brand">L&amp;M.</div>
-      <div class="nav-right"><a>Universe</a><a>About</a><a class="nav-pill">Join the List</a></div>
+      <div class="nav-right"><a href="Universe-Catalog.html">Universe</a><a href="About.html">About</a><a class="nav-pill" href="Martini-Mondays.html">Join the List</a></div>
     </nav>
-    <div class="breadcrumb">yourlnm.com › <span>The Magazine</span></div>
+    <div class="breadcrumb"><a href="yourlnm.com">yourlnm.com › </a><span>The Magazine</span></div>
 
     <section class="hero">
       <div class="hero-inner">
@@ -395,8 +395,8 @@ h1 em {
           <h1>The <em>Magazine</em></h1>
           <p class="hero-copy">A digital magazine for girls becoming the main character of their own life — one issue, one ritual, one outfit, one reset at a time. Read the latest issue online, download the PDF, and browse the archive as L&amp;M grows.</p>
           <div class="cta-row">
-            <a class="btn primary">Read Issue 01</a>
-            <a class="btn secondary">Download PDF</a>
+            <a href="Magazine.html" class="btn primary">Read Issue 01</a>
+            <a href="Magazine.html" class="btn secondary">Download PDF</a>
           </div>
           <div class="micro-note">Launch issue now live · Saturday, 4 July 2026 · Free forever</div>
         </div>
@@ -498,7 +498,7 @@ h1 em {
           <div class="pills">
             <span class="pill">Diagnosis</span><span class="pill">Reset</span><span class="pill">Alter-Egos</span><span class="pill">Daily Shifts</span><span class="pill">Playbook</span><span class="pill">Horoscope</span>
           </div>
-          <div class="cta-row"><a class="btn primary">Read Issue 01</a><a class="btn secondary">Download PDF</a></div>
+          <div class="cta-row"><a href="Magazine.html" class="btn primary">Read Issue 01</a><a href="Magazine.html" class="btn secondary">Download PDF</a></div>
         </div>
       </div>
     </section>
@@ -512,7 +512,7 @@ h1 em {
           <div class="meta">Available Now</div>
           <h3>Issue 01 — Main Character Syndrome Kit</h3>
           <p>The first L&amp;M issue. Read it online or keep the PDF in your own little digital archive.</p>
-          <div class="cta-row"><a class="btn primary">Read Online</a><a class="btn secondary">Download PDF</a></div>
+          <div class="cta-row"><a href="Magazine.html" class="btn primary">Read Issue 01</a><a href="Magazine.html" class="btn secondary">Download PDF</a></div>
         </article>
         <article class="archive-card coming">
           <div class="meta">Coming Soon</div>
@@ -531,6 +531,7 @@ h1 em {
         <div class="time-box"><div class="time-num" id="days">00</div><div class="time-label">Days</div></div>
         <div class="time-box"><div class="time-num" id="hours">00</div><div class="time-label">Hours</div></div>
         <div class="time-box"><div class="time-num" id="minutes">00</div><div class="time-label">Minutes</div></div>
+        <div class="time-box"><div class="time-num" id="seconds">00</div><div class="time-label">Seconds</div></div>
       </div>
       <p style="position:relative;z-index:2;color:rgba(255,255,255,.38);font-size:12px;">Target drop: Saturday, 18 July 2026</p>
     </section>
@@ -552,12 +553,14 @@ function updateCountdown() {
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / (1000));
   document.getElementById('days').textContent = String(days).padStart(2, '0');
   document.getElementById('hours').textContent = String(hours).padStart(2, '0');
   document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+  document.getElementById('seconds').textContent = String(seconds).padStart(2,'0');
 }
 updateCountdown();
-setInterval(updateCountdown, 60000);
+setInterval(updateCountdown, 1000);
 </script>
 </body>
 </html>
