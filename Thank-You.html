@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>L&M — Thank You Page</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ivory:#FAF7F5;
+  --paper:#FFFDFC;
+  --rose-milk:#FFCAD4;
+  --milk:#FFF0F5;
+  --orchid:#BE6C9E;
+  --burg:#6C0820;
+  --burg-deep:#4F0719;
+  --noir:#1A0A0E;
+  --line:#2A1A20;
+  --muted:#76656D;
+  --soft-line:#E8D8DC;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%}
+body{
+  font-family:'DM Sans',sans-serif;
+  color:var(--noir);
+  background:
+    radial-gradient(circle at 18% 16%, rgba(255,202,212,.56), transparent 20%),
+    radial-gradient(circle at 82% 18%, rgba(190,108,158,.20), transparent 22%),
+    linear-gradient(rgba(108,8,32,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(108,8,32,.045) 1px, transparent 1px),
+    var(--ivory);
+  background-size:auto,auto,36px 36px,36px 36px,auto;
+  display:grid;
+  place-items:center;
+  padding:28px;
+}
+a{text-decoration:none;color:inherit}
+
+.page{
+  width:min(100%,1080px);
+  min-height:620px;
+  border:1.3px solid var(--line);
+  border-radius:22px;
+  background:
+    radial-gradient(circle at 24% 70%, rgba(255,202,212,.45), transparent 18%),
+    linear-gradient(135deg,var(--paper),var(--milk));
+  box-shadow:0 30px 80px rgba(108,8,32,.16);
+  overflow:hidden;
+  position:relative;
+}
+.page:before{
+  content:"";
+  position:absolute;
+  inset:18px;
+  border:1px solid rgba(42,26,32,.18);
+  border-radius:16px;
+  pointer-events:none;
+}
+.page:after{
+  content:"✦";
+  position:absolute;
+  right:70px;
+  bottom:46px;
+  font-size:110px;
+  color:rgba(108,8,32,.06);
+  line-height:1;
+}
+.topbar{
+  height:76px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  padding:0 34px;
+  position:relative;
+  z-index:2;
+}
+.logo{
+  font-family:'Playfair Display',serif;
+  color:var(--burg);
+  font-size:31px;
+  font-weight:900;
+  letter-spacing:-.04em;
+}
+.logo em{color:var(--orchid);font-style:italic}
+.close{
+  width:38px;
+  height:38px;
+  border:1px solid var(--soft-line);
+  border-radius:50%;
+  background:#fff;
+  display:grid;
+  place-items:center;
+  color:var(--burg);
+  font-weight:900;
+  box-shadow:0 8px 20px rgba(108,8,32,.08);
+}
+
+.content{
+  min-height:470px;
+  display:grid;
+  grid-template-columns:.82fr 1.18fr;
+  gap:30px;
+  align-items:end;
+  padding:18px 56px 54px;
+  position:relative;
+  z-index:2;
+}
+.left{
+  align-self:end;
+  padding-bottom:10px;
+}
+.micro{
+  color:var(--orchid);
+  font-size:10px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-weight:900;
+  margin-bottom:18px;
+}
+.status-card{
+  border:1.2px solid var(--line);
+  background:#fff;
+  padding:20px;
+  border-radius:20px;
+  max-width:330px;
+  box-shadow:12px 12px 0 rgba(190,108,158,.16);
+}
+.status-card h3{
+  font-family:'Playfair Display',serif;
+  color:var(--burg);
+  font-size:28px;
+  line-height:1;
+  letter-spacing:-.03em;
+  margin-bottom:10px;
+}
+.status-card p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+}
+.social{
+  margin-top:28px;
+}
+.social .label{
+  color:var(--noir);
+  font-size:10px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  font-weight:900;
+  margin-bottom:12px;
+}
+.social-row{
+  display:flex;
+  gap:9px;
+  flex-wrap:wrap;
+}
+.social-row span{
+  width:36px;height:36px;
+  border:1.1px solid var(--line);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:var(--burg);
+  background:rgba(255,255,255,.72);
+  font-size:12px;
+  font-weight:800;
+}
+
+.main{
+  align-self:center;
+  padding-top:18px;
+}
+.stamp{
+  display:inline-flex;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--rose-milk);
+  color:var(--burg);
+  padding:10px 15px;
+  font-size:10px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  font-weight:900;
+  transform:rotate(-3deg);
+  margin-bottom:24px;
+}
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(56px,8vw,112px);
+  line-height:.84;
+  letter-spacing:-.07em;
+  color:var(--noir);
+  max-width:680px;
+  margin-bottom:24px;
+}
+h1 em{
+  display:block;
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  color:var(--orchid);
+  font-weight:600;
+  letter-spacing:-.04em;
+}
+.subcopy{
+  max-width:540px;
+  color:#5b4850;
+  font-size:15px;
+  line-height:1.85;
+  margin-bottom:28px;
+}
+.btnrow{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.btn{
+  min-height:48px;
+  border:1.3px solid var(--line);
+  border-radius:999px;
+  padding:0 20px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+  color:var(--noir);
+  font-size:10px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  font-weight:900;
+}
+.btn.primary{
+  background:var(--burg);
+  color:#fff;
+  border-color:var(--burg);
+}
+
+.bottom-note{
+  border-top:1.2px solid var(--line);
+  background:rgba(255,255,255,.48);
+  padding:17px 34px;
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.6;
+  position:relative;
+  z-index:2;
+}
+.bottom-note b{color:var(--burg)}
+
+
+@media(max-width:850px){
+  body{padding:16px}
+  .content{grid-template-columns:1fr;padding:14px 28px 42px}
+  .left{order:2}
+  .main{order:1}
+  .page{min-height:auto}
+  h1{font-size:58px}
+}
+@media(max-width:560px){
+  .topbar{padding:0 22px}
+  .content{padding-left:22px;padding-right:22px}
+  .btnrow{flex-direction:column}
+  .btn{width:100%}
+  .bottom-note{padding-left:22px;padding-right:22px}
+  .social-row span{width:34px;height:34px}
+}
+</style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="logo">L<em>&amp;</em>M</div>
+      <a class="close">×</a>
+    </header>
+
+    <section class="content">
+      <div class="left">
+        <div class="micro">A little note from the universe</div>
+
+        <div class="status-card">
+          <h3>Your note made it in.</h3>
+          <p>Whether this was a collaboration inquiry, a Studio request, or a tiny hello — it has safely entered the L&M world.</p>
+        </div>
+
+        <div class="social">
+          <div class="label">Follow along</div>
+          <div class="social-row">
+            <span>IG</span>
+            <span>PIN</span>
+            <span>YT</span>
+            <span>IN</span>
+            <span>✉</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="stamp">Filed under: very much received</div>
+        <h1>Thank you for reaching <em>out.</em></h1>
+        <p class="subcopy">
+          Your message has been received. If it feels aligned, we’ll get back to you soon with the next step. Until then, you can wander back into the magazine, the universe, or the softer corners of L&M.
+        </p>
+
+        <div class="btnrow">
+          <a class="btn primary">Return to L&M</a>
+          <a class="btn">Open the magazine</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-note">
+      <div><b>For brand / PR inquiries:</b> please allow a little time for thoughtful review.</div>
+      <div><b>For Studio inquiries:</b> we’ll reply with the right next step if there’s a fit.</div>
+    </section>
+  </main>
+</body>
+</html>

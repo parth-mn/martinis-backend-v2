@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>L&M — Individual Blog Post Template</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ivory:#FAF7F5;
+  --paper:#FFFDFC;
+  --rose-milk:#FFCAD4;
+  --milk:#FFF0F5;
+  --orchid:#BE6C9E;
+  --burg:#6C0820;
+  --burg-deep:#4F0719;
+  --noir:#1A0A0E;
+  --line:#2A1A20;
+  --muted:#76656D;
+  --soft-line:#E8D8DC;
+  --cream-shadow:rgba(108,8,32,.08);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',sans-serif;
+  color:var(--noir);
+  background:
+    radial-gradient(circle at 10% 6%, rgba(255,202,212,.42), transparent 22%),
+    radial-gradient(circle at 90% 8%, rgba(190,108,158,.16), transparent 24%),
+    var(--ivory);
+}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+
+.shell{
+  width:min(100% - 42px,1320px);
+  margin:18px auto 28px;
+  border:1.2px solid var(--line);
+  background:var(--paper);
+  box-shadow:0 16px 42px var(--cream-shadow);
+}
+
+/* NAV */
+.nav{
+  min-height:68px;
+  display:grid;
+  grid-template-columns:170px 1fr 170px;
+  align-items:center;
+  border-bottom:1.2px solid var(--line);
+  padding:0 22px;
+}
+.menu{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:var(--burg);
+  font-size:10px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:900;
+}
+.hamburger{
+  width:26px;
+  display:grid;
+  gap:5px;
+}
+.hamburger span{
+  height:1.2px;
+  background:var(--line);
+}
+.logo{
+  justify-self:center;
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+  font-weight:900;
+  color:var(--burg);
+  letter-spacing:-.05em;
+}
+.logo em{color:var(--orchid);font-style:italic}
+.nav-right{
+  justify-self:end;
+  display:flex;
+  gap:14px;
+  align-items:center;
+  color:var(--burg);
+  font-size:12px;
+}
+.nav-right span{
+  width:28px;height:28px;border:1px solid var(--soft-line);border-radius:50%;
+  display:grid;place-items:center;background:#fff;
+}
+.subnav{
+  border-bottom:1.2px solid var(--line);
+  background:var(--milk);
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  flex-wrap:wrap;
+  padding:12px 20px;
+  color:var(--burg);
+  font-size:10px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  font-weight:900;
+}
+
+/* TITLE HEADER */
+.post-header{
+  text-align:center;
+  padding:88px 28px 64px;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255,202,212,.34), transparent 18%),
+    var(--paper);
+}
+.breadcrumb{
+  display:inline-flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:center;
+  color:var(--orchid);
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:900;
+  margin-bottom:22px;
+}
+.post-header h1{
+  width:min(850px,100%);
+  margin:0 auto 20px;
+  font-family:'Playfair Display',serif;
+  font-size:clamp(48px,6vw,86px);
+  line-height:.93;
+  letter-spacing:-.055em;
+  color:var(--noir);
+}
+.post-header h1 em{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  color:var(--orchid);
+  font-weight:600;
+}
+.meta{
+  color:#6f5c64;
+  font-size:10px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  font-weight:900;
+}
+
+/* MAIN LAYOUT */
+.content-wrap{
+  display:grid;
+  grid-template-columns:230px minmax(0,680px) 250px;
+  gap:34px;
+  padding:0 56px 70px;
+  align-items:start;
+}
+.side-left,.side-right{
+  position:sticky;
+  top:26px;
+  padding-top:6px;
+}
+.side-title{
+  font-family:'Playfair Display',serif;
+  font-size:19px;
+  margin-bottom:14px;
+  color:var(--noir);
+}
+.about-card{
+  border-top:1px solid var(--soft-line);
+  border-bottom:1px solid var(--soft-line);
+  padding:24px 0;
+}
+.about-visual{
+  height:155px;
+  border:1px solid var(--line);
+  background:
+    radial-gradient(circle at 50% 35%, rgba(255,202,212,.68), transparent 28%),
+    linear-gradient(135deg,#FFF0F5,#FAF7F5);
+  margin-bottom:16px;
+  position:relative;
+  overflow:hidden;
+}
+.about-visual:after{
+  content:"L&M";
+  position:absolute;
+  right:-8px;
+  bottom:-18px;
+  font-family:'Playfair Display',serif;
+  font-size:58px;
+  font-weight:900;
+  color:rgba(108,8,32,.08);
+}
+.about-card p{
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.75;
+  margin-bottom:18px;
+}
+.socials{
+  display:flex;
+  gap:8px;
+  color:var(--burg);
+  font-size:13px;
+}
+.socials span{
+  width:25px;height:25px;border:1px solid var(--soft-line);border-radius:50%;
+  display:grid;place-items:center;background:#fff;
+}
+
+/* HERO IMAGE */
+.article{
+  min-width:0;
+}
+.hero-image{
+  height:440px;
+  border:1.2px solid var(--line);
+  background:
+    linear-gradient(rgba(108,8,32,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(108,8,32,.045) 1px, transparent 1px),
+    radial-gradient(circle at 73% 25%, rgba(190,108,158,.24), transparent 17%),
+    radial-gradient(circle at 28% 70%, rgba(255,202,212,.58), transparent 20%),
+    linear-gradient(135deg,#fff,#FFF0F5 48%,#F6D3DD 100%);
+  background-size:26px 26px,26px 26px,auto,auto,auto;
+  margin-bottom:34px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-image:before{
+  content:"soft reset";
+  position:absolute;
+  left:34px;
+  top:36px;
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  color:var(--burg);
+  font-size:44px;
+}
+.hero-image:after{
+  content:"L&M Reading Room";
+  position:absolute;
+  right:28px;
+  bottom:26px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff;
+  color:var(--burg);
+  padding:10px 16px;
+  font-size:10px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  font-weight:900;
+}
+
+/* ARTICLE BODY */
+.article-body{
+  color:var(--noir);
+  font-family:'Playfair Display',serif;
+}
+.article-body p{
+  font-family:'Playfair Display',serif;
+  color:#25151b;
+  font-size:19px;
+  line-height:1.82;
+  margin-bottom:25px;
+}
+.article-body p.lede{
+  font-size:23px;
+  line-height:1.65;
+  color:var(--burg);
+}
+.article-body h2{
+  font-family:'Playfair Display',serif;
+  font-size:38px;
+  line-height:1;
+  letter-spacing:-.035em;
+  margin:44px 0 16px;
+}
+.article-body h2 em{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  color:var(--orchid);
+}
+.pullquote{
+  margin:38px 0;
+  padding:28px 30px;
+  border-left:4px solid var(--orchid);
+  background:var(--milk);
+}
+.pullquote p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:30px;
+  line-height:1.18;
+  font-style:italic;
+  color:var(--burg);
+  margin:0;
+}
+.takeaway{
+  margin:38px 0;
+  border:1.2px solid var(--line);
+  background:linear-gradient(135deg,var(--rose-milk),#fff);
+  padding:26px;
+}
+.takeaway .small{
+  color:var(--burg);
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:900;
+  margin-bottom:12px;
+  font-family:'DM Sans',sans-serif;
+}
+.takeaway ul{
+  list-style:none;
+  display:grid;
+  gap:12px;
+}
+.takeaway li{
+  font-family:'DM Sans',sans-serif;
+  color:#523e47;
+  font-size:14px;
+  line-height:1.65;
+  padding-left:22px;
+  position:relative;
+}
+.takeaway li:before{
+  content:"✦";
+  position:absolute;
+  left:0;
+  color:var(--burg);
+}
+
+/* RIGHT SIDEBAR */
+.search-box{
+  border-bottom:1px solid var(--soft-line);
+  padding-bottom:24px;
+  margin-bottom:26px;
+}
+.search-box input{
+  width:100%;
+  border:1.1px solid var(--line);
+  border-radius:999px;
+  min-height:40px;
+  background:#fff;
+  padding:0 14px;
+  font:inherit;
+  font-size:11px;
+}
+.sidebar-block{
+  border-bottom:1px solid var(--soft-line);
+  padding-bottom:24px;
+  margin-bottom:26px;
+}
+.side-list{
+  display:grid;
+  gap:18px;
+}
+.side-post .cat{
+  color:var(--orchid);
+  font-size:9px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:900;
+  margin-bottom:5px;
+}
+.side-post h4{
+  font-family:'Playfair Display',serif;
+  font-size:17px;
+  line-height:1.18;
+  font-weight:700;
+}
+.archive-list{
+  display:grid;
+  gap:10px;
+  color:var(--muted);
+  font-size:12px;
+}
+.category-pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.category-pills span{
+  border:1px solid var(--soft-line);
+  border-radius:999px;
+  padding:8px 10px;
+  background:#fff;
+  color:var(--burg);
+  font-size:9px;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  font-weight:900;
+}
+
+/* POST FOOTER */
+.share{
+  margin-top:44px;
+  padding:22px 0;
+  border-top:1px solid var(--soft-line);
+  border-bottom:1px solid var(--soft-line);
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
+  color:var(--burg);
+  font-size:10px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  font-weight:900;
+}
+.share span:not(:first-child){
+  border:1px solid var(--soft-line);
+  border-radius:999px;
+  padding:8px 10px;
+  background:#fff;
+}
+.author-box{
+  margin:36px 0 48px;
+  border:1px solid var(--soft-line);
+  background:#fff;
+  padding:24px;
+  display:grid;
+  grid-template-columns:84px 1fr;
+  gap:18px;
+  align-items:center;
+}
+.author-avatar{
+  width:84px;height:84px;border-radius:50%;
+  background:linear-gradient(135deg,var(--burg),var(--orchid));
+  display:grid;place-items:center;
+  color:var(--rose-milk);
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+  font-weight:900;
+}
+.author-box h3{
+  font-family:'Playfair Display',serif;
+  font-size:22px;
+  margin-bottom:6px;
+}
+.author-box p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.75;
+}
+.related{
+  border-top:1px solid var(--soft-line);
+  padding-top:34px;
+}
+.related h3{
+  font-family:'Playfair Display',serif;
+  font-size:26px;
+  margin-bottom:18px;
+}
+.related-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+.related-card{
+  border:1px solid var(--soft-line);
+  background:#fff;
+  overflow:hidden;
+}
+.related-img{
+  height:145px;
+  background:
+    radial-gradient(circle at 62% 30%, rgba(190,108,158,.2), transparent 20%),
+    linear-gradient(135deg,#fff,#FFF0F5,#FFCAD4);
+  border-bottom:1px solid var(--soft-line);
+}
+.related-card:nth-child(2) .related-img{
+  background:
+    linear-gradient(rgba(108,8,32,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(108,8,32,.045) 1px, transparent 1px),
+    linear-gradient(135deg,#fff,#FAF7F5,#EFD0DC);
+  background-size:22px 22px,22px 22px,auto;
+}
+.related-card h4{
+  font-family:'Playfair Display',serif;
+  font-size:18px;
+  line-height:1.15;
+  padding:16px;
+}
+
+/* CTA */
+.article-cta{
+  margin-top:44px;
+  border:1.2px solid var(--line);
+  background:linear-gradient(135deg,var(--burg),var(--burg-deep));
+  color:#fff;
+  padding:30px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:20px;
+  align-items:center;
+}
+.article-cta h3{
+  font-family:'Playfair Display',serif;
+  color:var(--rose-milk);
+  font-size:30px;
+  line-height:1;
+  margin-bottom:8px;
+}
+.article-cta p{
+  color:rgba(255,255,255,.72);
+  font-size:13px;
+  line-height:1.7;
+}
+.article-cta a{
+  min-height:42px;
+  border:1px solid rgba(255,255,255,.55);
+  border-radius:999px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 16px;
+  color:#fff;
+  font-size:10px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+/* FOOTER */
+.footer{
+  border-top:1.2px solid var(--line);
+  background:linear-gradient(180deg,var(--burg),var(--burg-deep));
+  color:white;
+  padding:34px 32px 28px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1fr .8fr .8fr;
+  gap:28px;
+}
+.footer-brand{
+  font-family:'Playfair Display',serif;
+  font-size:38px;
+  margin-bottom:12px;
+}
+.footer p{
+  color:rgba(255,255,255,.78);
+  max-width:420px;
+  font-size:13px;
+  line-height:1.8;
+}
+.footer h4{
+  color:var(--rose-milk);
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+.footer a{
+  display:block;
+  color:rgba(255,255,255,.88);
+  font-size:13px;
+  margin-bottom:8px;
+}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.18);
+  margin-top:24px;
+  padding-top:18px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:14px;
+  color:rgba(255,255,255,.72);
+  font-size:12px;
+}
+
+@media(max-width:1120px){
+  .content-wrap{
+    grid-template-columns:1fr;
+    padding:0 32px 60px;
+  }
+  .side-left,.side-right{position:static}
+  .side-left{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+  }
+  .about-card{border:1px solid var(--soft-line);padding:20px}
+  .side-right{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+  }
+  .search-box,.sidebar-block{
+    border:1px solid var(--soft-line);
+    padding:18px;
+    margin:0;
+  }
+}
+@media(max-width:760px){
+  .shell{width:min(100% - 20px,1320px)}
+  .nav{grid-template-columns:1fr;gap:12px;text-align:center;padding:16px}
+  .menu,.nav-right{justify-self:center}
+  .subnav{gap:12px;font-size:9px}
+  .post-header{padding:58px 22px 40px}
+  .content-wrap{padding:0 20px 48px}
+  .hero-image{height:330px}
+  .article-body p{font-size:17px}
+  .article-body p.lede{font-size:20px}
+  .pullquote p{font-size:25px}
+  .side-left,.side-right,.related-grid,.footer-grid,.article-cta{grid-template-columns:1fr}
+  .author-box{grid-template-columns:1fr;text-align:center}
+  .author-avatar{margin:auto}
+}
+</style>
+</head>
+
+<body>
+<div class="shell">
+  <header class="nav">
+    <div class="menu"><div class="hamburger"><span></span><span></span><span></span></div><span>Menu</span></div>
+    <div class="logo">L<em>&amp;</em>M</div>
+    <div class="nav-right"><span>◎</span><span>⌕</span></div>
+  </header>
+
+  <nav class="subnav">
+    <span>Confidence</span>
+    <span>Outfit Inspo</span>
+    <span>Soft Reset</span>
+    <span>Feel Understood</span>
+    <span>L&M Journal</span>
+  </nav>
+
+  <section class="post-header">
+    <div class="breadcrumb">
+      <span>Soft Reset</span><span>/</span><span>5 min read</span><span>/</span><span>July 2026</span>
+    </div>
+    <h1>How to Feel Like Yourself Again When You’ve Been in a <em>Slump</em></h1>
+    <div class="meta">By Deepanshi Srivastava · The Reading Room</div>
+  </section>
+
+  <main class="content-wrap">
+    <aside class="side-left">
+      <div class="about-card">
+        <div class="side-title">About L&M</div>
+        <div class="about-visual"></div>
+        <p>Lipsticks & Martinis is a digital editorial world for the girl becoming the main character of her own life — softly, stylishly, and on purpose.</p>
+        <div class="socials"><span>◎</span><span>♡</span><span>✦</span><span>↗</span></div>
+      </div>
+
+      <div class="about-card">
+        <div class="side-title">In this article</div>
+        <p>Why slumps feel so personal, how to make your day smaller, what to romanticise first, and when to let the reset be gentle.</p>
+      </div>
+    </aside>
+
+    <article class="article">
+      <div class="hero-image"></div>
+
+      <div class="article-body">
+        <p class="lede">Sometimes the hardest part of a slump is not the tiredness. It is the quiet fear that maybe this version of you is the real one and the old you was the exception.</p>
+
+        <p>But the truth is softer than that. You are not gone. You are overloaded, under-nourished, emotionally noisy, or simply in a season where the smallest things have started asking for the most energy.</p>
+
+        <p>A reset does not have to look like a dramatic reinvention. It can begin with one glass of water, one clean corner, one shower, one text you finally reply to, one outfit that makes you remember you have a body and not just a brain full of tabs.</p>
+
+        <h2>Start by making the day <em>smaller.</em></h2>
+
+        <p>When you are in a slump, your mind turns every task into a verdict. The room is messy, so you are messy. Your inbox is full, so you are behind. You missed one morning routine, so the entire week feels ruined.</p>
+
+        <p>Do not negotiate with that version of your brain. Make the day smaller. Pick three things that would make tonight feel less heavy than this morning. Not impressive things. Useful things.</p>
+
+        <div class="pullquote">
+          <p>“The reset is not a performance. It is a quiet return.”</p>
+        </div>
+
+        <h2>Choose one ritual that makes you feel <em>visible to yourself.</em></h2>
+
+        <p>Wear perfume even if you are not leaving the house. Put your hair up properly. Make coffee in the nice glass. Open the window. Change the bedsheet. Sit at the desk for ten minutes. Your life does not need to be cinematic to deserve a little beauty.</p>
+
+        <p>The point is not to pretend everything is fine. The point is to give your nervous system one small piece of evidence that you are still here, still capable of care, still allowed to begin again without announcing it.</p>
+
+        <div class="takeaway">
+          <div class="small">Save-worthy takeaway</div>
+          <ul>
+            <li>Do not rebuild your whole life in one morning. Rebuild trust with yourself through one small promise.</li>
+            <li>Pick rituals that reduce friction, not rituals that look good online.</li>
+            <li>Your return can be quiet. Nobody needs to see it for it to count.</li>
+          </ul>
+        </div>
+
+        <h2>Let the first version be <em>soft and imperfect.</em></h2>
+
+        <p>You may not wake up tomorrow and become the most disciplined, glowing, productive version of yourself. That is okay. The goal is not to punish the slump out of you. The goal is to create a life that is easier to come back to.</p>
+
+        <p>So take the walk. Drink the water. Open the Notes app. Put on the earrings. Start the checklist. Let it be small enough to actually happen. Let it be beautiful enough to make you want to stay.</p>
+      </div>
+
+      <div class="share">
+        <span>Share this:</span>
+        <span>Instagram</span>
+        <span>Pinterest</span>
+        <span>Copy Link</span>
+      </div>
+
+      <div class="author-box">
+        <div class="author-avatar">D</div>
+        <div>
+          <h3>Deepanshi Srivastava</h3>
+          <p>Founder of Lipsticks & Martinis. Writing about becoming, softness, structure, fashion, lifestyle, and the tiny rituals that make a girl feel like herself again.</p>
+        </div>
+      </div>
+
+      <section class="related">
+        <h3>Related reads</h3>
+        <div class="related-grid">
+          <a class="related-card">
+            <div class="related-img"></div>
+            <h4>How to Build a Morning Routine That Doesn’t Feel Like Punishment</h4>
+          </a>
+          <a class="related-card">
+            <div class="related-img"></div>
+            <h4>Outfits for the Days You Need to Remember Who You Are</h4>
+          </a>
+        </div>
+      </section>
+
+      <section class="article-cta">
+        <div>
+          <h3>Want a softer system for this?</h3>
+          <p>Open L&M Journal for morning checklists, mood tracking, water rituals, weekly recaps, and a private little world that helps you come back to yourself.</p>
+        </div>
+        <a>Open L&M Journal</a>
+      </section>
+    </article>
+
+    <aside class="side-right">
+      <div class="search-box">
+        <div class="side-title">Search</div>
+        <input placeholder="Search L&M reads..." />
+      </div>
+
+      <div class="sidebar-block">
+        <div class="side-title">Recent posts</div>
+        <div class="side-list">
+          <div class="side-post">
+            <div class="cat">Confidence</div>
+            <h4>How to stop waiting to feel pretty before living</h4>
+          </div>
+          <div class="side-post">
+            <div class="cat">Outfit Inspo</div>
+            <h4>The little black top theory</h4>
+          </div>
+          <div class="side-post">
+            <div class="cat">Feel Understood</div>
+            <h4>For the girl who feels behind after college</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-block">
+        <div class="side-title">Categories</div>
+        <div class="category-pills">
+          <span>Confidence</span><span>Outfits</span><span>Reset</span><span>Feelings</span><span>Rituals</span>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">L&M</div>
+        <p>A digital world for girls becoming the main character of their own life — through magazines, letters, stories, curation, and considered digital spaces.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a>The Magazine</a><a>L&M Journal</a><a>The Reading Room</a><a>L&M Universe</a>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <a>About</a><a>Work With Us</a><a>Instagram</a><a>Newsletter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Lipsticks & Martinis. All rights reserved.</div>
+      <div>Built for a soft, stylish internet.</div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

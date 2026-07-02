@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>L&M — About Page Mockup V3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f8f4f1;
+    --paper:#fffdfa;
+    --paper-2:#fdf8f6;
+    --line:#3b2a2f;
+    --line-soft:#dccfd2;
+    --ink:#1a0e12;
+    --muted:#6d6066;
+    --muted-2:#867980;
+    --burg:#780922;
+    --rose:#d98fb0;
+    --rose-soft:#f8cbd9;
+    --blush:#fdeff3;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%}
+  a{text-decoration:none;color:inherit}
+  .site-shell{
+    width:min(100% - 42px, 1320px);
+    margin:18px auto 24px;
+    border:1.3px solid var(--line);
+    background:linear-gradient(180deg, #fcfaf8 0%, #fbf6f3 100%);
+    box-shadow:0 10px 40px rgba(33,12,18,.05);
+  }
+
+  .topbar{
+    min-height:74px;
+    display:grid;
+    grid-template-columns:190px 1fr 220px;
+    align-items:center;
+    border-bottom:1.2px solid var(--line);
+    padding:0 18px;
+    gap:12px;
+  }
+  .brand{
+    font-family:'Playfair Display',serif;
+    font-size:34px;
+    font-weight:900;
+    color:var(--burg);
+    letter-spacing:-.03em;
+  }
+  .brand em{font-style:italic;color:var(--rose)}
+  .navlinks{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:#5f5358;
+  }
+  .navcta{
+    justify-self:end;
+    border:1.2px solid var(--line);
+    border-radius:999px;
+    min-height:42px;
+    padding:0 18px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--burg);
+    color:#fff;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.11em;
+    font-weight:800;
+    white-space:nowrap;
+  }
+
+  .hero{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    border-bottom:1.2px solid var(--line);
+    min-height:650px;
+  }
+  .hero-photo-col{
+    padding:42px;
+    border-right:1.2px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+      radial-gradient(circle at 20% 15%, rgba(217,143,176,.14), transparent 26%),
+      linear-gradient(180deg, rgba(255,255,255,.35), rgba(255,255,255,0));
+  }
+  .founder-frame{
+    width:min(100%, 445px);
+    background:var(--paper);
+    border:1.2px solid var(--line);
+    padding:18px;
+    box-shadow:12px 12px 0 rgba(248,203,217,.95);
+  }
+  .founder-image{
+    aspect-ratio:3/4;
+    overflow:hidden;
+    background:#ece7e3;
+    border:1.2px solid var(--line-soft);
+  }
+  .founder-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center 26%;
+    filter:contrast(1.03) saturate(.98);
+  }
+  .founder-label{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    padding-top:16px;
+  }
+  .founder-label strong{
+    font-family:'Playfair Display',serif;
+    font-size:20px;
+    color:var(--burg);
+  }
+  .founder-label span{
+    font-size:10px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#6c5e64;
+    font-weight:700;
+  }
+
+  .hero-copy-col{
+    padding:48px 44px 42px;
+    position:relative;
+    background:
+      radial-gradient(circle at 70% 22%, rgba(217,143,176,.10), transparent 22%),
+      linear-gradient(135deg, #fbf8f5 0%, #f9f1f4 58%, #fcfaf8 100%);
+  }
+  .breadcrumb{
+    font-size:11px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:#786c71;
+    margin-bottom:18px;
+  }
+  .pill{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:34px;
+    padding:0 16px;
+    border-radius:999px;
+    border:1.2px solid var(--line);
+    background:var(--rose-soft);
+    color:var(--burg);
+    font-size:11px;
+    letter-spacing:.11em;
+    text-transform:uppercase;
+    font-weight:800;
+    margin-bottom:20px;
+    transform:rotate(-3deg);
+  }
+  .hero-copy-col h1{
+    font-family:'Playfair Display',serif;
+    font-size:78px;
+    line-height:.92;
+    letter-spacing:-.045em;
+    margin-bottom:20px;
+  }
+  .hero-copy-col h1 em{
+    color:var(--rose);
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-weight:600;
+  }
+  .hero-copy-col p{
+    max-width:650px;
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.95;
+    margin-bottom:16px;
+  }
+  .mini-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:22px 0 26px;
+  }
+  .mini-tags span{
+    min-height:34px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 12px;
+    border-radius:999px;
+    border:1px solid var(--line-soft);
+    background:rgba(255,255,255,.75);
+    font-size:10px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--burg);
+    font-weight:800;
+  }
+  .hero-cta-row{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:6px;
+  }
+  .btn{
+    min-height:50px;
+    padding:0 20px;
+    border-radius:999px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+    letter-spacing:.11em;
+    text-transform:uppercase;
+    font-weight:800;
+    border:1.2px solid var(--line);
+  }
+  .btn.primary{background:var(--burg); color:#fff}
+  .btn.secondary{background:#fff; color:var(--ink)}
+  .btn.soft{background:var(--rose-soft); color:var(--burg)}
+  .hero-note{
+    margin-top:24px;
+    color:#786b71;
+    font-size:12px;
+    line-height:1.8;
+  }
+  .hero-note strong{color:var(--burg)}
+
+  .booking-strip{
+    border-bottom:1.2px solid var(--line);
+    background:var(--rose-soft);
+    overflow:hidden;
+  }
+  .booking-strip .inner{
+    display:flex;
+    gap:22px;
+    white-space:nowrap;
+    padding:10px 0;
+    font-size:12px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--burg);
+    font-weight:700;
+    justify-content:center;
+  }
+
+  .story-section{
+    display:grid;
+    grid-template-columns:1.02fr .98fr;
+    border-bottom:1.2px solid var(--line);
+    min-height:520px;
+  }
+  .story-left{
+    padding:48px 42px;
+    border-right:1.2px solid var(--line);
+    position:relative;
+    background:linear-gradient(180deg,#fffdfb 0%, #fcf8f6 100%);
+  }
+  .eyebrow{
+    font-size:11px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--rose);
+    font-weight:800;
+    margin-bottom:14px;
+  }
+  .story-left h2{
+    font-family:'Playfair Display',serif;
+    font-size:58px;
+    line-height:.98;
+    letter-spacing:-.04em;
+    max-width:640px;
+    margin-bottom:22px;
+  }
+  .story-left h2 em{
+    color:var(--burg);
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-weight:600;
+  }
+  .story-left p{
+    max-width:580px;
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.95;
+    margin-bottom:14px;
+  }
+  .story-link{
+    margin-top:18px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:12px;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--burg);
+    font-weight:800;
+  }
+  .blur-dot{
+    position:absolute;
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(217,143,176,.52), rgba(217,143,176,0) 68%);
+    right:90px;
+    top:168px;
+    filter:blur(4px);
+  }
+
+  .story-right{
+    display:grid;
+    grid-template-rows:auto auto;
+    background:#faf5f2;
+  }
+  .stats-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    border-bottom:1.2px solid var(--line);
+  }
+  .stat{
+    min-height:152px;
+    padding:28px 24px;
+    border-right:1.2px solid var(--line);
+    border-bottom:1.2px solid var(--line);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .stat:nth-child(2n){border-right:0}
+  .stat-num{
+    font-family:'Playfair Display',serif;
+    font-size:48px;
+    color:var(--burg);
+    line-height:1;
+    margin-bottom:10px;
+  }
+  .stat-label{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    color:#675a61;
+    line-height:1.65;
+    font-weight:800;
+  }
+
+  .girl-card{
+    padding:34px 28px 36px;
+    background:var(--ink);
+    color:#fff;
+    min-height:214px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .girl-card h3{
+    font-family:'Playfair Display',serif;
+    font-size:34px;
+    line-height:1;
+    margin-bottom:14px;
+  }
+  .girl-card p{
+    color:rgba(255,255,255,.72);
+    font-size:14px;
+    line-height:1.95;
+    margin-bottom:10px;
+  }
+  .girl-card .closing{
+    color:#ffd8e4;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:28px;
+    line-height:1.05;
+    margin-top:8px;
+  }
+
+  .bottom-feature{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    min-height:640px;
+  }
+  .book-panel{
+    padding:44px 38px;
+    border-right:1.2px solid var(--line);
+    background:linear-gradient(180deg, #fdeff3 0%, #fcf7f4 100%);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .book-panel .eyebrow{color:var(--burg)}
+  .book-panel h2{
+    font-family:'Playfair Display',serif;
+    font-size:54px;
+    line-height:.98;
+    letter-spacing:-.045em;
+    margin-bottom:16px;
+  }
+  .book-panel h2 em{
+    color:var(--rose);
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-weight:600;
+  }
+  .book-panel p{
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.95;
+    max-width:560px;
+    margin-bottom:16px;
+  }
+  .book-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:8px;
+    margin-bottom:18px;
+  }
+  .book-mock{
+    margin-top:8px;
+    width:210px;
+    height:292px;
+    border:1.2px solid var(--line);
+    background:
+      linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px),
+      linear-gradient(135deg, #6f0820 0%, #ac4b76 55%, #d798b5 100%);
+    background-size:20px 20px, 20px 20px, auto;
+    color:#fff;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    box-shadow:10px 10px 0 rgba(120,9,34,.16);
+  }
+  .book-mock .tiny{
+    font-size:10px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.68);
+    margin-bottom:auto;
+  }
+  .book-mock h4{
+    font-family:'Playfair Display',serif;
+    font-size:34px;
+    line-height:1.02;
+    font-style:italic;
+  }
+
+  .cred-panel{
+    padding:44px 34px;
+    background:#fffdfa;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+  }
+  .cred-panel .eyebrow{margin-bottom:18px}
+  .cred-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+  }
+  .cred-card{
+    border:1.2px solid var(--line);
+    background:#fff;
+    padding:20px;
+    min-height:170px;
+  }
+  .cred-card .num{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    border:1.2px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--burg);
+    font-family:'Playfair Display',serif;
+    font-size:20px;
+    margin-bottom:20px;
+    background:var(--blush);
+  }
+  .cred-card h4{
+    font-family:'Playfair Display',serif;
+    font-size:26px;
+    line-height:1.02;
+    margin-bottom:10px;
+  }
+  .cred-card p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.8;
+  }
+  .social-follow{
+    margin-top:18px;
+    border:1.2px solid var(--line);
+    background:linear-gradient(135deg, #fffdfa 0%, #fdeff3 100%);
+    padding:24px 24px 22px;
+    min-height:170px;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:16px;
+    align-items:center;
+  }
+  .social-follow h3{
+    font-family:'Playfair Display',serif;
+    font-size:34px;
+    line-height:1;
+    margin-bottom:10px;
+  }
+  .social-follow h3 em{
+    color:var(--rose);
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-weight:600;
+  }
+  .social-follow p{
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.9;
+    max-width:560px;
+  }
+  .social-follow .right{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    align-items:flex-start;
+    justify-content:center;
+  }
+  .handle{
+    font-size:12px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--muted-2);
+    font-weight:700;
+  }
+
+  .footer-cta{
+    border-top:1.2px solid var(--line);
+    background:
+      linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px),
+      linear-gradient(135deg, #790922 0%, #95234b 45%, #d88dad 100%);
+    background-size:28px 28px, 28px 28px, auto;
+    color:#fff;
+    padding:46px 36px;
+    display:grid;
+    grid-template-columns:1fr .85fr;
+    gap:28px;
+    align-items:center;
+  }
+  .footer-cta h2{
+    font-family:'Playfair Display',serif;
+    font-size:60px;
+    line-height:.96;
+    letter-spacing:-.04em;
+    margin-bottom:14px;
+  }
+  .footer-cta h2 em{
+    color:#ffd9e3;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-weight:600;
+  }
+  .footer-cta p{
+    max-width:680px;
+    color:rgba(255,255,255,.82);
+    font-size:15px;
+    line-height:1.9;
+  }
+  .subscribe-box{
+    background:rgba(255,255,255,.12);
+    border:1.2px solid rgba(255,255,255,.28);
+    padding:22px;
+  }
+  .subscribe-box h3{
+    font-family:'Playfair Display',serif;
+    font-size:32px;
+    margin-bottom:8px;
+  }
+  .subscribe-box p{
+    font-size:13px;
+    line-height:1.8;
+    margin-bottom:14px;
+  }
+  .field{
+    width:100%;
+    min-height:50px;
+    border:0;
+    outline:none;
+    padding:0 16px;
+    background:#fff;
+    color:var(--ink);
+    font-size:13px;
+    margin-bottom:10px;
+  }
+
+  @media (max-width: 1024px){
+    .topbar{grid-template-columns:1fr; padding:18px; text-align:center}
+    .navcta{justify-self:center}
+    .hero, .story-section, .bottom-feature, .footer-cta{grid-template-columns:1fr}
+    .hero-photo-col, .story-left, .book-panel{border-right:0; border-bottom:1.2px solid var(--line)}
+    .hero-copy-col h1{font-size:58px}
+    .story-left h2, .book-panel h2, .footer-cta h2{font-size:42px}
+    .social-follow{grid-template-columns:1fr}
+  }
+
+  @media (max-width: 680px){
+    .site-shell{width:min(100% - 20px, 1320px)}
+    .hero-photo-col, .hero-copy-col, .story-left, .book-panel, .cred-panel{padding:26px}
+    .topbar{gap:16px}
+    .navlinks{gap:10px}
+    .hero-copy-col h1{font-size:44px}
+    .story-left h2, .book-panel h2, .footer-cta h2{font-size:34px}
+    .cred-grid, .stats-grid{grid-template-columns:1fr}
+    .stat{border-right:0}
+    .booking-strip .inner{justify-content:flex-start; padding-left:16px; padding-right:16px}
+  }
+</style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="brand">L<em>&amp;</em>M</div>
+      <nav class="navlinks">
+        <span>The Magazine</span>
+        <span>L&amp;M Journal</span>
+        <span>Blogs</span>
+        <span>L&amp;M Universe</span>
+        <span>Martini Mondays</span>
+        <span>The Studio</span>
+        <span>About</span>
+      </nav>
+      <a class="navcta">Start reading</a>
+    </header>
+
+    <section class="hero">
+      <div class="hero-photo-col">
+        <div class="founder-frame">
+          <div class="founder-image">
+            <img src="lnm_about_founder_photo_v2.jpg" alt="Deepanshi, founder of Lipsticks &amp; Martinis">
+          </div>
+          <div class="founder-label">
+            <strong>Deepanshi ✦</strong>
+            <span>Founder-editor of L&amp;M</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-copy-col">
+        <div class="breadcrumb">yourlnm.com / About</div>
+        <div class="pill">The Founder</div>
+        <h1>It’s time to build a world that feels <em>like her.</em></h1>
+        <p>
+          I’m Deepanshi — a BITS Pilani graduate, published poetry author, and the founder-editor behind Lipsticks &amp; Martinis.
+        </p>
+        <p>
+          L&amp;M exists for the girl who wants more from life than being told to work harder, glow up faster, or fix herself in six steps. She wants beauty, structure, taste, softness, and self-respect — all in the same world.
+        </p>
+        <p>
+          So I built a magazine, a ritual ecosystem, and a brand universe that feels like an elder sister with better taste and better timing.
+        </p>
+
+        <div class="mini-tags">
+          <span>BITS Pilani grad</span>
+          <span>Poetry book author</span>
+          <span>Magazine builder</span>
+          <span>Founder-editor</span>
+        </div>
+
+        <div class="hero-cta-row">
+          <a class="btn primary">Read Issue 01</a>
+          <a class="btn secondary">Join Martini Mondays</a>
+        </div>
+
+        <div class="hero-note">
+          <strong>What L&amp;M really is:</strong> a soft but strategic universe for girls becoming women — one issue, one ritual, one recommendation, one reset at a time.
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-strip">
+      <div class="inner">
+        <span>✦ Founder Story</span>
+        <span>✦ Why L&amp;M Exists</span>
+        <span>✦ The L&amp;M Girl</span>
+        <span>✦ The Poetry Book</span>
+        <span>✦ A World Built With Taste</span>
+        <span>✦ Founder Story</span>
+        <span>✦ Why L&amp;M Exists</span>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <div class="story-left">
+        <div class="eyebrow">Why this exists</div>
+        <h2>Helping her get closer to the woman she already feels <em>becoming.</em></h2>
+        <p>
+          L&amp;M was built from a very specific ache: the feeling of wanting your life to feel prettier, calmer, more structured, more deliberate — but not finding a space that treated those desires with seriousness.
+        </p>
+        <p>
+          Most spaces either become too clinical, too self-help coded, too productivity obsessed, or too shallow to hold any real emotional depth. L&amp;M sits in the middle. It is editorial, useful, emotionally intelligent, and aesthetically intentional.
+        </p>
+        <p>
+          It is free because not every beautiful thing should begin with a paywall. First, she should be met. Then, if she stays, she can choose what part of the world she wants more of.
+        </p>
+        <a class="story-link">Read the L&amp;M story →</a>
+        <div class="blur-dot"></div>
+      </div>
+
+      <div class="story-right">
+        <div class="stats-grid">
+          <div class="stat">
+            <div class="stat-num">1</div>
+            <div class="stat-label">Poetry book published</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">22</div>
+            <div class="stat-label">Years old</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">01</div>
+            <div class="stat-label">Issue launched</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">Things romanticised</div>
+          </div>
+        </div>
+
+        <div class="girl-card">
+          <div class="eyebrow" style="color:#ffcedd">The L&amp;M Girl</div>
+          <h3>She wants more than advice.</h3>
+          <p>
+            She is 18–26. She grew up on Pinterest and Tumblr, watches Gossip Girl for the aesthetic, saves things she wants to become, and craves a life that feels as thoughtful as it looks.
+          </p>
+          <p>
+            She doesn’t need another platform talking down to her.
+          </p>
+          <div class="closing">L&amp;M is that sister who gets it.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-feature">
+      <div class="book-panel">
+        <div class="eyebrow">Before L&amp;M, there was—</div>
+        <h2>The poetry. The late-night voice. The first version of <em>the world.</em></h2>
+        <p>
+          Before I built a magazine, I published a poetry book. It came from the same place L&amp;M comes from now: overthinking, emotional honesty, softness, self-observation, and the urge to turn feeling into something beautiful and shareable.
+        </p>
+        <p>
+          The magazine is bigger and more strategic. But the voice — the part that wants girls to feel seen — started there.
+        </p>
+
+        <div class="book-actions">
+          <a class="btn primary" href="https://www.amazon.in/s?k=Fathoming+My+3AM+Thoughts" target="_blank" rel="noopener noreferrer">Find the book on Amazon</a>
+          <a class="btn secondary">Read the story behind it</a>
+        </div>
+
+        <div class="book-mock">
+          <div class="tiny">Poetry book</div>
+          <h4>Fathoming<br>My 3AM<br>Thoughts</h4>
+        </div>
+      </div>
+
+      <div class="cred-panel">
+        <div class="eyebrow">What I bring to L&amp;M</div>
+        <div class="cred-grid">
+          <article class="cred-card">
+            <div class="num">1</div>
+            <h4>Editorial voice</h4>
+            <p>Writing that feels emotionally precise, memorable, and save-worthy — from magazine copy to blog essays to weekly letters.</p>
+          </article>
+
+          <article class="cred-card">
+            <div class="num">2</div>
+            <h4>Visual world-building</h4>
+            <p>An eye for feminine design direction, hierarchy, mood, and cohesive digital experiences that feel premium and ownable.</p>
+          </article>
+
+          <article class="cred-card">
+            <div class="num">3</div>
+            <h4>Founder thinking</h4>
+            <p>Not just aesthetics — positioning, storytelling, curation, and the ability to turn taste into a complete brand world.</p>
+          </article>
+
+          <article class="cred-card">
+            <div class="num">4</div>
+            <h4>Proof through making</h4>
+            <p>L&amp;M itself is the proof: a magazine, a website ecosystem, content systems, and a universe being built piece by piece.</p>
+          </article>
+        </div>
+
+        <div class="social-follow">
+          <div class="left">
+            <div class="eyebrow">Beyond the website</div>
+            <h3>For the in-between moments, <em>follow along.</em></h3>
+            <p>
+              If L&amp;M is the finished world, Instagram is where I share the life around it too — thoughts, routines, soft observations, behind-the-scenes building, and the little things I’m currently romanticising.
+            </p>
+          </div>
+          <div class="right">
+            <div class="handle">Instagram / @yourhandle</div>
+            <a class="btn soft" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-cta">
+      <div>
+        <div class="eyebrow" style="color:#ffd8e4">Start here</div>
+        <h2>Enter the world. Stay for the <em>becoming.</em></h2>
+        <p>
+          Read the magazine, join Martini Mondays, or explore the universe. However she arrives, the point is the same: she leaves feeling a little more met, a little more directed, and a lot more like herself.
+        </p>
+      </div>
+
+      <div class="subscribe-box">
+        <div class="eyebrow" style="color:#ffd8e4">Weekly letter</div>
+        <h3>Get Martini Mondays.</h3>
+        <p>Five picks. One stylish note. Every Monday, in her inbox.</p>
+        <input class="field" placeholder="Email address" />
+        <a class="btn primary" style="width:100%">Join the newsletter</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
