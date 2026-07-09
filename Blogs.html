@@ -1,1154 +1,528 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>L&M — The Reading Room Mockup V4</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-<style>
-:root{
-  --paper:#fbf8f2;
-  --paper-2:#fffdf8;
-  --ink:#171013;
-  --noir:#170C11;
-  --burg:#6C0820;
-  --burg-2:#8A1536;
-  --rose:#C47A9B;
-  --blush:#F8CAD6;
-  --blush-soft:#FFF0F4;
-  --butter:#F4E28F;
-  --line:#24191d;
-  --soft-line:#e8d8dc;
-  --muted:#6f6873;
-  --shadow:0 18px 42px rgba(40, 20, 24, .08);
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The L&M Reading Room launches with Issue 02 on 25 July 2026." />
+  <title>L&M | The Reading Room — Coming Soon</title>
 
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  background:
-    radial-gradient(circle at 20% 0%, rgba(248,202,214,.35), transparent 26%),
-    radial-gradient(circle at 88% 12%, rgba(244,226,143,.18), transparent 24%),
-    linear-gradient(rgba(23,12,17,.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(23,12,17,.025) 1px, transparent 1px),
-    var(--paper);
-  background-size:auto, auto, 24px 24px, 24px 24px, auto;
-  color:var(--ink);
-  font-family:'DM Sans',sans-serif;
-  overflow-x:hidden;
-}
-a{text-decoration:none;color:inherit}
-button,input{font:inherit}
-img{max-width:100%;display:block}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&display=swap" rel="stylesheet">
 
-.topline{
-  background:var(--noir);
-  color:#ffe1ea;
-  text-align:center;
-  padding:8px 16px;
-  font-size:10px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  font-weight:800;
-}
+  <style>
+    :root {
+      --ivory:#FBF8F4;
+      --paper:#FFFDFC;
+      --rose-milk:#FCE7EE;
+      --blush:#F7C7D6;
+      --wild-orchid:#BE6C9E;
+      --burgundy:#6C0820;
+      --burgundy-2:#8C1738;
+      --noir:#180B10;
+      --gold:#F1DE7A;
+      --muted:#6F6570;
+      --line:#E6D8DD;
+    }
 
-.nav{
-  position:sticky;
-  top:0;
-  z-index:60;
-  min-height:70px;
-  background:rgba(251,248,242,.94);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(36,25,29,.18);
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:22px;
-  padding:0 34px;
-}
-.logo{
-  font-family:'Playfair Display',serif;
-  font-size:30px;
-  font-weight:900;
-  color:var(--burg);
-  white-space:nowrap;
-}
-.logo span{font-style:italic;color:var(--rose)}
-.navlinks{
-  flex:1;
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-  color:#827985;
-  font-size:11px;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-.navbtn{
-  padding:12px 18px;
-  border-radius:999px;
-  background:var(--burg);
-  color:white;
-  font-size:11px;
-  letter-spacing:.09em;
-  text-transform:uppercase;
-  font-weight:800;
-  white-space:nowrap;
-}
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family:'DM Sans',sans-serif;
+      color:var(--noir);
+      background:var(--paper);
+      overflow-x:hidden;
+    }
+    a { color:inherit; text-decoration:none; }
+    button { font:inherit; }
+    :focus-visible { outline:3px solid var(--gold); outline-offset:4px; }
 
-.container{
-  width:min(100% - 58px, 1280px);
-  margin:0 auto;
-}
-.section{
-  padding:84px 0;
-}
-.eyebrow{
-  color:var(--rose);
-  font-size:11px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  font-weight:800;
-  margin-bottom:12px;
-}
-.title{
-  font-family:'Playfair Display',serif;
-  font-size:58px;
-  line-height:1.02;
-  letter-spacing:-1.7px;
-}
-.title em{
-  font-style:italic;
-  color:var(--burg);
-}
-.sub{
-  color:var(--muted);
-  font-size:15px;
-  line-height:1.9;
-  max-width:760px;
-}
+    .announcement {
+      min-height:34px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:8px 18px;
+      text-align:center;
+      background:var(--rose-milk);
+      color:var(--burgundy);
+      border-bottom:1px solid var(--line);
+      font-size:10px;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      font-weight:800;
+    }
 
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:48px;
-  padding:0 20px;
-  border-radius:999px;
-  border:2px solid var(--line);
-  background:white;
-  color:var(--burg);
-  font-size:11px;
-  letter-spacing:.10em;
-  text-transform:uppercase;
-  font-weight:900;
-}
-.btn.primary{
-  background:var(--burg);
-  color:white;
-  border-color:var(--burg);
-}
+    .site-header {
+      background:rgba(255,253,252,.96);
+      border-bottom:1px solid var(--line);
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(14px);
+    }
 
-/* PAPER FRAME */
-.paper-frame{
-  margin:34px auto 0;
-  width:min(100% - 58px, 1280px);
-  border:2px solid var(--line);
-  background:rgba(255,253,248,.76);
-  box-shadow:0 28px 60px rgba(30,15,18,.10);
-}
-.browser-bar{
-  height:40px;
-  border-bottom:2px solid var(--line);
-  display:grid;
-  grid-template-columns:50px 1fr 50px;
-  align-items:center;
-  background:rgba(255,253,248,.85);
-}
-.browser-icon{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:22px;
-  color:var(--line);
-}
-.browser-url{
-  height:22px;
-  border-left:1px solid rgba(36,25,29,.28);
-  border-right:1px solid rgba(36,25,29,.28);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#786f78;
-  font-size:10px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-}
-.masthead{
-  border-bottom:2px solid var(--line);
-  padding:26px 22px 22px;
-  text-align:center;
-  position:relative;
-}
-.masthead .mini-nav{
-  display:flex;
-  justify-content:center;
-  gap:70px;
-  color:#4e464d;
-  font-size:12px;
-  text-transform:lowercase;
-  margin-bottom:14px;
-}
-.masthead h1{
-  font-family:'Playfair Display',serif;
-  font-size:74px;
-  line-height:.92;
-  letter-spacing:-2px;
-  color:var(--ink);
-}
-.masthead h1 em{
-  font-family:'Cormorant Garamond',serif;
-  font-style:italic;
-  font-weight:500;
-  color:var(--burg);
-}
-.masthead p{
-  margin-top:10px;
-  color:var(--muted);
-  font-family:'Cormorant Garamond',serif;
-  font-style:italic;
-  font-size:23px;
-}
+    .masthead-row {
+      min-height:112px;
+      padding:0 34px;
+      display:grid;
+      grid-template-columns:1fr auto 1fr;
+      align-items:center;
+      border-bottom:1px solid var(--line);
+    }
 
-/* HERO SPREAD */
-.editorial-hero{
-  display:grid;
-  grid-template-columns:1.18fr .82fr;
-  min-height:520px;
-  border-bottom:2px solid var(--line);
-}
-.hero-visual{
-  border-right:2px solid var(--line);
-  padding:28px;
-}
-.feature-cover{
-  height:390px;
-  border:2px solid var(--line);
-  position:relative;
-  overflow:hidden;
-  background:
-    linear-gradient(145deg, rgba(108,8,32,.18), transparent 42%),
-    linear-gradient(35deg, #f8cad6 0%, #fbf8f2 42%, #f4e28f 100%);
-}
-.feature-cover::before{
-  content:'3–5 Minute Reads';
-  position:absolute;
-  left:28px;
-  top:28px;
-  font-family:'Playfair Display',serif;
-  font-style:italic;
-  font-size:64px;
-  line-height:.92;
-  color:rgba(108,8,32,.92);
-  max-width:420px;
-}
-.feature-cover::after{
-  content:'choose a category · read what helps';
-  position:absolute;
-  left:28px;
-  bottom:28px;
-  color:var(--burg);
-  font-size:11px;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  font-weight:900;
-  padding:10px 12px;
-  border:1px solid rgba(108,8,32,.22);
-  background:rgba(255,253,248,.68);
-}
-.cover-orb{
-  position:absolute;
-  width:210px;
-  height:210px;
-  border-radius:50%;
-  right:58px;
-  bottom:50px;
-  border:2px solid rgba(36,25,29,.16);
-  background:
-    radial-gradient(circle at 35% 35%, rgba(255,255,255,.72), transparent 26%),
-    linear-gradient(135deg,#6C0820,#C47A9B);
-  opacity:.88;
-}
-.caption-row{
-  display:flex;
-  justify-content:space-between;
-  gap:18px;
-  border:2px solid var(--line);
-  border-top:0;
-  padding:11px 14px;
-  font-family:'Cormorant Garamond',serif;
-  font-size:17px;
-}
-.hero-copy{
-  padding:30px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-}
-.hero-copy h2{
-  font-family:'Playfair Display',serif;
-  font-style:italic;
-  font-size:58px;
-  line-height:.94;
-  letter-spacing:-1.3px;
-  margin-bottom:18px;
-}
-.hero-copy .place{
-  color:var(--rose-deep);
-  font-family:'Cormorant Garamond',serif;
-  font-size:24px;
-  font-style:italic;
-  margin-bottom:20px;
-}
-.hero-copy p{
-  color:#3f373d;
-  font-family:'Cormorant Garamond',serif;
-  font-size:20px;
-  line-height:1.45;
-  margin-bottom:18px;
-}
-.hero-copy .utility{
-  border:1px solid var(--line);
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  margin-top:18px;
-}
-.utility div{
-  padding:14px;
-  border-right:1px solid var(--line);
-}
-.utility div:last-child{border-right:0}
-.utility span{
-  display:block;
-  font-size:9px;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  font-weight:900;
-  color:var(--rose);
-  margin-bottom:6px;
-}
-.utility b{
-  font-family:'Playfair Display',serif;
-  font-size:18px;
-}
-.quick-panels{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  border-bottom:2px solid var(--line);
-}
-.quick-panel{
-  min-height:112px;
-  border-right:2px solid var(--line);
-  padding:18px;
-  display:flex;
-  gap:14px;
-  align-items:center;
-}
-.quick-panel:last-child{border-right:0}
-.thumb{
-  width:86px;
-  height:70px;
-  border:1px solid var(--line);
-  flex:0 0 auto;
-  background:
-    linear-gradient(135deg, rgba(23,12,17,.18), rgba(23,12,17,.02)),
-    linear-gradient(45deg,#fff0f4,#fbf8f2);
-}
-.quick-panel h3{
-  font-family:'Playfair Display',serif;
-  font-style:italic;
-  font-size:25px;
-  line-height:1;
-  margin-bottom:6px;
-}
-.quick-panel p{
-  color:#50484f;
-  font-size:12px;
-  line-height:1.4;
-}
+    .header-left,
+    .header-right {
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+    .header-right { justify-content:flex-end; }
+    .search-button {
+      width:42px;
+      height:42px;
+      border:0;
+      background:transparent;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--noir);
+      cursor:pointer;
+    }
 
-/* MOOD STRIP */
-.mood-strip{
-  border-bottom:2px solid var(--line);
-  background:var(--noir);
-  color:white;
-}
-.mood-head{
-  display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  gap:20px;
-  align-items:end;
-  padding:32px 28px 24px;
-  border-bottom:1px solid rgba(255,255,255,.20);
-}
-.mood-head h2{
-  font-family:'Playfair Display',serif;
-  font-size:48px;
-  line-height:1;
-}
-.mood-head h2 em{
-  color:#ffd6e0;
-  font-style:italic;
-}
-.mood-head p{
-  color:rgba(255,255,255,.70);
-  font-size:14px;
-  line-height:1.8;
-}
-.mood-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-}
-.mood-card{
-  min-height:180px;
-  padding:24px;
-  border-right:1px solid rgba(255,255,255,.20);
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  transition:.25s ease;
-}
-.mood-card:last-child{border-right:0}
-.mood-card:hover{
-  background:rgba(255,255,255,.06);
-}
-.line-icon{
-  width:42px;
-  height:42px;
-  border:1px solid rgba(255,255,255,.62);
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#ffd6e0;
-  font-family:'Playfair Display',serif;
-  font-style:italic;
-  font-size:18px;
-}
-.mood-card h3{
-  font-family:'Playfair Display',serif;
-  font-style:italic;
-  font-size:30px;
-  line-height:1;
-  margin-bottom:8px;
-}
-.mood-card p{
-  color:rgba(255,255,255,.66);
-  font-size:12px;
-  line-height:1.65;
-}
+    .search-icon {
+      width:18px;
+      height:18px;
+      border:1.6px solid currentColor;
+      border-radius:50%;
+      position:relative;
+    }
+    .search-icon::after {
+      content:'';
+      position:absolute;
+      width:7px;
+      height:1.6px;
+      background:currentColor;
+      right:-5px;
+      bottom:-3px;
+      transform:rotate(45deg);
+      transform-origin:left center;
+    }
 
-/* SEARCH + FILTERS */
-.tools{
-  padding:28px;
-  border-bottom:2px solid var(--line);
-  background:rgba(255,253,248,.86);
-}
-.search-row{
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:14px;
-  margin-bottom:18px;
-}
-.search{
-  min-height:56px;
-  border:2px solid var(--line);
-  background:#fff;
-  display:flex;
-  align-items:center;
-  padding:0 18px;
-  gap:12px;
-}
-.search span{
-  font-size:20px;
-}
-.search input{
-  border:0;
-  outline:0;
-  width:100%;
-  background:transparent;
-  font-size:14px;
-}
-.filter-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-.filter{
-  border:1px solid var(--line);
-  background:white;
-  padding:10px 14px;
-  border-radius:999px;
-  color:#3e363d;
-  font-size:11px;
-  letter-spacing:.09em;
-  text-transform:uppercase;
-  font-weight:800;
-}
-.filter.active{
-  background:var(--burg);
-  color:white;
-  border-color:var(--burg);
-}
+    .logo {
+      text-align:center;
+      font-family:'Playfair Display',serif;
+      font-size:55px;
+      line-height:.82;
+      font-weight:900;
+      letter-spacing:-.075em;
+    }
+    .logo em {
+      color:var(--burgundy);
+      font-style:italic;
+    }
+    .logo small {
+      display:block;
+      margin-top:11px;
+      font-family:'DM Sans',sans-serif;
+      font-size:10px;
+      line-height:1;
+      letter-spacing:.26em;
+      text-transform:uppercase;
+      font-weight:800;
+    }
 
-/* FEATURED + GRID */
-.content-area{
-  padding:28px;
-}
-.featured{
-  display:grid;
-  grid-template-columns:.95fr 1.05fr;
-  border:2px solid var(--line);
-  margin-bottom:28px;
-  background:#fff;
-}
-.featured-img{
-  min-height:360px;
-  border-right:2px solid var(--line);
-  background:
-    linear-gradient(145deg, rgba(23,12,17,.34), rgba(23,12,17,.02)),
-    linear-gradient(45deg,#f8cad6,#fbf8f2 48%,#c47a9b);
-  position:relative;
-  overflow:hidden;
-}
-.featured-img::before{
-  content:'Featured Read';
-  position:absolute;
-  left:24px;
-  top:24px;
-  font-size:10px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  font-weight:900;
-  color:var(--burg);
-  background:rgba(255,253,248,.72);
-  border:1px solid rgba(36,25,29,.35);
-  padding:9px 12px;
-}
-.featured-img::after{
-  content:'Night Ritual';
-  position:absolute;
-  right:24px;
-  bottom:24px;
-  font-family:'Playfair Display',serif;
-  font-style:italic;
-  font-size:62px;
-  color:#fff;
-  text-shadow:0 12px 24px rgba(23,12,17,.22);
-}
-.featured-copy{
-  padding:30px;
-}
-.meta{
-  color:var(--rose);
-  font-size:10px;
-  letter-spacing:.15em;
-  text-transform:uppercase;
-  font-weight:900;
-  margin-bottom:14px;
-}
-.featured-copy h2{
-  font-family:'Playfair Display',serif;
-  font-size:54px;
-  line-height:1;
-  letter-spacing:-1.2px;
-  margin-bottom:14px;
-}
-.featured-copy p{
-  color:#5a525b;
-  font-size:15px;
-  line-height:1.9;
-  margin-bottom:22px;
-}
-.article-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  border-top:2px solid var(--line);
-  border-left:2px solid var(--line);
-}
-.article{
-  background:white;
-  border-right:2px solid var(--line);
-  border-bottom:2px solid var(--line);
-}
-.article-cover{
-  height:220px;
-  border-bottom:2px solid var(--line);
-  position:relative;
-  overflow:hidden;
-}
-.article:nth-child(1) .article-cover{
-  background:linear-gradient(135deg,#fff0f4,#6C0820);
-}
-.article:nth-child(2) .article-cover{
-  background:linear-gradient(135deg,#fbf8f2,#f4e28f,#c47a9b);
-}
-.article:nth-child(3) .article-cover{
-  background:linear-gradient(135deg,#170c11,#f8cad6);
-}
-.article:nth-child(4) .article-cover{
-  background:linear-gradient(135deg,#fffdf8,#c47a9b);
-}
-.article:nth-child(5) .article-cover{
-  background:linear-gradient(135deg,#6C0820,#fbf8f2);
-}
-.article:nth-child(6) .article-cover{
-  background:linear-gradient(135deg,#f8cad6,#fffdf8,#170c11);
-}
-.cover-title{
-  position:absolute;
-  left:18px;
-  bottom:18px;
-  right:18px;
-  color:white;
-  font-family:'Playfair Display',serif;
-  font-style:italic;
-  font-size:34px;
-  line-height:.95;
-  text-shadow:0 10px 20px rgba(23,12,17,.20);
-}
-.article-body{
-  padding:22px;
-}
-.tag{
-  display:inline-flex;
-  color:var(--rose);
-  font-size:10px;
-  letter-spacing:.15em;
-  text-transform:uppercase;
-  font-weight:900;
-  margin-bottom:12px;
-}
-.article h3{
-  font-family:'Playfair Display',serif;
-  font-size:30px;
-  line-height:1.05;
-  margin-bottom:10px;
-}
-.article p{
-  color:#625a64;
-  font-size:13px;
-  line-height:1.75;
-  margin-bottom:18px;
-}
-.article-foot{
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  color:#8a828d;
-  font-size:11px;
-  border-top:1px solid var(--soft-line);
-  padding-top:14px;
-}
+    .header-cta {
+      min-height:38px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 16px;
+      background:var(--burgundy);
+      color:#fff;
+      font-size:9px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-weight:800;
+    }
 
-/* CTA */
-.cta{
-  display:grid;
-  grid-template-columns:1.04fr .96fr;
-  border:2px solid var(--line);
-  background:var(--noir);
-  color:white;
-  margin-top:28px;
-}
-.cta-copy{
-  padding:32px;
-  border-right:2px solid rgba(255,255,255,.28);
-}
-.cta-copy h2{
-  font-family:'Playfair Display',serif;
-  font-size:48px;
-  line-height:1;
-  margin-bottom:12px;
-}
-.cta-copy h2 em{
-  color:#ffd6e0;
-  font-style:italic;
-}
-.cta-copy p{
-  color:rgba(255,255,255,.72);
-  font-size:14px;
-  line-height:1.85;
-}
-.cta-form{
-  padding:32px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap:12px;
-}
-.cta-form input{
-  min-height:52px;
-  border:1px solid rgba(255,255,255,.34);
-  background:rgba(255,255,255,.10);
-  color:white;
-  padding:0 16px;
-}
-.cta-form input::placeholder{
-  color:rgba(255,255,255,.58);
-}
-.load-more{
-  display:flex;
-  justify-content:center;
-  padding:34px 0 4px;
-}
+    .category-nav {
+      min-height:64px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:34px;
+      padding:0 24px;
+      overflow:auto;
+      white-space:nowrap;
+      scrollbar-width:none;
+    }
+    .category-nav::-webkit-scrollbar { display:none; }
+    .category-nav a {
+      color:#342A2E;
+      font-size:11px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      font-weight:700;
+    }
+    .category-nav a:hover,
+    .category-nav a[aria-current="page"] {
+      color:var(--burgundy);
+    }
 
-.footer{
-  margin-top:40px;
-  background:var(--noir);
-  color:rgba(255,255,255,.72);
-  padding:28px 0;
-}
-.footer-inner{
-  width:min(100% - 58px,1280px);
-  margin:0 auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:14px;
-  flex-wrap:wrap;
-}
-.footer-copy{
-  font-size:11px;
-  color:rgba(255,255,255,.38);
-}
-.footer-links{
-  display:flex;
-  gap:18px;
-  font-size:11px;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
+    .container {
+      width:min(1540px, calc(100% - 72px));
+      margin:0 auto;
+    }
 
-@media(max-width:1180px){
-  .editorial-hero,
-  .featured,
-  .cta{
-    grid-template-columns:1fr;
-  }
-  .hero-visual,
-  .featured-img,
-  .cta-copy{
-    border-right:0;
-    border-bottom:2px solid var(--line);
-  }
-  .mood-head{
-    grid-template-columns:1fr;
-  }
-  .mood-grid,
-  .article-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-  .quick-panels{
-    grid-template-columns:1fr;
-  }
-  .quick-panel{
-    border-right:0;
-    border-bottom:2px solid var(--line);
-  }
-  .quick-panel:last-child{border-bottom:0}
-}
+    .coming-hero {
+      padding:54px 0 46px;
+      border-bottom:1px solid var(--line);
+      background:
+        radial-gradient(circle at 89% 20%, rgba(247,199,214,.44), transparent 21%),
+        radial-gradient(circle at 13% 6%, rgba(190,108,158,.12), transparent 24%),
+        var(--paper);
+    }
 
-@media(max-width:840px){
-  .nav{
-    height:auto;
-    padding:14px 18px;
-    flex-wrap:wrap;
-  }
-  .navlinks{
-    order:3;
-    width:100%;
-    justify-content:flex-start;
-    overflow:auto;
-    white-space:nowrap;
-    flex-wrap:nowrap;
-  }
-  .container,
-  .paper-frame,
-  .footer-inner{
-    width:min(100% - 32px,1280px);
-  }
-  .masthead .mini-nav{
-    gap:24px;
-    overflow:auto;
-    justify-content:flex-start;
-  }
-  .masthead h1{
-    font-size:48px;
-  }
-  .editorial-hero{
-    min-height:auto;
-  }
-  .feature-cover{
-    height:310px;
-  }
-  .hero-copy h2,
-  .title,
-  .featured-copy h2{
-    font-size:40px;
-  }
-  .hero-copy p{
-    font-size:18px;
-  }
-  .mood-grid,
-  .article-grid,
-  .search-row{
-    grid-template-columns:1fr;
-  }
-  .mood-card{
-    border-right:0;
-    border-bottom:1px solid rgba(255,255,255,.20);
-  }
-  .mood-card:last-child{border-bottom:0}
-  .article{
-    border-right:0;
-  }
-  .browser-url{
-    font-size:8px;
-  }
-}
+    .hero-grid {
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:74px;
+      align-items:end;
+    }
 
-/* V2 refinement: fewer repeated blocks, no decorative sphere */
-.feature-cover{
-  background:
-    linear-gradient(135deg, rgba(108,8,32,.12), transparent 34%),
-    linear-gradient(160deg, #f8cad6 0%, #fffdf8 42%, #f4e28f 100%);
-}
-.feature-cover::before{
-  font-size:56px;
-  max-width:720px;
-  color:rgba(108,8,32,.88);
-}
-.feature-cover::after{
-  background:rgba(255,253,248,.74);
-}
-.cover-orb{
-  display:none !important;
-}
-.editorial-hero{
-  min-height:470px;
-}
-.feature-cover{
-  height:350px;
-}
-.hero-copy p{
-  margin-bottom:0;
-}
-@media(max-width:840px){
-  .feature-cover{
-    height:280px;
-  }
-  .feature-cover::before{
-    font-size:40px;
-  }
-}
+    .eyebrow {
+      color:var(--wild-orchid);
+      font-size:10px;
+      letter-spacing:.19em;
+      text-transform:uppercase;
+      font-weight:800;
+      margin-bottom:15px;
+    }
 
+    .coming-hero h1 {
+      max-width:970px;
+      font-family:'Playfair Display',serif;
+      font-size:clamp(58px,7vw,108px);
+      line-height:.9;
+      letter-spacing:-.06em;
+    }
+    .coming-hero h1 em {
+      color:var(--burgundy);
+      font-style:italic;
+    }
 
-/* V3 clarity pass: four simple categories, fewer content-type words */
-.feature-cover::before{
-  font-size:54px;
-}
-.masthead .mini-nav{
-  gap:56px;
-}
-@media(max-width:840px){
-  .masthead .mini-nav{
-    gap:22px;
-  }
-}
+    .hero-copy {
+      max-width:770px;
+      margin-top:25px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.85;
+    }
 
+    .launch-panel {
+      padding:28px;
+      border:1px solid var(--noir);
+      background:rgba(255,253,252,.78);
+      box-shadow:8px 8px 0 var(--blush);
+    }
+    .launch-panel-label {
+      color:var(--wild-orchid);
+      font-size:9px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      font-weight:800;
+    }
+    .launch-panel h2 {
+      margin-top:9px;
+      font-family:'Playfair Display',serif;
+      font-size:36px;
+      line-height:1.02;
+    }
+    .launch-panel p {
+      margin-top:12px;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.7;
+    }
 
-/* V4 palette pass: L&M logo-led burgundy / rose / blush / ivory, no yellow-heavy gradients */
-:root{
-  --butter:#F7E6EC;
-}
-body{
-  background:
-    radial-gradient(circle at 20% 0%, rgba(248,202,214,.32), transparent 26%),
-    radial-gradient(circle at 88% 12%, rgba(108,8,32,.08), transparent 24%),
-    linear-gradient(rgba(23,12,17,.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(23,12,17,.025) 1px, transparent 1px),
-    var(--paper) !important;
-  background-size:auto, auto, 24px 24px, 24px 24px, auto !important;
-}
-.feature-cover{
-  background:
-    linear-gradient(135deg, rgba(108,8,32,.16), transparent 36%),
-    linear-gradient(160deg, #F8CAD6 0%, #FFF8FA 42%, #C47A9B 100%) !important;
-}
-.feature-cover::before{
-  color:#6C0820 !important;
-}
-.format-item:nth-child(even),
-.peek-card:nth-child(2),
-.slip:nth-child(2){
-  background:#FFF6F9 !important;
-}
-.article:nth-child(1) .article-cover{
-  background:linear-gradient(135deg,#FFF0F4,#6C0820) !important;
-}
-.article:nth-child(2) .article-cover{
-  background:linear-gradient(135deg,#FAF7F5,#F8CAD6,#C47A9B) !important;
-}
-.article:nth-child(3) .article-cover{
-  background:linear-gradient(135deg,#170C11,#F8CAD6,#8A1536) !important;
-}
-.article:nth-child(4) .article-cover{
-  background:linear-gradient(135deg,#FFFDF8,#C47A9B,#6C0820) !important;
-}
-.article:nth-child(5) .article-cover{
-  background:linear-gradient(135deg,#6C0820,#FFF6F9,#C47A9B) !important;
-}
-.article:nth-child(6) .article-cover{
-  background:linear-gradient(135deg,#F8CAD6,#FFFDF8,#170C11) !important;
-}
-.thumb{
-  background:
-    linear-gradient(135deg, rgba(108,8,32,.16), rgba(23,12,17,.02)),
-    linear-gradient(45deg,#FFF0F4,#FAF7F5) !important;
-}
+    .countdown {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:8px;
+      margin-top:22px;
+    }
+    .time-box {
+      min-height:76px;
+      padding:12px 7px;
+      border:1px solid var(--line);
+      background:var(--rose-milk);
+      text-align:center;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    .time-box strong {
+      font-family:'Playfair Display',serif;
+      color:var(--burgundy);
+      font-size:27px;
+      line-height:1;
+    }
+    .time-box span {
+      margin-top:6px;
+      color:#8B7780;
+      font-size:7px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-weight:800;
+    }
 
-</style>
+    .stories {
+      padding:34px 0 82px;
+    }
+    .minimal-stories .below-grid {
+      margin-top:0;
+    }
+
+    .below-grid {
+      margin-top:74px;
+      padding:34px 0;
+      border-top:1px solid var(--noir);
+      border-bottom:1px solid var(--noir);
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:48px;
+      align-items:center;
+    }
+    .below-grid h2 {
+      font-family:'Playfair Display',serif;
+      font-size:42px;
+      line-height:.98;
+    }
+    .below-grid h2 em {
+      color:var(--burgundy);
+      font-style:italic;
+    }
+    .below-grid p {
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.8;
+    }
+    .action-row {
+      margin-top:20px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:11px;
+    }
+    .btn {
+      min-height:46px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 18px;
+      border:1.5px solid var(--noir);
+      background:var(--paper);
+      color:var(--burgundy);
+      font-size:9px;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+      font-weight:800;
+    }
+    .btn.primary {
+      background:var(--burgundy);
+      color:#fff;
+      border-color:var(--burgundy);
+    }
+
+    .footer {
+      background:var(--noir);
+      color:rgba(255,255,255,.68);
+      padding:28px 0;
+    }
+    .footer-inner {
+      width:min(1540px, calc(100% - 72px));
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+    .footer-copy {
+      color:rgba(255,255,255,.40);
+      font-size:10px;
+    }
+    .footer-links {
+      display:flex;
+      gap:18px;
+      font-size:10px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    @media(max-width:1100px) {
+      .hero-grid {
+        grid-template-columns:1fr;
+        gap:34px;
+      }
+      .launch-panel { max-width:620px; }
+      .below-grid { grid-template-columns:1fr; }
+    }
+
+    @media(max-width:780px) {
+      .announcement { font-size:8px; }
+
+      .masthead-row {
+        min-height:78px;
+        padding:0 16px;
+      }
+      .logo { font-size:39px; }
+      .logo small { font-size:7px; margin-top:8px; }
+      .category-nav {
+        min-height:54px;
+        justify-content:flex-start;
+        gap:23px;
+        padding:0 16px;
+      }
+
+      .container,
+      .footer-inner {
+        width:min(100% - 30px,1540px);
+      }
+
+      .coming-hero { padding:42px 0 38px; }
+      .coming-hero h1 { font-size:56px; }
+      .hero-copy { font-size:14px; }
+      .launch-panel { padding:23px; }
+
+      .stories { padding:34px 0 64px; }
+
+      .below-grid { margin-top:54px; gap:24px; }
+      .below-grid h2 { font-size:36px; }
+
+      .footer-inner {
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+    }
+  </style>
 </head>
 
 <body>
-  <div class="topline">✦ L&M Blogs · 3–5 minute reads for the girl who needs one clear thing ✦</div>
+  <div class="announcement">The L&M Reading Room opens with Issue 02 · 25 July 2026</div>
 
-  <nav class="nav">
-    <div class="logo">L<span>&amp;</span>M</div>
-    <div class="navlinks">
-      <span><a href="Magazine.html">The Magazine</span>
-      <span><a href="Journal.html">L&M Journal</span>
-      <span><a href="Blogs.html">Blogs</span>
-      <span><a href="Universe-Catalog.html">L&M Universe</span>
-      <span><a href="Martini-Mondays.html">Martini Mondays</span>
-      <span><a href="Studio.html">The Studio</span>
-      <span><a href="About.html">About</span>
-    </div>
-    <a class="navbtn">Start Reading</a>
-  </nav>
+  <header class="site-header">
+    <div class="masthead-row">
+      <div class="header-left" aria-hidden="true"></div>
 
-  <main class="paper-frame">
-    <div class="browser-bar">
-      <div class="browser-icon">⌕</div>
-      <div class="browser-url"><a href="yourlnm.com">yourlnm.com</a> › blogs › the reading room</div>
-      <div class="browser-icon">⌁</div>
+      <a class="logo" href="#" aria-label="L and M home">
+        L<em>&amp;</em>M.
+        <small>The Reading Room</small>
+      </a>
+
+      <div class="header-right">
+        <button class="search-button" aria-label="Search coming soon">
+          <span class="search-icon"></span>
+        </button>
+      </div>
     </div>
 
-    <header class="masthead">
-      <div class="mini-nav">
-        <span>confidence</span>
-        <span>outfits</span>
-        <span>soft reset</span>
-        <span>feel understood</span>
-      </div>
-      <h1>The <em>Reading Room</em></h1>
-      <p>Short reads for confidence, outfit ideas, soft resets, and feeling understood.</p>
-    </header>
+    <nav class="category-nav" aria-label="Reading Room navigation">
+      <a href="#">Home</a>
+      <a href="#launch-stories" aria-current="page">Coming Soon</a>
+      <a href="#">The Magazine</a>
+      <a href="#">Martini Mondays</a>
+      <a href="#">L&amp;M Journal</a>
+      <a href="#">L&amp;M Universe</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
 
-    <section class="editorial-hero">
-      <div class="hero-visual">
-        <div class="feature-cover">
-        </div>
-        <div class="caption-row">
-          <span>featured read</span>
-          <span>3–5 min read</span>
-        </div>
-      </div>
-
-      <div class="hero-copy">
+  <main>
+    <section class="coming-hero">
+      <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Editorial content library</div>
-          <h2>For when she needs one clear thing.</h2>
-          <div class="place">3–5 minute reads · 4 clear categories</div>
-          <p>
-            The L&M blog library is simple: short, useful reads across four categories — confidence, outfit ideas, soft resets, and feeling understood.
-          </p>
+          <div class="eyebrow">Coming with Issue 02</div>
+          <h1>A new little corner for when she needs <em>one clear thing.</em></h1>
+          <p class="hero-copy">The Reading Room will be L&M’s home for short, evergreen reads, thoughtful reflections and little perspective shifts worth returning to. The first collection arrives on 25 July.</p>
         </div>
 
-        <div class="utility">
-          <div>
-            <span>Best for</span>
-            <b>Quick clarity</b>
+        <aside class="launch-panel">
+          <div class="launch-panel-label">The Reading Room opens in</div>
+          <h2>Saturday, 25 July 2026</h2>
+          <p>Launching quietly alongside Issue 02, with a small opening collection and no pressure to become another weekly content machine.</p>
+
+          <div class="countdown" aria-label="Countdown to Reading Room launch">
+            <div class="time-box"><strong id="days">00</strong><span>Days</span></div>
+            <div class="time-box"><strong id="hours">00</strong><span>Hours</span></div>
+            <div class="time-box"><strong id="minutes">00</strong><span>Minutes</span></div>
+            <div class="time-box"><strong id="seconds">00</strong><span>Seconds</span></div>
           </div>
-          <div>
-            <span>Format</span>
-            <b>3–5 min reads</b>
-          </div>
-        </div>
+        </aside>
       </div>
     </section>
-<section class="mood-strip">
-      <div class="mood-head">
-        <h2>What does she <em>need today?</em></h2>
-        <p>Four clear paths, so she does not have to think too hard before reading.</p>
-      </div>
-
-      <div class="mood-grid">
-        <a class="mood-card">
-          <div class="line-icon">01</div>
+    <section class="stories minimal-stories" id="launch-stories">
+      <div class="container">
+        <section class="below-grid">
           <div>
-            <h3>Confidence</h3>
-            <p>Confidence · self-trust, courage, becoming her.</p>
+            <div class="eyebrow">While This Room Is Being Prepared</div>
+            <h2>There is already plenty to <em>step into.</em></h2>
           </div>
-        </a>
-        <a class="mood-card">
-          <div class="line-icon">02</div>
+
           <div>
-            <h3>Outfit Inspo</h3>
-            <p>Outfit Inspo · styling formulas and wardrobe ideas.</p>
+            <p>Read the first L&M issue, begin your week with Martini Mondays or explore the wider L&M world while the Reading Room is being carefully finished.</p>
+            <div class="action-row">
+              <a class="btn primary" href="#">Read Issue 01</a>
+              <a class="btn" id="martini-mondays" href="#">Explore Martini Mondays</a>
+            </div>
           </div>
-        </a>
-        <a class="mood-card">
-          <div class="line-icon">03</div>
-          <div>
-            <h3>Soft Reset</h3>
-            <p>Soft Reset · routines, calm, and tiny life fixes.</p>
-          </div>
-        </a>
-        <a class="mood-card">
-          <div class="line-icon">04</div>
-          <div>
-            <h3>Feel Understood</h3>
-            <p>Feel Understood · honest reads for heavy thoughts.</p>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <section class="tools">
-      <div class="search-row">
-        <label class="search">
-          <span>⌕</span>
-          <input placeholder="Search outfits, confidence, routines, feelings..." />
-        </label>
-        <a class="btn primary">Search</a>
-      </div>
-
-      <div class="filter-row">
-        <button class="filter active">All</button>
-        <button class="filter">Confidence</button>
-        <button class="filter">Outfit Inspo</button>
-        <button class="filter">Soft Reset</button>
-        <button class="filter">Feel Understood</button>
-        <button class="filter">Soft Reset</button>
-      </div>
-    </section>
-
-    <section class="content-area">
-      <article class="featured">
-        <div class="featured-img"></div>
-        <div class="featured-copy">
-          <div class="meta">Featured Read · Soft Reset · 4 min</div>
-          <h2>How to Build a Night Ritual That Actually Sticks</h2>
-          <p>
-            A simple 3–5 minute read for ending the day without falling into the scroll-hole — calm, practical, and not performative.
-          </p>
-          <a class="btn primary">Read the essay</a>
-        </div>
-      </article>
-
-      <div class="article-grid">
-        <article class="article">
-          <div class="article-cover"><div class="cover-title">Confidence Morning</div></div>
-          <div class="article-body">
-            <div class="tag">Confidence</div>
-            <h3>Confidence Morning Routine Ideas for Your 20s</h3>
-            <p>A soft, realistic way to begin the day when you want to feel a little more like yourself.</p>
-            <div class="article-foot"><span>6 min read</span><span>Issue 01</span></div>
-          </div>
-        </article>
-
-        <article class="article">
-          <div class="article-cover"><div class="cover-title">Outfit Inspo</div></div>
-          <div class="article-body">
-            <div class="tag">Outfit Inspo</div>
-            <h3>Dressing for Yourself vs Dressing to Be Chosen</h3>
-            <p>The difference between outfits that ask for approval and outfits that bring you back to yourself.</p>
-            <div class="article-foot"><span>5 min read</span><span>Outfit Inspo</span></div>
-          </div>
-        </article>
-
-        <article class="article">
-          <div class="article-cover"><div class="cover-title">Feel Understood</div></div>
-          <div class="article-body">
-            <div class="tag">Feel Understood</div>
-            <h3>When You Feel Behind, But You’re Still Becoming</h3>
-            <p>A short read for the girl comparing her timeline to everyone else’s highlight reel.</p>
-            <div class="article-foot"><span>8 min read</span><span>Essay</span></div>
-          </div>
-        </article>
-
-        <article class="article">
-          <div class="article-cover"><div class="cover-title">Soft Reset</div></div>
-          <div class="article-body">
-            <div class="tag">Soft Reset</div>
-            <h3>The 20-Minute Room Reset for a Heavy Brain</h3>
-            <p>A tiny reset for when life feels bigger than your capacity.</p>
-            <div class="article-foot"><span>4 min read</span><span>Guide</span></div>
-          </div>
-        </article>
-
-        <article class="article">
-          <div class="article-cover"><div class="cover-title">Slow Living</div></div>
-          <div class="article-body">
-            <div class="tag">Soft Reset</div>
-            <h3>How to Romanticise a Normal Tuesday</h3>
-            <p>Small details that make ordinary days feel less disposable.</p>
-            <div class="article-foot"><span>5 min read</span><span>Standalone</span></div>
-          </div>
-        </article>
-
-        <article class="article">
-          <div class="article-cover"><div class="cover-title">Soft Reset</div></div>
-          <div class="article-body">
-            <div class="tag">Soft Reset</div>
-            <h3>How to Stop Letting the Scroll Decide Your Night</h3>
-            <p>A gentler way to close the evening when discipline is not enough.</p>
-            <div class="article-foot"><span>6 min read</span><span>Ritual</span></div>
-          </div>
-        </article>
-      </div>
-
-      <div class="cta">
-        <div class="cta-copy">
-          <h2>Prefer the weekly edit <em>instead?</em></h2>
-          <p>Get Martini Mondays in your inbox every Monday at 8AM — five picks, one personal note, and a softer way to begin the week.</p>
-        </div>
-        <div class="cta-form">
-          <input placeholder="Email address"/>
-          <a class="btn primary">Join Martini Mondays</a>
-        </div>
-      </div>
-
-      <div class="load-more">
-        <a class="btn secondary" href="Blogs.html">Load more essays</a>
+        </section>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      <div class="logo" style="color:#ffdee8;font-size:24px">L<span>&amp;</span>M</div>
-      <div class="footer-copy">© 2026 Lipsticks &amp; Martinis · The Reading Room</div>
+      <a class="logo" href="#" style="color:#fff;font-size:28px" aria-label="L and M home">L<em>&amp;</em>M.</a>
+      <div class="footer-copy">© 2026 L&M. All rights reserved.</div>
       <div class="footer-links">
-        <span><a href="Magazine.html">The Magazine</a></span>
-        <span><a href="Blogs.html">Blogs</a></span>
-        <span><a href="Martini-Mondays.html">Martini Mondays</a></span>
+        <a href="#">Instagram</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Contact</a>
       </div>
     </div>
   </footer>
+
+  <script>
+    const launchDate = new Date('2026-07-25T00:00:00+05:30').getTime();
+    const countdownIds = ['days','hours','minutes','seconds'];
+
+    function updateCountdown() {
+      const distance = launchDate - Date.now();
+
+      if (distance <= 0) {
+        document.querySelector('.launch-panel-label').textContent = 'The Reading Room is now open';
+        countdownIds.forEach(id => document.getElementById(id).textContent = '00');
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('days').textContent = String(days).padStart(2,'0');
+      document.getElementById('hours').textContent = String(hours).padStart(2,'0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2,'0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2,'0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown,1000);
+  </script>
 </body>
 </html>
