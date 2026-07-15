@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>L&M — About</title>
+<title>L&M — About Page Mockup V3</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -384,11 +384,10 @@
   }
   .girl-card .closing{
     color:#ffd8e4;
-    font-family:'Playfair Display',serif;
-    font-style:normal;
-    font-weight:600;
-    font-size:26px;
-    line-height:1.08;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:28px;
+    line-height:1.05;
     margin-top:8px;
   }
 
@@ -444,11 +443,16 @@
       linear-gradient(135deg, #6f0820 0%, #ac4b76 55%, #d798b5 100%);
     background-size:20px 20px, 20px 20px, auto;
     color:#fff;
-    padding:20px;
+    padding: 20px;
+    max-width: 100%;
+    max-height: 100%;
     display:flex;
     flex-direction:column;
     justify-content:flex-end;
     box-shadow:10px 10px 0 rgba(120,9,34,.16);
+  }
+  .book-mock img {
+    object-fit: cover;
   }
   .book-mock .tiny{
     font-size:10px;
@@ -588,6 +592,7 @@
   .subscribe-box{
     background:rgba(255,255,255,.12);
     border:1.2px solid rgba(255,255,255,.28);
+    border-radius: 20px;
     padding:22px;
   }
   .subscribe-box h3{
@@ -640,16 +645,15 @@
     <header class="topbar">
       <div class="brand">L<em>&amp;</em>M</div>
       <nav class="navlinks">
-        <span>Home</span>
-        <span>The Magazine</span>
-        <span>L&amp;M Journal</span>
-        <span>Blogs</span>
-        <span>L&amp;M Universe</span>
-        <span>Martini Mondays</span>
-        <span>The Studio</span>
-        <span>About</span>
+        <span><a href="Magazine.html">The Magazine</a></span>
+        <span><a href="Journal.html">L&amp;M Journal</a></span>
+        <span><a href="Blogs.html">Blogs</a></span>
+        <span><a href="Universe-Catalog.html">L&amp;M Universe</a></span>
+        <span><a href="Martini-Mondays.html">Martini Mondays</a></span>
+        <span><a href="Studio.html">The Studio</a></span>
+        <span><a href="About.html">About</a></span>
       </nav>
-      <a class="navcta">Start reading</a>
+      <a class="navcta" href="Magazine.html">Start reading</a>
     </header>
 
     <section class="hero">
@@ -660,53 +664,52 @@
           </div>
           <div class="founder-label">
             <strong>Deepanshi ✦</strong>
-            <span>Founder &amp; Creative Director</span>
+            <span>Founder-editor of L&amp;M</span>
           </div>
         </div>
       </div>
 
       <div class="hero-copy-col">
-        <div class="breadcrumb">yourlnm.com / About</div>
+        <div class="breadcrumb"><a href="yourlnm.com">yourlnm.com</a> / About</div>
         <div class="pill">The Founder</div>
         <h1>It’s time to build a world that feels <em>like her.</em></h1>
         <p>
-          I’m Deepanshi, a BITS Pilani graduate, published poet, and the founder and creative mind behind Lipsticks &amp; Martinis.
+          I’m Deepanshi — a BITS Pilani graduate, published poetry author, and the founder-editor behind Lipsticks &amp; Martinis.
         </p>
         <p>
-          L&amp;M began with an instinct I could not ignore: that women deserve a space where taste is not treated as frivolous, ambition is not stripped of softness, and becoming is allowed to be both beautiful and serious.
+          L&amp;M exists for the girl who wants more from life than being told to work harder, glow up faster, or fix herself in six steps. She wants beauty, structure, taste, softness, and self-respect — all in the same world.
         </p>
         <p>
-          What I am building is no longer only a magazine. It is an editorial and digital world for the inner life, the outer life, and everything a woman is quietly becoming: stories to return to, rituals to live by, tools that make life feel more intentional, and ideas that stay with her.
+          So I built a magazine, a ritual ecosystem, and a brand universe that feels like an elder sister with better taste and better timing.
         </p>
 
         <div class="mini-tags">
-          <span>Founder &amp; Creative Director</span>
-          <span>Editor in Chief</span>
-          <span>Editorial Storyteller</span>
-          <span>Published Poet</span>
-          <span>BITS Pilani Graduate</span>
+          <span>BITS Pilani grad</span>
+          <span>Poetry book author</span>
+          <span>Magazine builder</span>
+          <span>Founder-editor</span>
         </div>
 
         <div class="hero-cta-row">
-          <a class="btn primary">Read Issue 01</a>
-          <a class="btn secondary">Join Martini Mondays</a>
+          <a href="Magazine.html" class="btn primary">Read Issue 01</a>
+          <a href="Martini-Mondays.html" class="btn secondary">Join Martini Mondays</a>
         </div>
 
         <div class="hero-note">
-          <strong>What L&amp;M really is:</strong> an editorial and digital world for women who want their lives to feel as considered as their ambitions: intelligent, expressive, useful, and entirely their own.
+          <strong>What L&amp;M really is:</strong> a soft but strategic universe for girls becoming women — one issue, one ritual, one recommendation, one reset at a time.
         </div>
       </div>
     </section>
 
     <section class="booking-strip">
       <div class="inner">
-        <span>✦ The Idea Behind L&amp;M</span>
-        <span>✦ Why This World Exists</span>
-        <span>✦ The Woman We Write For</span>
-        <span>✦ The Poetry Before the Platform</span>
-        <span>✦ A World Built With Intention</span>
-        <span>✦ The Idea Behind L&amp;M</span>
-        <span>✦ Why This World Exists</span>
+        <span>✦ Founder Story</span>
+        <span>✦ Why L&amp;M Exists</span>
+        <span>✦ The L&amp;M Girl</span>
+        <span>✦ The Poetry Book</span>
+        <span>✦ A World Built With Taste</span>
+        <span>✦ Founder Story</span>
+        <span>✦ Why L&amp;M Exists</span>
       </div>
     </section>
 
@@ -715,17 +718,15 @@
         <div class="eyebrow">Why this exists</div>
         <h2>Helping her get closer to the woman she already feels <em>becoming.</em></h2>
         <p>
-          L&amp;M was built from the feeling that so much of women’s media asks her to become more, yet rarely makes space for who she already is.
+          L&amp;M was built from a very specific ache: the feeling of wanting your life to feel prettier, calmer, more structured, more deliberate — but not finding a space that treated those desires with seriousness.
         </p>
         <p>
-          She is offered optimisation without tenderness, aesthetics without substance, and advice without context. I wanted to make something that could hold beauty and thought, softness and self-respect, fantasy and function, without asking any one of them to cancel the others.
+          Most spaces either become too clinical, too self-help coded, too productivity obsessed, or too shallow to hold any real emotional depth. L&amp;M sits in the middle. It is editorial, useful, emotionally intelligent, and aesthetically intentional.
         </p>
         <p>
-          That became L&amp;M: a living editorial world made to accompany her. Not to prescribe a perfect life, but to help her notice, choose, and build one that feels recognisably hers.
+          It is free because not every beautiful thing should begin with a paywall. First, she should be met. Then, if she stays, she can choose what part of the world she wants more of.
         </p>
-        <p>
-          Much of it remains free because access matters. Before anything is sold, she should be met with something generous, beautiful, and worth returning to.
-        </p>
+        <a class="story-link">Read the L&amp;M story →</a>
         <div class="blur-dot"></div>
       </div>
 
@@ -736,32 +737,29 @@
             <div class="stat-label">Poetry book published</div>
           </div>
           <div class="stat">
-            <div class="stat-num">6</div>
-            <div class="stat-label">Connected L&amp;M worlds</div>
+            <div class="stat-num">22</div>
+            <div class="stat-label">Years old</div>
           </div>
           <div class="stat">
-            <div class="stat-num">47</div>
-            <div class="stat-label">Tabs open in the founder’s head</div>
+            <div class="stat-num">01</div>
+            <div class="stat-label">Issue launched</div>
           </div>
           <div class="stat">
             <div class="stat-num">∞</div>
-            <div class="stat-label">Ideas still becoming</div>
+            <div class="stat-label">Things romanticised</div>
           </div>
         </div>
 
         <div class="girl-card">
           <div class="eyebrow" style="color:#ffcedd">The L&amp;M Girl</div>
-          <h3>She wants a life that feels unmistakably hers.</h3>
+          <h3>She wants more than advice.</h3>
           <p>
-            She is thoughtful, ambitious, and alive to beauty. She deeply cares about the future she is building for herself and the lipstick or lip-gloss shade that helps her embrace the diva within. She romanticises rom-coms, loves to shop, saves sentences, notices details, asks better questions, and wants a life that feels chosen rather than inherited.
+            She is 18–26. She grew up on Pinterest and Tumblr, watches Gossip Girl for the aesthetic, saves things she wants to become, and craves a life that feels as thoughtful as it looks.
           </p>
           <p>
-            She is learning to make herself the love of her own life and to be unapologetically herself. Shopping may be retail therapy, skincare and makeup are rituals rather than trivial indulgences, and embracing her life like the main character is not delusion. It is recognition. She is the moment, and she wants to feel it.
+            She doesn’t need another platform talking down to her.
           </p>
-          <p>
-            She is not looking to be fixed. She is looking for language, perspective, taste, and tools that help her hear herself more clearly and live more fully as the woman she already knows she can be.
-          </p>
-          <div class="closing">L&amp;M is the world that takes her seriously.</div>
+          <div class="closing">L&amp;M is that sister who gets it.</div>
         </div>
       </div>
     </section>
@@ -769,24 +767,22 @@
     <section class="bottom-feature">
       <div class="book-panel">
         <div class="eyebrow">Before L&amp;M, there was—</div>
-        <h2>Before L&amp;M became a world, it was a <em>voice after midnight.</em></h2>
+        <h2>The poetry. The late-night voice. The first version of <em>the world.</em></h2>
         <p>
-          <em>Fathoming My 3AM Thoughts</em> was the first place I learned what happens when a private feeling is shaped carefully enough to become someone else’s mirror. It was intimate, restless, romantic, and unafraid of emotional detail.
+          Before I built a magazine, I published a poetry book. It came from the same place L&amp;M comes from now: overthinking, emotional honesty, softness, self-observation, and the urge to turn feeling into something beautiful and shareable.
         </p>
         <p>
-          Publishing it taught me that language can do more than describe a feeling. It can make a person feel accompanied by it. L&amp;M grew from that same instinct, only on a larger canvas.
-        </p>
-        <p>
-          The poetry book was the first proof that the things we are tempted to dismiss as “too much” can become something meaningful when they are given form.
+          The magazine is bigger and more strategic. But the voice — the part that wants girls to feel seen — started there.
         </p>
 
         <div class="book-actions">
           <a class="btn primary" href="https://amzn.in/d/05zogC9d" target="_blank" rel="noopener noreferrer">Find the book on Amazon</a>
+          <a class="btn secondary">Read the story behind it</a>
         </div>
 
         <div class="book-mock">
-          <!--<div class="tiny">Poetry book</div>
-          <h4>Fathoming<br>My 3AM<br>Thoughts</h4>-->
+          <!-- <div class="tiny">Poetry book</div>
+          <h4>Fathoming<br>My 3AM<br>Thoughts</h4> -->
           <img src="assets/book-cover.png">
         </div>
       </div>
@@ -797,25 +793,25 @@
           <article class="cred-card">
             <div class="num">1</div>
             <h4>Editorial voice</h4>
-            <p>Writing with emotional precision and commercial clarity, from magazine essays and founder stories to weekly letters that are meant to stay with the reader.</p>
+            <p>Writing that feels emotionally precise, memorable, and save-worthy — from magazine copy to blog essays to weekly letters.</p>
           </article>
 
           <article class="cred-card">
             <div class="num">2</div>
             <h4>Visual world-building</h4>
-            <p>Turning mood, meaning, and taste into a cohesive visual identity and digital experience that feels distinctive, intentional, and ownable.</p>
+            <p>An eye for feminine design direction, hierarchy, mood, and cohesive digital experiences that feel premium and ownable.</p>
           </article>
 
           <article class="cred-card">
             <div class="num">3</div>
             <h4>Founder thinking</h4>
-            <p>Connecting positioning, storytelling, content, product, and experience so that every part of the brand feels like it belongs to the same idea.</p>
+            <p>Not just aesthetics — positioning, storytelling, curation, and the ability to turn taste into a complete brand world.</p>
           </article>
 
           <article class="cred-card">
             <div class="num">4</div>
             <h4>Proof through making</h4>
-            <p>L&amp;M is not a moodboard. It is a working ecosystem of editorial, design, digital products, systems, and strategy being built into one coherent world.</p>
+            <p>L&amp;M itself is the proof: a magazine, a website ecosystem, content systems, and a universe being built piece by piece.</p>
           </article>
         </div>
 
@@ -824,12 +820,12 @@
             <div class="eyebrow">Beyond the website</div>
             <h3>For the in-between moments, <em>follow along.</em></h3>
             <p>
-              If L&amp;M is the finished world, Instagram is where you see it becoming. I share the notes behind the ideas, the decisions behind the design, the life around the work, and the small obsessions that eventually find their way into an issue.
+              If L&amp;M is the finished world, Instagram is where I share the life around it too — thoughts, routines, soft observations, behind-the-scenes building, and the little things I’m currently romanticising.
             </p>
           </div>
           <div class="right">
             <div class="handle">Instagram / @yourhandle</div>
-            <a class="btn soft" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
+            <a class="btn soft" href="https://instagram.com/lipsticksandmartinis" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
           </div>
         </div>
       </div>
@@ -838,18 +834,18 @@
     <section class="footer-cta">
       <div>
         <div class="eyebrow" style="color:#ffd8e4">Start here</div>
-        <h2>Enter for the beauty. Stay for the <em>clarity.</em></h2>
+        <h2>Enter the world. Stay for the <em>becoming.</em></h2>
         <p>
-          Read the magazine, join Martini Mondays, or explore the universe. Each door is different, but the intention is the same: to make the internet feel more thoughtful, more useful, and a little more like a place you would choose to stay.
+          Read the magazine, join Martini Mondays, or explore the universe. However she arrives, the point is the same: she leaves feeling a little more met, a little more directed, and a lot more like herself.
         </p>
       </div>
 
       <div class="subscribe-box">
         <div class="eyebrow" style="color:#ffd8e4">Weekly letter</div>
         <h3>Get Martini Mondays.</h3>
-        <p>Five considered things and one note worth carrying into the week.</p>
+        <p>Five picks. One stylish note. Every Monday, in her inbox.</p>
         <input class="field" placeholder="Email address" />
-        <a class="btn primary" style="width:100%">Join Martini Mondays</a>
+        <a class="btn primary" style="width:100%">Join the newsletter</a>
       </div>
     </section>
   </div>
