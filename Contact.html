@@ -7,6 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,400;1,600&family=Cormorant+Garamond:ital,wght@1,400;1,600&family=DM+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<script src="components/header.js"></script>
+<script src="components/footer.js"></script>
 <style>
 :root{
   --ivory:#FAF7F5;
@@ -39,7 +41,7 @@ input,select,textarea,button{font:inherit}
   background:var(--paper);
   box-shadow:0 16px 42px rgba(108,8,32,.08);
 }
-.nav{
+/* .nav{
   min-height:74px;
   display:grid;
   grid-template-columns:190px 1fr 178px;
@@ -80,6 +82,24 @@ input,select,textarea,button{font:inherit}
   letter-spacing:.13em;
   text-transform:uppercase;
   font-weight:900;
+} */
+
+.topbar {
+  background:#be6c9e;
+  color:#fff;
+  text-align:center;
+  padding:7px 16px;
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:700;
+}
+
+header-component {
+  display: block;
+  position: sticky;
+  top:0;
+  z-index: 5000;
 }
 .ticker{
   border-bottom:1.2px solid var(--line);
@@ -527,23 +547,26 @@ details[open] summary:after{content:"–"}
 </head>
 
 <body>
-<div class="shell">
-  <header class="nav">
+<div class="topbar">✦ Launch Issue is live · Main Character Syndrome Kit · Read now at yourlnm.com ✦</div>
+
+  <header-component></header-component>
+
+  <!-- <header class="nav">
     <div class="logo">L<span>&amp;</span>M</div>
     <div class="links">
       <span>Home</span><span>The Magazine</span><span>L&M Journal</span><span>Blogs</span><span>L&M Universe</span><span>Martini Mondays</span><span>About</span>
     </div>
     <a class="navbtn" href="#contact-form">Work with us</a>
-  </header>
+  </header> -->
 
-  <section class="ticker">
+  <!-- <section class="ticker">
     <div><span>✦ Brand collaborations</span><span>✦ PR packages</span><span>✦ Creator partnerships</span><span>✦ Editorial opportunities</span><span>✦ Studio conversations</span><span>✦ Press notes</span></div>
-  </section>
+  </section> -->
 
   <section class="hero">
     <div class="visual">
-      <div class="frame"><img src="lnm_contact_founder_photo.jpg" alt="Founder of L&M"></div>
-      <div class="label">Deepanshi ✦ Lipsticks & Martinis</div>
+      <div class="frame"><img src="assets/founderpicedited.jpg" alt="Founder of L&M"></div>
+      <div class="label">Deepanshi ✦ Founder, Lipsticks & Martinis</div>
     </div>
     <div class="hero-copy">
       <div class="eyebrow">Work with L&M</div>
@@ -554,7 +577,7 @@ details[open] summary:after{content:"–"}
         <a class="btn primary" href="#contact-form">Send an inquiry</a>
         <a class="btn secondary" href="#faqs">Read the FAQs</a>
       </div>
-      <p class="micro"><b>Best fit:</b> consumer, lifestyle, fashion, beauty, wellness, hospitality, media, SaaS, AI, fintech, edtech, and founder-led businesses.</p>
+      <!-- <p class="micro"><b>Best fit:</b> consumer, lifestyle, fashion, beauty, wellness, hospitality, media, SaaS, AI, fintech, edtech, and founder-led businesses.</p> -->
     </div>
   </section>
 
@@ -614,25 +637,25 @@ details[open] summary:after{content:"–"}
     <div class="faq-intro">
       <div class="eyebrow">Frequently asked</div>
       <h2>Questions brands usually <em>ask first.</em></h2>
-      <p>A soft little clarity section, so collaborations feel considered, not confusing.</p>
+      <!-- <p>A soft little clarity section, so collaborations feel considered, not confusing.</p> -->
     </div>
     <div class="faq-list">
-      <details open><summary>How can a brand collaborate with L&M?</summary><div class="answer">L&M works with brands through considered editorial collaborations, issue-led storytelling, Martini Mondays, curated product discovery, and select placements within the L&M Universe. Every collaboration is approached through the lens of taste, relevance, and fit, so the brand feels like it belongs inside the world, not beside it.</div></details>
+      <details open><summary>How can a brand collaborate with L&M?</summary><div class="answer">L&M works with brands through considered editorial collaborations, issue-led storytelling, Martini Mondays, curated product discovery, and select placements within the L&M universe. Every collaboration is approached through the lens of taste, relevance, and fit, so the brand feels like it belongs inside the world, not beside it.</div></details>
       <details><summary>What kinds of brands are a fit for L&M?</summary><div class="answer">L&M works with thoughtful brands and founders across fashion, beauty, lifestyle, wellness, hospitality, media, consumer technology, SaaS, AI, fintech, edtech, and other emerging sectors. The strongest fit is a clear story, a valuable offering, and an ambition to communicate it with intention.</div></details>
       <details><summary>Do you accept PR packages?</summary><div class="answer">Yes. L&M is open to discovering products, experiences, and brands that align with the world we are building. If you would like to introduce something to L&M, send a short note about the brand, the product, and why you feel it belongs in the L&M universe.</div></details>
       <details><summary>Do you collaborate with creators, publications, or podcasts?</summary><div class="answer">Yes. L&M is open to thoughtful conversations and collaborations with creators, writers, editors, publications, podcasts, and platforms that speak to women, becoming, lifestyle, beauty, fashion, independence, creativity, or culture.</div></details>
       <details><summary>What should I include in my inquiry?</summary><div class="answer">Please include who you are, what you are building, the brand or platform link, the kind of collaboration you have in mind, your timeline, and any relevant context. The clearest notes make it easier to understand the fit and respond with the right next step.</div></details>
     </div>
   </section>
+  <footer-component></footer-component>
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="footergrid">
       <div><div class="footerbrand">L&M</div><p>A digital world for girls becoming the main character of their own life, through magazines, letters, stories, curation, and considered digital spaces.</p></div>
       <div><h4>Explore</h4><a>The Magazine</a><a>L&M Journal</a><a>Blogs</a><a>L&M Universe</a><a>Martini Mondays</a></div>
       <div><h4>Connect</h4><a>About</a><a>Work With Us</a><a>Instagram</a></div>
     </div>
     <div class="footerbottom"><div>© 2026 Lipsticks & Martinis. All rights reserved.</div><div>Built for a soft, stylish internet.</div></div>
-  </footer>
-</div>
+  </footer> -->
 </body>
 </html>

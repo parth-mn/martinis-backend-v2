@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>L&M Journal — Landing Page Mockup V2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#eee8df;
+  --paper:#fffdf8;
+  --cream:#faf7f0;
+  --soft:#f9e6ec;
+  --blush:#f8cbd9;
+  --rose:#d98fb0;
+  --orchid:#BE6C9E;
+  --burg:#6C0820;
+  --burg-2:#932747;
+  --noir:#1A0A0E;
+  --lime:#D4C84A;
+  --ink:#1a0e12;
+  --muted:#6f6369;
+  --line:#2e2327;
+  --line-soft:#dfd1d5;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  background:
+    radial-gradient(circle at 18% 7%, rgba(255,255,255,.75), transparent 20%),
+    radial-gradient(circle at 84% 4%, rgba(217,143,176,.20), transparent 24%),
+    linear-gradient(135deg, rgba(255,255,255,.38), rgba(255,255,255,0)),
+    var(--bg);
+}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+button,input{font:inherit}
+
+.page-shell{
+  width:min(100% - 44px, 1060px);
+  margin:44px auto;
+  border:1.3px solid var(--line);
+  background:var(--cream);
+  box-shadow:0 24px 60px rgba(34,19,24,.10);
+}
+
+.nav{
+  min-height:58px;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:180px 1fr 175px;
+  align-items:center;
+  border-bottom:1.3px solid var(--line);
+  background:rgba(250,247,240,.92);
+}
+.logo{
+  font-family:'Playfair Display',serif;
+  color:var(--burg);
+  font-size:26px;
+  font-weight:900;
+  letter-spacing:-.04em;
+}
+.logo em{font-style:italic;color:var(--rose)}
+.navlinks{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+  font-size:9px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:#51464b;
+  font-weight:700;
+}
+.navbtn{
+  justify-self:end;
+  min-height:34px;
+  border:1.2px solid var(--line);
+  border-radius:999px;
+  padding:0 14px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--paper);
+  color:var(--burg);
+  font-size:9px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-weight:800;
+}
+
+.hero{
+  min-height:372px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:52px 28px;
+  border-bottom:1.3px solid var(--line);
+  background:
+    linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px),
+    radial-gradient(circle at 18% 82%, rgba(212,200,74,.24), transparent 20%),
+    radial-gradient(circle at 78% 18%, rgba(255,202,212,.36), transparent 24%),
+    linear-gradient(135deg, #6C0820 0%, #8d1738 54%, #BE6C9E 100%);
+  background-size:28px 28px, 28px 28px, auto, auto, auto;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:'soft discipline';
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%) rotate(-3deg);
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  color:rgba(255,255,255,.15);
+  font-size:132px;
+  white-space:nowrap;
+  pointer-events:none;
+}
+.hero::after{
+  content:'';
+  position:absolute;
+  inset:26px;
+  border:1px solid rgba(255,255,255,.20);
+  pointer-events:none;
+}
+.hero-content{position:relative;z-index:2}
+.hero .pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:34px;
+  padding:0 18px;
+  border-radius:999px;
+  background:rgba(255,253,248,.92);
+  border:1.2px solid var(--line);
+  color:var(--burg);
+  font-size:9px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:800;
+  margin-bottom:18px;
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:82px;
+  line-height:.9;
+  letter-spacing:-.055em;
+  color:#fffdf8;
+  text-shadow:0 8px 28px rgba(26,10,14,.25);
+}
+.hero h1 em{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-weight:600;
+  color:#ffdce7;
+}
+.hero p{
+  max-width:650px;
+  margin:18px auto 0;
+  color:rgba(255,255,255,.84);
+  font-size:14px;
+  line-height:1.85;
+}
+.hero-actions{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:24px;
+}
+
+.btn{
+  min-height:44px;
+  padding:0 18px;
+  border-radius:999px;
+  border:1.3px solid var(--line);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:10px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-weight:800;
+}
+.btn.primary{background:var(--burg);color:white}
+.btn.secondary{background:white;color:var(--ink)}
+.btn.rose{background:var(--blush);color:var(--burg)}
+.btn.dark{background:var(--noir);color:white}
+
+.products{
+  padding:44px 38px;
+  background:var(--soft);
+  border-bottom:1.3px solid var(--line);
+}
+.section-kicker{
+  color:var(--burg);
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:800;
+  margin-bottom:14px;
+}
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:end;
+  margin-bottom:26px;
+}
+.section-head h2{
+  font-family:'Playfair Display',serif;
+  font-size:46px;
+  line-height:.95;
+  letter-spacing:-.045em;
+}
+.section-head h2 em{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  color:var(--rose);
+}
+.section-head p{
+  max-width:390px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.75;
+}
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.module-card{
+  background:var(--paper);
+  border:1.3px solid var(--line);
+  padding:18px 18px 22px;
+  min-height:338px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.module-preview{
+  height:132px;
+  border:1.2px solid var(--line-soft);
+  background:
+    linear-gradient(rgba(108,8,32,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(108,8,32,.045) 1px, transparent 1px),
+    #fff8fa;
+  background-size:18px 18px,18px 18px,auto;
+  margin-bottom:22px;
+  padding:14px;
+}
+.preview-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+}
+.preview-pill{
+  height:18px;
+  width:70px;
+  border-radius:999px;
+  background:var(--blush);
+}
+.preview-dot{
+  width:20px;height:20px;border-radius:50%;
+  background:var(--burg);
+}
+.app-line{
+  height:10px;
+  border-radius:999px;
+  background:var(--blush);
+  margin-bottom:8px;
+}
+.app-line:nth-child(3){width:78%;background:#eed6dd}
+.app-line:nth-child(4){width:54%;background:#e6c4cf}
+.app-mini-row{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:6px;
+  margin-top:10px;
+}
+.app-dot{
+  height:26px;
+  border:1px solid var(--line-soft);
+  background:white;
+  border-radius:10px;
+}
+.module-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:30px;
+  line-height:.98;
+  letter-spacing:-.04em;
+  margin-bottom:10px;
+}
+.module-card p{
+  font-size:12px;
+  line-height:1.72;
+  color:var(--muted);
+  margin-bottom:18px;
+}
+.module-link{
+  display:inline-flex;
+  align-self:flex-start;
+  min-height:32px;
+  padding: 14px 14px;
+  border-radius:999px;
+  background:var(--rose);
+  color:var(--burg);
+  border:1.2px solid var(--line);
+  font-size:9px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-weight:800;
+}
+.label-row{
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  margin-bottom:12px;
+}
+.tiny-label{
+  display:inline-flex;
+  align-items:center;
+  min-height:23px;
+  padding:0 9px;
+  border-radius:999px;
+  border:1px solid var(--line-soft);
+  background:#fff;
+  color:var(--burg);
+  font-size:8px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-weight:800;
+}
+
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border-bottom:1.3px solid var(--line);
+}
+.split-visual{
+  min-height:465px;
+  border-right:1.3px solid var(--line);
+  background:
+    radial-gradient(circle at 50% 30%, rgba(108,8,32,.08), transparent 20%),
+    linear-gradient(135deg, #fbf6f0 0%, #f7dce6 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:38px;
+}
+.app-window{
+  width:100%;
+  max-width:430px;
+  min-height:360px;
+  border:1.3px solid var(--line);
+  background:rgba(250,247,245,.92);
+  display:grid;
+  grid-template-columns:116px 1fr;
+  box-shadow:12px 12px 0 rgba(108,8,32,.14);
+}
+.app-sidebar{
+  border-right:1.2px solid var(--line);
+  background:#fffafc;
+  padding:14px;
+}
+.app-logo{
+  font-family:'Playfair Display',serif;
+  font-weight:900;
+  color:var(--burg);
+  font-size:22px;
+  margin-bottom:12px;
+}
+.side-item{
+  height:24px;
+  border-radius:999px;
+  background:#f6e0e8;
+  margin-bottom:8px;
+}
+.side-item.active{background:var(--burg)}
+.app-main{
+  padding:16px;
+}
+.app-main h3{
+  font-family:'Playfair Display',serif;
+  font-size:30px;
+  line-height:.95;
+  color:var(--burg);
+  margin-bottom:12px;
+}
+.dark-card{
+  background:linear-gradient(135deg,var(--burg),#31070f);
+  color:white;
+  border-radius:22px;
+  padding:16px;
+  margin-bottom:12px;
+}
+.dark-card h4{
+  font-family:'Playfair Display',serif;
+  color:var(--blush);
+  font-size:22px;
+  line-height:1;
+  margin-bottom:8px;
+}
+.progress{
+  height:8px;
+  border-radius:999px;
+  background:rgba(255,255,255,.18);
+  overflow:hidden;
+}
+.progress span{
+  display:block;
+  width:52%;
+  height:100%;
+  background:linear-gradient(90deg,var(--orchid),var(--blush));
+}
+.small-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+.small-card{
+  min-height:72px;
+  border:1px solid var(--line-soft);
+  background:white;
+  border-radius:16px;
+  padding:10px;
+}
+.small-card strong{
+  display:block;
+  font-family:'Playfair Display',serif;
+  color:var(--burg);
+  font-size:18px;
+}
+.small-card span{
+  font-size:9px;
+  color:var(--muted);
+}
+.split-copy{
+  padding:52px 46px;
+  background:var(--paper);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.split-copy h2{
+  font-family:'Playfair Display',serif;
+  font-size:48px;
+  line-height:.98;
+  letter-spacing:-.045em;
+  margin-bottom:16px;
+}
+.split-copy h2 em{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  color:var(--rose);
+}
+.split-copy p{
+  font-size:14px;
+  line-height:1.9;
+  color:var(--muted);
+  margin-bottom:14px;
+}
+.btn-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+
+.faq-section{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border-bottom:1.3px solid var(--line);
+}
+.faq-left{
+  padding:48px 42px;
+  background:var(--soft);
+  border-right:1.3px solid var(--line);
+}
+.faq-left h2{
+  font-family:'Playfair Display',serif;
+  font-size:58px;
+  line-height:1;
+  letter-spacing:-.05em;
+  margin-bottom:32px;
+}
+.faq-item{
+  border-top:1.2px solid rgba(46,35,39,.45);
+  padding:15px 0;
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#42363b;
+  font-weight:700;
+}
+.faq-item:last-child{border-bottom:1.2px solid rgba(46,35,39,.45)}
+.faq-right{
+  min-height:350px;
+  background:
+    radial-gradient(circle at 30% 35%, rgba(248,203,217,.55), transparent 24%),
+    linear-gradient(135deg,#fffdfa 0%, #f8cbd9 100%);
+  padding:38px;
+  display:flex;
+  align-items:end;
+  justify-content:center;
+}
+.journal-card{
+  width:100%;
+  max-width:380px;
+  background:white;
+  border:1.3px solid var(--line);
+  padding:24px;
+  box-shadow:10px 10px 0 rgba(108,8,32,.12);
+}
+.journal-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:35px;
+  line-height:1;
+  margin-bottom:12px;
+}
+.journal-card p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.8;
+  margin-bottom:16px;
+}
+
+.roadmap{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border-bottom:1.3px solid var(--line);
+}
+.roadmap-left{
+  padding:34px 32px;
+  background:var(--paper);
+  border-right:1.3px solid var(--line);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+.small-resource{
+  display:grid;
+  grid-template-columns:88px 1fr;
+  gap:12px;
+  align-items:center;
+}
+.res-thumb{
+  height:72px;
+  border:1.2px solid var(--line);
+  background:
+    linear-gradient(135deg,#f8cbd9,#fffdfa);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--burg);
+  font-family:'Playfair Display',serif;
+  font-size:22px;
+}
+.small-resource h4{
+  font-family:'Playfair Display',serif;
+  font-size:19px;
+  line-height:1;
+  margin-bottom:5px;
+}
+.small-resource p{
+  font-size:10px;
+  line-height:1.55;
+  color:var(--muted);
+}
+.roadmap-right{
+  padding:34px 36px;
+  background:var(--paper);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.roadmap-right h2{
+  font-family:'Playfair Display',serif;
+  font-size:45px;
+  line-height:.95;
+  letter-spacing:-.04em;
+  margin-bottom:12px;
+}
+.roadmap-right h2 em{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  color:var(--rose);
+}
+.roadmap-right p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.8;
+  max-width:420px;
+}
+
+.footer{
+  min-height:78px;
+  background:var(--rose-soft, #f8cbd9);
+  background:var(--blush);
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  padding:0 24px;
+}
+.footer .logo{font-size:24px}
+.socials{
+  display:flex;
+  gap:12px;
+  font-size:14px;
+  color:var(--burg);
+}
+.contact{
+  justify-self:end;
+  text-align:right;
+  color:var(--burg);
+  font-size:10px;
+  line-height:1.6;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:700;
+}
+
+@media(max-width:900px){
+  .page-shell{width:min(100% - 20px,1060px);margin:20px auto}
+  .nav{grid-template-columns:1fr;text-align:center;gap:12px;padding:16px}
+  .navbtn{justify-self:center}
+  .hero h1{font-size:52px}
+  .hero::before{font-size:76px}
+  .section-head{display:block}
+  .section-head p{margin-top:12px}
+  .product-grid,.split,.faq-section,.roadmap{grid-template-columns:1fr}
+  .split-visual,.faq-left,.roadmap-left{border-right:0;border-bottom:1.3px solid var(--line)}
+  .roadmap-left{grid-template-columns:1fr}
+  .app-window{grid-template-columns:1fr}
+  .app-sidebar{border-right:0;border-bottom:1px solid var(--line);display:flex;gap:8px;overflow:auto}
+  .side-item{min-width:54px}
+  .footer{grid-template-columns:1fr;gap:14px;text-align:center;padding:20px}
+  .contact{justify-self:center;text-align:center}
+}
+</style>
+</head>
+
+<body>
+  <div class="page-shell">
+    <nav class="nav">
+      <div class="logo">L<em>&amp;</em>M</div>
+      <div class="navlinks">
+        <span><a href="yourlnm.com">Home</a></span>
+        <span><a href="Magazine.html">Magazine</a></span>
+        <span><a href="Universe-Catalog.html">Universe</a></span>
+        <span><a href="Blogs.html">Blogs</a></span>
+        <span><a href="About.html">About</a></span>
+      </div>
+      <a class="navbtn">Open app</a>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="pill">your little world ✦</div>
+        <h1>L&M <em>Journal</em></h1>
+        <p>
+          The companion web app for the girl in her soft discipline era — morning checklists, mood tracking, water rituals, issue prompts, weekly recaps, and a private little world that keeps her becoming.
+        </p>
+        <div class="hero-actions">
+          <a class="btn secondary">Preview the system</a>
+          <a class="btn dark">Open the WeWeb app</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">What actually lives inside</div>
+          <h2>The app is not a planner. <em>It is a soft system.</em></h2>
+        </div>
+        <p>Based on the WeWeb build: dashboard, era onboarding, morning checklist, mood tracker, water tracker, magazine rituals, weekly recap, and My World.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="module-card">
+          <div>
+            <div class="module-preview">
+              <div class="preview-top"><div class="preview-pill"></div><div class="preview-dot"></div></div>
+              <div class="app-line"></div><div class="app-line"></div><div class="app-line"></div>
+              <div class="app-mini-row"><div class="app-dot"></div><div class="app-dot"></div><div class="app-dot"></div></div>
+            </div>
+            <div class="label-row"><span class="tiny-label">22 rituals</span><span class="tiny-label">daily intention</span></div>
+            <h3>Morning Checklist</h3>
+            <p>A menu of 22 tiny rituals. She can choose what her morning needs instead of trying to perform a perfect routine.</p>
+          </div>
+          <a class="module-link">Morning module</a>
+        </article>
+
+        <article class="module-card">
+          <div>
+            <div class="module-preview" style="background:#1A0A0E">
+              <div class="preview-top"><div class="preview-pill" style="background:#BE6C9E"></div><div class="preview-dot" style="background:#FFCAD4"></div></div>
+              <div class="app-line" style="background:#6C0820"></div><div class="app-line" style="background:#BE6C9E"></div><div class="app-line" style="background:#FFCAD4"></div>
+              <div class="app-mini-row"><div class="app-dot" style="background:#6C0820"></div><div class="app-dot" style="background:#BE6C9E"></div><div class="app-dot" style="background:#FFCAD4"></div></div>
+            </div>
+            <div class="label-row"><span class="tiny-label">heart scale</span><span class="tiny-label">mood words</span></div>
+            <h3>Mood Tracker</h3>
+            <p>A private midnight room that asks how her heart feels today — not to fix it, just to hear it.</p>
+          </div>
+          <a class="module-link">Mood module</a>
+        </article>
+
+        <article class="module-card">
+          <div>
+            <div class="module-preview">
+              <div class="preview-top"><div class="preview-pill"></div><div class="preview-dot"></div></div>
+              <div class="app-mini-row" style="grid-template-columns:repeat(5,1fr);margin-top:4px">
+                <div class="app-dot"></div><div class="app-dot"></div><div class="app-dot"></div><div class="app-dot"></div><div class="app-dot"></div>
+              </div>
+              <div class="app-line" style="margin-top:12px;background:#D4C84A"></div><div class="app-line"></div>
+            </div>
+            <div class="label-row"><span class="tiny-label">6 / 8 / 10 glasses</span><span class="tiny-label">hydration ritual</span></div>
+            <h3>Water Tracker</h3>
+            <p>Hydration, but made romantic: daily goals, glass logging, progress, and tiny ritual prompts.</p>
+          </div>
+          <a class="module-link">Water module</a>
+        </article>
+
+        <article class="module-card">
+          <div>
+            <div class="module-preview">
+              <div class="preview-top"><div class="preview-pill"></div><div class="preview-dot"></div></div>
+              <div class="app-line"></div><div class="app-line"></div>
+              <div class="app-mini-row"><div class="app-dot"></div><div class="app-dot"></div><div class="app-dot"></div></div>
+            </div>
+            <div class="label-row"><span class="tiny-label">issue prompts</span><span class="tiny-label">actions</span></div>
+            <h3>Magazine Rituals</h3>
+            <p>Every L&M issue can feed prompts, actions, challenges, and saved reads into the app.</p>
+          </div>
+          <a class="module-link">Issue module</a>
+        </article>
+
+        <article class="module-card">
+          <div>
+            <div class="module-preview">
+              <div class="preview-top"><div class="preview-pill"></div><div class="preview-dot"></div></div>
+              <div class="app-line" style="width:92%"></div><div class="app-line" style="width:66%"></div><div class="app-line" style="width:48%"></div>
+              <div class="app-mini-row"><div class="app-dot"></div><div class="app-dot"></div><div class="app-dot"></div></div>
+            </div>
+            <div class="label-row"><span class="tiny-label">weekly recap</span><span class="tiny-label">love letter</span></div>
+            <h3>Weekly Recap</h3>
+            <p>Not a report card — a soft reflection on moods logged, water goals, checklist opens, and tiny rituals lived.</p>
+          </div>
+          <a class="module-link">Recap module</a>
+        </article>
+
+        <article class="module-card">
+          <div>
+            <div class="module-preview">
+              <div class="preview-top"><div class="preview-pill"></div><div class="preview-dot"></div></div>
+              <div class="app-mini-row">
+                <div class="app-dot" style="border-radius:50%;height:36px"></div>
+                <div class="app-dot" style="border-radius:50%;height:36px"></div>
+                <div class="app-dot" style="border-radius:50%;height:36px"></div>
+              </div>
+              <div class="app-line" style="margin-top:12px"></div><div class="app-line"></div>
+            </div>
+            <div class="label-row"><span class="tiny-label">charms</span><span class="tiny-label">saved world</span></div>
+            <h3>My World</h3>
+            <p>A private identity layer for charms, affirmations, saved prompts, mood archive, and the girl she is becoming.</p>
+          </div>
+          <a class="module-link">World module</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="split">
+      <div class="split-visual">
+        <div class="app-window">
+          <div class="app-sidebar">
+            <div class="app-logo">L<em>&amp;</em>M</div>
+            <div class="side-item active"></div>
+            <div class="side-item"></div>
+            <div class="side-item"></div>
+            <div class="side-item"></div>
+            <div class="side-item"></div>
+          </div>
+          <div class="app-main">
+            <h3>good morning, <em style="font-family:'Cormorant Garamond',serif;color:var(--orchid);font-weight:400">love.</em></h3>
+            <div class="dark-card">
+              <h4>Wear perfume,<br>for yourself.</h4>
+              <div class="progress"><span></span></div>
+            </div>
+            <div class="small-grid">
+              <div class="small-card"><strong>11/22</strong><span>checklist items</span></div>
+              <div class="small-card"><strong>5/8</strong><span>water glasses</span></div>
+              <div class="small-card"><strong>soft</strong><span>mood today</span></div>
+              <div class="small-card"><strong>4/7</strong><span>logged days</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="split-copy">
+        <div class="section-kicker">How this page should work</div>
+        <h2>A landing page first. <em>The app opens after.</em></h2>
+        <p>
+          The website page should introduce the Journal clearly, then send users to the WeWeb app. That way the nav does not throw a new reader into a dashboard without context.
+        </p>
+        <p>
+          The app itself can live on a subdomain like <b>journal.yourlnm.com</b> or <b>app.yourlnm.com</b>, while this page explains why the system exists.
+        </p>
+        <div class="btn-row">
+          <a class="btn primary" href="Journal.html">Open L&M Journal</a>
+          <a class="btn secondary" href="Journal.html">See app preview</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="faq-left">
+        <h2>FAQs</h2>
+        <div class="faq-item"><span>Is this the full app?</span><span>+</span></div>
+        <div class="faq-item"><span>What can I track inside?</span><span>+</span></div>
+        <div class="faq-item"><span>Is there a morning checklist?</span><span>+</span></div>
+        <div class="faq-item"><span>How is this different from Notion?</span><span>+</span></div>
+        <div class="faq-item"><span>Will it open on mobile?</span><span>+</span></div>
+      </div>
+
+      <div class="faq-right">
+        <div class="journal-card">
+          <h3>The checklist is a menu, not a courtroom.</h3>
+          <p>
+            The Journal is designed to feel gentle even when it is helping her build structure — because shame is not a sustainable system.
+          </p>
+          <a class="btn primary">Open the WeWeb app</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="roadmap">
+      <div class="roadmap-left">
+        <article class="small-resource">
+          <div class="res-thumb">☾</div>
+          <div>
+            <h4>Coming August</h4>
+            <p>Night Ritual, Closet Planner, and Weekly Reset are phase-two modules.</p>
+          </div>
+        </article>
+
+        <article class="small-resource">
+          <div class="res-thumb">✦</div>
+          <div>
+            <h4>Era Onboarding</h4>
+            <p>Soft Discipline, Healing, Main Character, Moving Out, and Romanticising Life eras.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="roadmap-right">
+        <h2>Prefer starting <em>gently?</em></h2>
+        <p>
+          Start with Martini Mondays or the free magazine, then use L&M Journal when you want the world to become a daily system.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="logo">L<em>&amp;</em>M</div>
+      <div class="socials">♡ ◎ ✦</div>
+      <div class="contact">
+        <div>journal.yourlnm.com</div>
+        <div>opens in WeWeb</div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

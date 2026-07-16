@@ -208,26 +208,26 @@ header-component {
   white-space:nowrap;
 }
 .sticker.free {
-  top:88px;
+  top:50px;
   left:20px;
   background:#F8C7D3;
   transform:rotate(-11deg);
 }
 .sticker.launch {
   top:104px;
-  right:0;
+  right:-40px;
   background:white;
-  transform:rotate(8deg);
+  transform:rotate(28deg);
 }
 .sticker.kit {
   left:28px;
-  bottom:122px;
+  bottom:102px;
   background:#ead9ff;
   transform:rotate(6deg);
 }
 .sticker.date {
   right:10px;
-  bottom:148px;
+  bottom:168px;
   background:#f5e58e;
   transform:rotate(-10deg);
 }
@@ -442,7 +442,7 @@ header-component {
   border:1px solid rgba(255,255,255,.10);
   box-shadow:0 28px 70px rgba(108,8,32,.20);
 }
-.journal-launch-shell::before{
+/* .journal-launch-shell::before{
   content:'L&M';
   position:absolute;
   right:-16px;
@@ -453,7 +453,7 @@ header-component {
   letter-spacing:-12px;
   color:rgba(255,255,255,.035);
   pointer-events:none;
-}
+} */
 .journal-launch-copy{
   position:relative;
   z-index:3;
@@ -1197,7 +1197,7 @@ header-component {
   color:#6c0820;
 }
 
-.footer {
+/* .footer {
   background:#1a0a03;
   color:rgba(255,255,255,.72);
   padding:28px 56px;
@@ -1221,7 +1221,7 @@ header-component {
   font-size:11px;
   letter-spacing:.08em;
   text-transform:uppercase;
-}
+} */
 
 .journal-head{
   display:grid;
@@ -1736,7 +1736,7 @@ header-component {
     <div class="hero-shell">
       <div class="hero-text">
         <div class="eyebrow">
-           <span class="eyebrow-star">✦</span>The L&M Magazine · Free Digital Issues</div>
+           <span class="eyebrow-star">✦</span>The L&M Magazine</div>
 
         <h1 class="hero-title">
           For the girl<br>
@@ -1751,8 +1751,8 @@ header-component {
         </p>
 
         <div class="hero-actions">
-          <a href="Magazine.html" class="btn primary link-btn-pri">Read Issue 01</a>
-          <a href="Magazine.html" class="btn secondary link-btn-sec">Download PDF</a>
+          <a href="issue-01.html" class="btn primary link-btn-pri">Read Issue 01</a>
+          <a href="downloads/issue-01.pdf" class="btn secondary link-btn-sec">Download PDF</a>
         </div>
 
         <div class="hero-note"><strong class="hero-note-strong">Launch issue live soon</strong> · Saturday, 18 July 2026</div>
@@ -1761,7 +1761,7 @@ header-component {
       <div class="hero-visual">
         <div class="magazine-stage">
           <!-- <div class="micro-pill one">main character energy</div> -->
-          <div class="micro-pill two">all digital issue</div>
+          <!-- <div class="micro-pill two">all digital issue</div> -->
 
           <div class="cover-shadow"></div>
 
@@ -2045,18 +2045,15 @@ header-component {
   <section class="section inside">
     <div class="container">
       <div class="sec-eyebrow">Inside the launch issue</div>
-      <h2 class="sec-title">What we <span class="italic">packed for you</span>.</h2>
-      <p class="sec-sub">
-        This makes the homepage instantly richer: not just “read the issue,” but a teaser of what kind of reading
-        experience she is getting inside L&amp;M.
-      </p>
+      <h2 class="sec-title">What we <span class="italic">packed for you.</span></h2>
+      
 
       <div class="inside-layout">
         <div class="contents-card">
           <img src="assets/contents-preview.jpg" alt="Issue contents preview">
-          <div class="contents-note">
+          <!-- <div class="contents-note">
             A look into the contents of Issue 01
-          </div>
+          </div> -->
         </div>
 
         <div class="inside-grid">
@@ -2157,7 +2154,7 @@ header-component {
         <div class="polaroid">
           <div class="photo-box"><img src="assets/founderpicedited.jpg"></div>
           <div class="polaroid-label">Deepanshi ✦ Founder</div>
-          <div class="polaroid-button"><a class="nav-cta" href="About.html">Read about →</a></div>
+          <div class="polaroid-button"><a class="nav-cta" href="About.html">Read about me →</a></div>
         </div>
 
         <div>
@@ -2241,7 +2238,7 @@ header-component {
     <div class="newsletter-grid"</div>
     <div class="container news-grid">
       <div>
-        <div class="sec-eyebrow join">Join the L&amp;M list</div>
+        <div class="sec-eyebrow join">Join the L&amp;M newsletter</div>
         <div class="news-title">Never miss an issue, a note, or a new L&amp;M drop.</div>
         <div class="news-copy">
           Join the L&M list and let the next chapter come to you. New issues, Martini Mondays, web-app launches, interactive
@@ -2250,7 +2247,7 @@ header-component {
       </div>
 
       <div class="news-box">
-        <h4 class="news-box-h4">Join the list ✦</h4>
+        <h4 class="news-box-h4">Get the newsletter ✦</h4>
         <p class="news-box-p">Get issue drops, Journal updates, Martini Mondays and L&amp;M notes in your inbox.</p>
         <div class="form">
           <input class="input" placeholder="your@email.com" type="email">

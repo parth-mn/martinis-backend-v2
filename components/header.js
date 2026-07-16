@@ -64,8 +64,7 @@ connectedCallback() {
     <div class="nav-links">
       <span class="nav-links-span"><a href="Magazine.html">The Magazine</a></span>
       <span class="nav-links-span"><a href="Journal.html">L&M Journal</a></span>
-      <span class="nav-links-span"><a href="Blogs.html">Blogs</a></span>
-      <span class="nav-links-span"><a href="Universe-Catalog.html">L&M Universe</a></span>
+      <!-- <span class="nav-links-span"><a href="Universe-Catalog.html">L&M Universe</a></span> -->
       <span class="nav-links-span"><a href="Martini-Mondays.html">Martini Mondays</a></span>
       <span class="nav-links-span"><a href="Studio.html">L&M Studio</a></span>
       <span class="nav-links-span"><a href="About.html">About</a></span>

@@ -354,7 +354,7 @@ h1 em {
 .archive-card h3 { font-family:'Playfair Display', serif; font-size: 32px; letter-spacing:-.05em; line-height:.95; margin: 8px 0 12px; max-width: 420px; }
 .archive-card p { color:#746B6F; line-height:1.7; font-size:13px; max-width: 500px; padding-bottom: 5px; }
 .countdown { text-align:center; background:var(--noir); color:var(--cream); position: relative; overflow:hidden; }
-.countdown::before { content:'L&M'; position:absolute; inset:auto -30px -70px auto; font-family:'Playfair Display', serif; font-size:220px; color: rgba(255,202,212,.045); letter-spacing:-.09em; }
+/* .countdown::before { content:'L&M'; position:absolute; inset:auto -30px -70px auto; font-family:'Playfair Display', serif; font-size:220px; color: rgba(255,202,212,.045); letter-spacing:-.09em; } */
 .countdown .section-title { color: var(--blush); }
 .countdown .section-lede { color: rgba(255,255,255,.55); margin-left:auto; margin-right:auto; }
 .time-row { display:flex; justify-content:center; gap: 12px; flex-wrap:wrap; margin: 24px 0 18px; position:relative; z-index:2; }
@@ -514,7 +514,7 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline:3px solid v
 <section class="section soft">
 <div class="kicker">The Archive</div>
 <h2 class="section-title">Past, present, <em>next</em></h2>
-<p class="section-lede">Every L&amp;M issue will live here. Issue 01 is ready to explore; Issue 02 arrives on Saturday, 25 July 2026.</p>
+<p class="section-lede">Every L&amp;M issue will live here. Issue 01 is ready to explore; Issue 02 arrives on Saturday, 1 August 2026.</p>
 <div class="archive-grid">
 <article class="archive-card">
 <div class="meta">Available Now</div>
@@ -540,20 +540,20 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline:3px solid v
 <div class="time-box"><div class="time-num" id="minutes">00</div><div class="time-label">Minutes</div></div>
 <div class="time-box"><div class="time-num" id="seconds">00</div><div class="time-label">Seconds</div></div>
 </div>
-<p style="position:relative;z-index:2;color:rgba(255,255,255,.38);font-size:12px;">Target drop: Saturday, 1 August 2026</p>
+<!-- <p style="position:relative;z-index:2;color:rgba(255,255,255,.38);font-size:12px;">Target drop: Saturday, 1 August 2026</p> -->
 <a class="btn pink" href="/issue-02.html" id="issue-live-cta" style="display:none;position:relative;z-index:2;margin-top:18px;">Open Issue 02</a></section>
 <section class="section newsletter" id="join-list">
-<div class="kicker">Join the L&amp;M List</div>
+<div class="kicker">Join the L&amp;M Newsletter</div>
 <h2 class="section-title">Get the latest issue <em>in your inbox.</em></h2>
 <p class="section-lede" style="margin-left:auto;margin-right:auto;">Join the L&amp;M List to receive the latest issue, Martini Mondays, future magazine drops and everything new from L&amp;M directly in your inbox.</p>
-<form action="#" aria-label="Join the L&amp;M List" class="email-box" method="post"><input aria-label="Email address" autocomplete="email" name="email" placeholder="your@email.com" required="" type="email"/><button class="btn primary" type="submit">Join the L&amp;M List</button></form>
+<form action="#" aria-label="Join the L&amp;M Newsletter" class="email-box" method="post"><input aria-label="Email address" autocomplete="email" name="email" placeholder="your@email.com" required="" type="email"/><button class="btn primary" type="submit">Join the L&amp;M Newsletter</button></form>
 </section>
 <footer-component></footer-component>
 <!-- <div class="footer-strip"><span>© 2026 L&amp;M. All rights reserved.</span><a class="footer-policy" href="/privacy-policy/">Privacy Policy</a></div> -->
 </main>
 <script>
 function updateCountdown() {
-  var target = new Date('2026-08-21T00:00:00+05:30').getTime();
+  var target = new Date('2026-08-01T00:00:00+05:30').getTime();
   var now = new Date().getTime();
   var distance = target - now;
   var countdownSection = document.querySelector('.countdown');

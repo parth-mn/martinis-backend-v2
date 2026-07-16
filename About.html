@@ -7,6 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="components/header.js"></script>
+<script src="components/footer.js"></script>
 <style>
   :root{
     --bg:#f8f4f1;
@@ -41,7 +43,25 @@
     box-shadow:0 10px 40px rgba(33,12,18,.05);
   }
 
-  .topbar{
+  .topbar {
+  background:#be6c9e;
+  color:#fff;
+  text-align:center;
+  padding:7px 16px;
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:700;
+}
+
+header-component {
+  display: block;
+  position: sticky;
+  top:0;
+  z-index: 5000;
+}
+
+  /* .topbar{
     min-height:74px;
     display:grid;
     grid-template-columns:190px 1fr 220px;
@@ -84,7 +104,7 @@
     letter-spacing:.11em;
     font-weight:800;
     white-space:nowrap;
-  }
+  } */
 
   .hero{
     display:grid;
@@ -260,6 +280,7 @@
     color:var(--burg);
     font-weight:700;
     justify-content:center;
+    animation: ticker 22s linear infinite;
   }
 
   .story-section{
@@ -393,7 +414,7 @@
   }
 
   .bottom-feature{
-    display:grid;
+    /* display:grid; */
     grid-template-columns:.9fr 1.1fr;
     min-height:640px;
   }
@@ -425,6 +446,7 @@
     line-height:1.95;
     max-width:560px;
     margin-bottom:16px;
+    margin-top: 16px;
   }
   .book-actions{
     display:flex;
@@ -433,7 +455,7 @@
     margin-top:8px;
     margin-bottom:18px;
   }
-  .book-mock{
+  /* .book-mock{
     margin-top:8px;
     width:210px;
     height:292px;
@@ -445,6 +467,21 @@
     background-size:20px 20px, 20px 20px, auto;
     color:#fff;
     padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    box-shadow:10px 10px 0 rgba(120,9,34,.16);
+  } */
+   .book-mock{
+    margin-top:40px;
+    width:210px;
+    height:292px;
+    background:
+      linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px),
+      linear-gradient(135deg, #6f0820 0%, #ac4b76 55%, #d798b5 100%);
+    background-size:20px 20px, 20px 20px, auto;
+    color:#fff;
+    padding-top:20px;
     display:flex;
     flex-direction:column;
     justify-content:flex-end;
@@ -636,8 +673,12 @@
 </style>
 </head>
 <body>
-  <div class="site-shell">
-    <header class="topbar">
+  <div class="topbar">✦ Launch Issue is live · Main Character Syndrome Kit · Read now at yourlnm.com ✦</div>
+
+  <header-component></header-component>
+
+  
+    <!-- <header class="topbar">
       <div class="brand">L<em>&amp;</em>M</div>
       <nav class="navlinks">
         <span>Home</span>
@@ -650,7 +691,7 @@
         <span>About</span>
       </nav>
       <a class="navcta">Start reading</a>
-    </header>
+    </header> -->
 
     <section class="hero">
       <div class="hero-photo-col">
@@ -676,7 +717,7 @@
           L&amp;M began with an instinct I could not ignore: that women deserve a space where taste is not treated as frivolous, ambition is not stripped of softness, and becoming is allowed to be both beautiful and serious.
         </p>
         <p>
-          What I am building is no longer only a magazine. It is an editorial and digital world for the inner life, the outer life, and everything a woman is quietly becoming: stories to return to, rituals to live by, tools that make life feel more intentional, and ideas that stay with her.
+          What I am building isn't just a magazine. It is an editorial and digital world for the inner life, the outer life, and everything a woman is quietly becoming: stories to return to, rituals to live by, tools that make life feel more intentional, and ideas that stay with her.
         </p>
 
         <div class="mini-tags">
@@ -687,7 +728,7 @@
           <span>BITS Pilani Graduate</span>
         </div>
 
-        <div class="hero-cta-row">
+        <!-- <div class="hero-cta-row">
           <a class="btn primary">Read Issue 01</a>
           <a class="btn secondary">Join Martini Mondays</a>
         </div>
@@ -695,7 +736,7 @@
         <div class="hero-note">
           <strong>What L&amp;M really is:</strong> an editorial and digital world for women who want their lives to feel as considered as their ambitions: intelligent, expressive, useful, and entirely their own.
         </div>
-      </div>
+      </div> -->
     </section>
 
     <section class="booking-strip">
@@ -713,7 +754,7 @@
     <section class="story-section">
       <div class="story-left">
         <div class="eyebrow">Why this exists</div>
-        <h2>Helping her get closer to the woman she already feels <em>becoming.</em></h2>
+        <h2>Helping her get closer to the woman she already feels like <em>becoming.</em></h2>
         <p>
           L&amp;M was built from the feeling that so much of women’s media asks her to become more, yet rarely makes space for who she already is.
         </p>
@@ -736,7 +777,7 @@
             <div class="stat-label">Poetry book published</div>
           </div>
           <div class="stat">
-            <div class="stat-num">6</div>
+            <div class="stat-num">4</div>
             <div class="stat-label">Connected L&amp;M worlds</div>
           </div>
           <div class="stat">
@@ -753,10 +794,10 @@
           <div class="eyebrow" style="color:#ffcedd">The L&amp;M Girl</div>
           <h3>She wants a life that feels unmistakably hers.</h3>
           <p>
-            She is thoughtful, ambitious, and alive to beauty. She deeply cares about the future she is building for herself and the lipstick or lip-gloss shade that helps her embrace the diva within. She romanticises rom-coms, loves to shop, saves sentences, notices details, asks better questions, and wants a life that feels chosen rather than inherited.
+            She is thoughtful, ambitious, and alive to beauty. She deeply cares about the future she is building for herself, while also concerned about the lipstick or lip-gloss shade that helps her embrace the diva within. She romanticises rom-coms, loves to shop, annotates books, notices details, and wants a life that feels chosen rather than influenced.
           </p>
           <p>
-            She is learning to make herself the love of her own life and to be unapologetically herself. Shopping may be retail therapy, skincare and makeup are rituals rather than trivial indulgences, and embracing her life like the main character is not delusion. It is recognition. She is the moment, and she wants to feel it.
+            She is learning to make herself the love of her own life, to be unapologetically herself. Shopping is retail therapy, skincare and makeup are rituals rather than trivial indulgences, and embracing her life like the main character is not delusion but recognition. She is in the moment, and she wants to feel it.
           </p>
           <p>
             She is not looking to be fixed. She is looking for language, perspective, taste, and tools that help her hear herself more clearly and live more fully as the woman she already knows she can be.
@@ -770,6 +811,11 @@
       <div class="book-panel">
         <div class="eyebrow">Before L&amp;M, there was—</div>
         <h2>Before L&amp;M became a world, it was a <em>voice after midnight.</em></h2>
+        <div class="book-mock">
+          <!--<div class="tiny">Poetry book</div>
+          <h4>Fathoming<br>My 3AM<br>Thoughts</h4>-->
+          <img src="assets/book-cover.png">
+        </div>
         <p>
           <em>Fathoming My 3AM Thoughts</em> was the first place I learned what happens when a private feeling is shaped carefully enough to become someone else’s mirror. It was intimate, restless, romantic, and unafraid of emotional detail.
         </p>
@@ -783,15 +829,23 @@
         <div class="book-actions">
           <a class="btn primary" href="https://amzn.in/d/05zogC9d" target="_blank" rel="noopener noreferrer">Find the book on Amazon</a>
         </div>
-
-        <div class="book-mock">
-          <!--<div class="tiny">Poetry book</div>
-          <h4>Fathoming<br>My 3AM<br>Thoughts</h4>-->
-          <img src="assets/book-cover.png">
+        <div class="social-follow">
+          <div class="left">
+            <div class="eyebrow">Beyond the website</div>
+            <h3>For the in-between moments, <em>follow along.</em></h3>
+            <p>
+              If L&amp;M is the finished world, Instagram is where you see it becoming. I share the notes behind the ideas, the decisions behind the design, the life around the work, and the small obsessions that eventually find their way into an issue.
+            </p>
+          </div>
+          <div class="right">
+            <div class="handle">Instagram / @yourhandle</div>
+            <a class="btn soft" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
+          </div>
         </div>
+        
       </div>
 
-      <div class="cred-panel">
+      <!-- <div class="cred-panel">
         <div class="eyebrow">What I bring to L&amp;M</div>
         <div class="cred-grid">
           <article class="cred-card">
@@ -818,27 +872,14 @@
             <p>L&amp;M is not a moodboard. It is a working ecosystem of editorial, design, digital products, systems, and strategy being built into one coherent world.</p>
           </article>
         </div>
-
-        <div class="social-follow">
-          <div class="left">
-            <div class="eyebrow">Beyond the website</div>
-            <h3>For the in-between moments, <em>follow along.</em></h3>
-            <p>
-              If L&amp;M is the finished world, Instagram is where you see it becoming. I share the notes behind the ideas, the decisions behind the design, the life around the work, and the small obsessions that eventually find their way into an issue.
-            </p>
-          </div>
-          <div class="right">
-            <div class="handle">Instagram / @yourhandle</div>
-            <a class="btn soft" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
-          </div>
-        </div>
-      </div>
+      </div> -->
     </section>
 
     <section class="footer-cta">
       <div>
         <div class="eyebrow" style="color:#ffd8e4">Start here</div>
-        <h2>Enter for the beauty. Stay for the <em>clarity.</em></h2>
+        <!-- <h2>Enter for the beauty. Stay for the <em>clarity.</em></h2> -->
+         <h2>Join our <em>Newsletter.</em></h2>
         <p>
           Read the magazine, join Martini Mondays, or explore the universe. Each door is different, but the intention is the same: to make the internet feel more thoughtful, more useful, and a little more like a place you would choose to stay.
         </p>
@@ -852,6 +893,6 @@
         <a class="btn primary" style="width:100%">Join Martini Mondays</a>
       </div>
     </section>
-  </div>
+  <footer-component></footer-component>
 </body>
 </html>

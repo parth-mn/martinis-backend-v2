@@ -17,7 +17,7 @@ a {
             .footer {
   background:#1a0a03;
   color:rgba(255,255,255,.72);
-  padding:28px 56px;
+  padding:14px 56px;
   font-family: 'DM Sans',sans-serif;
   overflow-x: hidden;
 }
@@ -51,7 +51,7 @@ a {
         <footer class="footer">
     <div class="footer-inner">
       <!-- <div class="logo-lower">L<span class="amp"> &amp; </span>M</div> -->
-      <div><a href="/"><img src="../L&M_Logo.svg" width="50" height="50"></a></div>
+      <div><a href="/"><img src="assets/L&M_Logo.svg" width="150" height="150"></a></div>
       <div class="footer-copy">© 2026 Lipsticks &amp; Martinis</div>
       <div class="footer-links">
         <span><a href="https://instagram.com/lipsticksandmartinis">Instagram</a></span>
