@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+	<defs>
+		<image  width="800" height="800" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAMgAQMAAADhvpQrAAAAAXNSR0IB2cksfwAAAANQTFRF////p8QbyAAAAS1JREFUeJztzUERAAAMAqDZv/Ra+PCgALmCSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKRSCQSiUQikUgkEolEIpFIJBKJRCKR7CQPIHEDIbMPz1oAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 300px;fill: #6c0820;font-weight: 400;font-family: "PlayfairDisplayRoman-Bold", "Playfair Display" } 
+		.t1 { font-size: 300px;fill: #be6c9e;font-weight: 400;font-family: "PlayfairDisplayRoman-Bold", "Playfair Display" } 
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+	<text id="L&amp;M" transform="translate(-1,256)">
+		<tspan x="34.6" y="249.7" class="t0">L</tspan><tspan  y="249.7" class="t1">&amp;</tspan><tspan  y="249.7" class="t0">M
+</tspan>
+	</text>
+</svg>
