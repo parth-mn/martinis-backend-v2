@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- <link rel="stylesheet" href="styles.css"> -->
+  <script src="components/header.js" type="text/javascript"></script>
+  <script src="components/footer.js" type="text/javascript"></script>
    <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&display=swap');
 
@@ -32,70 +34,11 @@ a {
   font-weight:700;
 }
 
-.nav {
-  height:64px;
-  padding:0 38px;
-  background:rgba(250,247,245,.94);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid #e8d8dc;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  position:sticky;
+header-component {
+  display: block;
+  position: sticky;
   top:0;
-  z-index:50;
-}
-
-.logo {
-  font-family:'Playfair Display',serif;
-  font-size:28px;
-  font-weight:900;
-  color:#6c0820;
-  line-height:1;
-}
-
-.logo .amp { color:#be6c9e; font-style:italic; }
-.nav-links {
-  display:flex;
-  gap:22px;
-  font-size:11px;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  color:#7C7480;
-  white-space:nowrap;
-}
-
-.logo-lower {
-  font-family:'Playfair Display',serif;
-  font-size:28px;
-  font-weight:900;
-  color:#6c0820;
-  line-height:1;
-  font-size:24px;color:#FFDEE8;
-}
-
-.logo-lower .amp { color:#be6c9e; font-style:italic; }
-.nav-links {
-  display:flex;
-  gap:22px;
-  font-size:11px;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  color:#7C7480;
-  white-space:nowrap;
-}
-
-.nav-links-span { cursor:pointer; }
-.nav-links-span:hover { color:#be6c9e; }
-.nav-cta {
-  background:#6c0820;
-  color:white;
-  padding:10px 18px;
-  border-radius:999px;
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:.08em;
-  text-transform:uppercase;
+  z-index: 5000;
 }
 
 .hero {
@@ -587,7 +530,10 @@ a {
   color:#fff;
   font-family:'Cormorant Garamond',serif;
   font-size:24px;
-  font-style:italic;
+  /* font-style:italic; */
+}
+.journal-launch-manifesto em {
+  font-style: normal;
 }
 .journal-launch-manifesto::before{
   content:'✦';
@@ -606,8 +552,10 @@ a {
   padding:8px 12px;
   border-radius:999px;
   border:1px solid rgba(255,255,255,.14);
-  background:rgba(255,255,255,.07);
-  color:rgba(255,255,255,.76);
+  /* background:rgba(255,255,255,.07); */
+  background: white;
+  color: --burg;
+  /* color:rgba(255,255,255,.76); */
   font-size:10px;
   font-weight:800;
   letter-spacing:.09em;
@@ -1779,22 +1727,9 @@ a {
 </head>
 
 <body>
-  <div class="topbar">✦ Launch Issue is live · Main Character Syndrome Kit · Read free at yourlnm.com ✦</div>
+  <div class="topbar">✦ Launch Issue is live · Main Character Syndrome Kit · Read now at yourlnm.com ✦</div>
 
-  <nav class="nav">
-    <div class="logo">L<span class="amp">&</span>M</div>
-    <div class="nav-links">
-      <span class="nav-links-span"><a href="Magazine.html">The Magazine</a></span>
-      <span class="nav-links-span"><a href="Journal.html">L&M Journal</a></span>
-      <span class="nav-links-span"><a href="Blogs.html">Blogs</a></span>
-      <span class="nav-links-span"><a href="Universe-Catalog.html">L&M Universe</a></span>
-      <span class="nav-links-span"><a href="Martini-Mondays.html">Martini Mondays</a></span>
-      <span class="nav-links-span"><a href="Studio.html">L&M Studio</a></span>
-      <span class="nav-links-span"><a href="About.html">About</a></span>
-      <span class="nav-links-span"><a href="Contact.html">Contact</a></span>
-    </div>
-    <a class="nav-cta" href="Magazine.html">Read Issue 01</a>
-  </nav>
+  <header-component></header-component>
 
   <section class="hero">
     <div class="hero-grid"></div>
@@ -1851,12 +1786,12 @@ a {
         <div class="journal-launch-copy">
           <div class="journal-launch-ribbon">
             <span class="live-dot"></span>
-            <span>Launching Soon</span>
-            <strong>8 August 2026</strong>
+            <span>Launching </span>
+            <strong>19 September 2026</strong>
             <span>Our Web App</span>
           </div>
 
-          <div class="journal-launch-eyebrow">L&amp;M Journal · Launching with Issue 03</div>
+          <div class="journal-launch-eyebrow">L&amp;M Journal</div>
           <h2 class="journal-launch-title">
             Meet the L&amp;M
             <span>Journal Web App.</span>
@@ -1864,23 +1799,28 @@ a {
 
           <p class="journal-launch-copytext">
             L&amp;M is growing into a tech-forward lifestyle ecosystem, and the L&amp;M Journal Web App is our next step.
-            Launching on 8 August alongside Issue 03, it is being designed to help girls practise the things we talk about
+            Launching on 19 September, it is being designed to help girls practise the things we talk about
             in the magazine through interactive tools, routines and ritual-based experiences.
           </p>
 
           <div class="journal-launch-manifesto">So L&amp;M becomes something you live, not just read.</div>
 
+            <p class="journal-launch-copytext">
+            <br>We will be launching the beta soon, and we are looking for users with the most attention to detail to help us 
+            make it better! If that sounds like you, visit the Journal page below and join the Beta testing program!
+          </p>
+
           <div class="journal-launch-pills">
-            <span>Mobile-first web app</span>
-            <span>Issue-connected rituals</span>
-            <span>Built for everyday life</span>
+            <a href="journal.html"><span>learn more on the Journal page</span></a>
+            <!-- <span>Issue-connected rituals</span>
+            <span>Built for everyday life</span> -->
           </div>
         </div>
 
         <div class="journal-app-wrap" aria-label="Preview of the upcoming L&amp;M Journal Web App">
           <div class="journal-date-sticker">
-            <b>08</b>
-            <span>Aug 2026<br>Issue 03</span>
+            <b>19</b>
+            <span>Sep 2026</span>
           </div>
           <div class="journal-coming-sticker">The next L&amp;M chapter ✦</div>
 
@@ -1893,7 +1833,7 @@ a {
             <div class="journal-app-screen">
               <div class="journal-app-nav">
                 <div class="journal-app-logo">L<span>&amp;</span>M <em>Journal</em></div>
-                <div class="journal-app-date">Saturday<br>8 August</div>
+                <div class="journal-app-date">Saturday<br>19 September</div>
               </div>
 
               <div class="journal-app-greeting">

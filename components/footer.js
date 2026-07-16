@@ -51,7 +51,7 @@ a {
         <footer class="footer">
     <div class="footer-inner">
       <!-- <div class="logo-lower">L<span class="amp"> &amp; </span>M</div> -->
-      <div><a href="/"><img src="../assets/L&M_Logo.svg" width="50" height="50"></a></div>
+      <div><a href="/"><img src="../L&M_Logo.svg" width="50" height="50"></a></div>
       <div class="footer-copy">© 2026 Lipsticks &amp; Martinis</div>
       <div class="footer-links">
         <span><a href="https://instagram.com/lipsticksandmartinis">Instagram</a></span>

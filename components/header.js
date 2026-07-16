@@ -21,18 +21,8 @@ connectedCallback() {
             color: inherit;
             }
 
-            .topbar {
-            background:#be6c9e;
-            color:#fff;
-            text-align:center;
-            padding:7px 16px;
-            font-size:10px;
-            letter-spacing:.16em;
-            text-transform:uppercase;
-            font-weight:700;
-            }
-
             .nav {
+            position:sticky;
             height:64px;
             padding:0 38px;
             background:rgba(250,247,245,.94);
@@ -41,9 +31,6 @@ connectedCallback() {
             display:flex;
             align-items:center;
             justify-content:space-between;
-            position:sticky;
-            top:0;
-            z-index:50;
             }
 
             .nav-links {
@@ -69,13 +56,11 @@ connectedCallback() {
             text-transform:uppercase;
             }
         </style>
-    </head>
     <header>
-        <div class="topbar">✦ Launch Issue is live · Main Character Syndrome Kit · Read at yourlnm.com ✦</div>
-
+      
   <nav class="nav">
     <!-- <div><a href="/"><span class="logoimg"><span class="visually-hidden">L&M</span></span></a></div> -->
-    <div><a href="/"><img src="../assets/L&M_Logo.svg" width="50" height="50"></a></div>
+    <div><a href="/"><img src="assets/L&M_Logo.svg" width="50" height="50"></a></div>
     <div class="nav-links">
       <span class="nav-links-span"><a href="Magazine.html">The Magazine</a></span>
       <span class="nav-links-span"><a href="Journal.html">L&M Journal</a></span>
