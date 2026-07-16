@@ -60,7 +60,7 @@ connectedCallback() {
       
   <nav class="nav">
     <!-- <div><a href="/"><span class="logoimg"><span class="visually-hidden">L&M</span></span></a></div> -->
-    <div><a href="/"><img src="assets/L&M_Logo.svg" width="50" height="50"></a></div>
+    <div><a href="/"><img style="margin-top:5px;" src="assets/L&M_Logo.svg" width="100" height="100"></a></div>
     <div class="nav-links">
       <span class="nav-links-span"><a href="Magazine.html">The Magazine</a></span>
       <span class="nav-links-span"><a href="Journal.html">L&M Journal</a></span>
