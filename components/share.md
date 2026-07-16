@@ -58,6 +58,7 @@ connectedCallback() {
             text-transform:uppercase;
             }
         </style>
+    </head>
     <header>
       
   <nav class="nav">
