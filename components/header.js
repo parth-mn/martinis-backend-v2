@@ -43,8 +43,9 @@ connectedCallback() {
             white-space:nowrap;
             }
 
-            .nav-links-span { cursor:pointer; }
+            .nav-links-span { cursor:pointer; color:#7c7480; transition:color 0.2s ease; text-decoration: none; }
             .nav-links-span:hover { color:#be6c9e; }
+            .nav-links a.active { color: #6c0820; font-weight: 700; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
             .nav-cta {
             background:#6c0820;
             color:white;
@@ -62,18 +63,26 @@ connectedCallback() {
     <!-- <div><a href="/"><span class="logoimg"><span class="visually-hidden">L&M</span></span></a></div> -->
     <div><a href="/"><img style="margin-top:5px;" src="assets/L&M_Logo.svg" width="100" height="100"></a></div>
     <div class="nav-links">
-      <span class="nav-links-span"><a href="Magazine.html">The Magazine</a></span>
-      <span class="nav-links-span"><a href="Journal.html">L&M Journal</a></span>
-      <!-- <span class="nav-links-span"><a href="Universe-Catalog.html">L&M Universe</a></span> -->
-      <span class="nav-links-span"><a href="Martini-Mondays.html">Martini Mondays</a></span>
-      <span class="nav-links-span"><a href="Studio.html">L&M Studio</a></span>
-      <span class="nav-links-span"><a href="About.html">About</a></span>
-      <span class="nav-links-span"><a href="Contact.html">Contact</a></span>
+      <span class="nav-links-span"><a href="Magazine.html" data-page="mag">The Magazine</a></span>
+      <span class="nav-links-span"><a href="Journal.html" data-page="jrn">L&M Journal</a></span>
+      <!-- <span class="nav-links-span"><a href="Universe-Catalog.html" data-page="uni">L&M Universe</a></span> -->
+      <span class="nav-links-span"><a href="Martini-Mondays.html" data-page="mar">Martini Mondays</a></span>
+      <span class="nav-links-span"><a href="Studio.html" data-page="stu">L&M Studio</a></span>
+      <span class="nav-links-span"><a href="About.html" data-page="abt">About</a></span>
+      <span class="nav-links-span"><a href="Contact.html" data-page="cnt">Contact</a></span>
     </div>
     <a class="nav-cta link-cta" href="Magazine.html">Read Issue 01</a>
   </nav>
     </header>
     `;
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+this.querySelectorAll(".nav-links a").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+    }
+});
   }
+  
 }
 customElements.define('header-component', Header);

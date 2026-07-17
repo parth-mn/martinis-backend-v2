@@ -640,7 +640,8 @@ header-component {
     }
     .faq-question span:last-child { color:var(--burgundy); font-family:'DM Sans',sans-serif; font-size:24px; transition:transform .2s ease; }
     .faq-item.open .faq-question span:last-child { transform:rotate(45deg); }
-    .faq-answer { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+    /* .faq-answer { max-height:0; overflow:hidden; transition:max-height .35s ease; } */
+    .faq-answer { min-height:0; overflow:hidden; transition:max-height .35s ease; }
     .faq-answer p { color:var(--muted); line-height:1.8; font-size:14px; padding:0 36px 24px 0; }
 
     .final { background:linear-gradient(135deg,#6C0820,#9E3C68); color:#fff; }
@@ -959,10 +960,22 @@ header-component {
       <div class="container faq-grid">
         <div class="faq-intro">
           <div class="eyebrow">A Few Things You May Be Wondering</div>
-          <h2 class="section-title">Journal <em>FAQs.</em></h2>
-          <p class="section-copy">The first version is intentionally focused, browser-based and designed to feel easy on both mobile and desktop.</p>
+          <h2 class="section-title">Journal <em>FAQs</em></h2>
+          <!-- <p class="section-copy">The first version is intentionally focused, browser-based and designed to feel easy on both mobile and desktop.</p> -->
         </div>
         <div class="accordion">
+      <details class="faq-item"><summary class="faq-question">What is L&M Journal?                                          <span>+</span></summary><div class="faq-answer"><p>L&M Journal is a browser-based companion to the L&M world, designed to help you bring the ideas you read in the magazine into your everyday life. It brings together gentle routines, mood check-ins, hydration tracking, magazine-inspired rituals and collectible main-character charms in one thoughtful digital space.                 </p></div></details>
+      <details class="faq-item"><summary class="faq-question">Do I need to download anything?                               <span>+</span></summary><div class="faq-answer"><p>No. The first version of L&M Journal will work directly in your browser, so there is no app to download. You will be able to access it on both mobile and desktop through your personal Journal account.                                                                                                                                   </p></div></details>
+      <details class="faq-item"><summary class="faq-question">When does it launch?                                          <span>+</span></summary><div class="faq-answer"><p>L&M Journal launches on Saturday, 19 September 2026. A small group of selected beta testers will receive access before the public launch.                                                                                                                                                             </p></div></details>
+      <details class="faq-item"><summary class="faq-question">What will be available at launch?                             <span>+</span></summary><div class="faq-answer"><p>The first release will include the Morning Checklist, Mood Tracker, Water Tracker and Magazine Rituals, along with six collectible main-character charms. We are keeping the first version intentionally focused so that every feature feels useful, reliable and genuinely delightful to return to.                                       </p></div></details>
+      <details class="faq-item"><summary class="faq-question">How can I join the beta?                                      <span>+</span></summary><div class="faq-answer"><p>You can apply for beta access through the short application form on this page. A small number of applicants will be selected to test the Journal before launch, explore its first features and share honest feedback. Applying does not guarantee selection, but all applicants can receive important Journal and launch updates.          </p></div></details>
+      <details class="faq-item"><summary class="faq-question">How is this different from Notion or a regular habit tracker? <span>+</span></summary><div class="faq-answer"><p>You do not have to design, organise or build the system yourself. L&M Journal is a guided experience connected to the L&M editorial universe, with carefully created rituals, emotional check-ins and tools that work together. It is designed to feel personal and beautiful without turning your life into another productivity project. </p></div></details>
+      <details class="faq-item"><summary class="faq-question">Will my entries be private?                                   <span>+</span></summary><div class="faq-answer"><p>Yes. Your personal check-ins and Journal activity will be connected to your authenticated account and will not be publicly visible to other users. Clear information about how your data is stored, accessed and protected will be provided in the L&M Journal Privacy Policy before launch.                                               </p></div></details>
+      <details class="faq-item"><summary class="faq-question">Is L&M Journal free to use?                                   <span>+</span></summary><div class="faq-answer"><p>The pricing and access structure for the public version will be announced closer to launch. Selected beta testers will receive access to the testing version without charge during the beta period.                                                                                                                                        </p></div></details>
+      <details class="faq-item"><summary class="faq-question">What happens after I apply for beta access?                   <span>+</span></summary><div class="faq-answer"><p>Once you submit the application, your response will be reviewed by the L&M team. Selected testers will be contacted by email with their private access link, testing dates and simple instructions. Applicants who are not selected may still receive product updates and the public launch link.                                          </p></div></details>
+      <details class="faq-item"><summary class="faq-question">Will more features be added later?                            <span>+</span></summary><div class="faq-answer"><p>Yes. The first release is only the beginning. New tools, rituals and experiences may be introduced gradually based on how people use the Journal and the feedback shared during beta testing. We would rather grow thoughtfully than fill the Journal with features that do not meaningfully improve your experience.                      </p></div></details>
+    </div>
+        <!-- <div class="accordion">
           <div class="faq-item"><button class="faq-question" type="button"><span>What is L&amp;M Journal?</span><span>+</span></button><div class="faq-answer"><p>A browser-based companion web app that brings together everyday rituals, mood check-ins, hydration tracking, magazine-inspired practices and collectible charms.</p></div></div>
           <div class="faq-item"><button class="faq-question" type="button"><span>Do I need to download anything?</span><span>+</span></button><div class="faq-answer"><p>No. The first version will work directly in your browser on both mobile and desktop.</p></div></div>
           <div class="faq-item"><button class="faq-question" type="button"><span>When does it launch?</span><span>+</span></button><div class="faq-answer"><p>L&amp;M Journal launches on Saturday, 22 August 2026 alongside Issue 04 of The L&amp;M Magazine.</p></div></div>
@@ -970,7 +983,7 @@ header-component {
           <div class="faq-item"><button class="faq-question" type="button"><span>Can I join the beta?</span><span>+</span></button><div class="faq-answer"><p>A small group will be invited from the early-access list before launch. You can indicate your interest when joining the list.</p></div></div>
           <div class="faq-item"><button class="faq-question" type="button"><span>How is this different from Notion?</span><span>+</span></button><div class="faq-answer"><p>You do not have to build the system yourself. The Journal is curated, connected to the L&amp;M editorial world and designed around a specific set of gentle, guided experiences.</p></div></div>
           <div class="faq-item"><button class="faq-question" type="button"><span>Will my entries be private?</span><span>+</span></button><div class="faq-answer"><p>The launch version is being built with authenticated accounts and private user data in mind. Full details on storage, access and data handling will be explained clearly in the Privacy Policy before launch.</p></div></div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -1000,29 +1013,32 @@ header-component {
   </footer> -->
 
   <script>
-    const launchDate = new Date('2026-08-22T00:00:00+05:30').getTime();
-    const countdownIds = ['days','hours','minutes','seconds'];
-
     function updateCountdown() {
-      var now = new Date.getTime();
-      var target = new Date('2026-09-19T00:00:00+05:30').getTime();
-      var distance = target - now;
-      if (distance <= 0) {
-        document.querySelector('.countdown-label').textContent = 'L&M Journal is now open';
-        countdownIds.forEach(id => document.getElementById(id).textContent = '00');
-        return;
-      }
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      document.getElementById('days').textContent = String(days).padStart(2,'0');
-      document.getElementById('hours').textContent = String(hours).padStart(2,'0');
-      document.getElementById('minutes').textContent = String(minutes).padStart(2,'0');
-      document.getElementById('seconds').textContent = String(seconds).padStart(2,'0');
-    }
-    updateCountdown();
-    setInterval(updateCountdown,1000);
+  var target = new Date('2026-08-01T00:00:00+05:30').getTime();
+  var now = new Date().getTime();
+  var distance = target - now;
+  var countdownSection = document.querySelector('.countdown');
+  if (distance <= 0) {
+    document.getElementById('days').textContent = '00';
+    document.getElementById('hours').textContent = '00';
+    document.getElementById('minutes').textContent = '00';
+    document.getElementById('seconds').textContent = '00';
+    countdownSection.querySelector('.section-title').innerHTML = 'Issue 02 is <em>now live.</em>';
+    countdownSection.querySelector('.section-lede').textContent = 'The next chapter of The L&M Magazine has arrived.';
+    document.getElementById('issue-live-cta').style.display = 'inline-flex';
+    return;
+  }
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  document.getElementById('days').textContent = String(days).padStart(2, '0');
+  document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+  document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+  document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
 
     document.querySelectorAll('.faq-question').forEach(button => {
       button.addEventListener('click', () => {
@@ -1038,7 +1054,6 @@ header-component {
           answer.style.maxHeight = answer.scrollHeight + 'px';
         }
       });
-    });
     });
 
     const toggle = document.getElementById('mobile-toggle');

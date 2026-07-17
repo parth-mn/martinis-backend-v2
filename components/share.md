@@ -45,8 +45,9 @@ connectedCallback() {
             white-space:nowrap;
             }
 
-            .nav-links-span { cursor:pointer; }
+            .nav-links-span { cursor:pointer; color:#7c7480; transition:color 0.2s ease; text-decoration: none; }
             .nav-links-span:hover { color:#be6c9e; }
+            .nav-link-span a:active { color: #6c0820; font-weight: 700; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
             .nav-cta {
             background:#6c0820;
             color:white;
@@ -64,19 +65,26 @@ connectedCallback() {
   <nav class="nav">
     <div><a href="/"><img src="assets/logo.svg" width="50" height="50"></a></div>
     <div class="nav-links">
-      <span class="nav-links-span"><a href="a.html">a</a></span>
-      <span class="nav-links-span"><a href="b.html">b</a></span>
-      <span class="nav-links-span"><a href="c.html">c</a></span>
-      <span class="nav-links-span"><a href="d.html">d</a></span>
-      <span class="nav-links-span"><a href="e.html">e</a></span>
-      <span class="nav-links-span"><a href="f.html">f</a></span>
-      <span class="nav-links-span"><a href="g.html">g</a></span>
-      <span class="nav-links-span"><a href="h.html">h</a></span>
+      <span class="nav-links-span"><a href="a.html" data-page="abc">a</a></span>
+      <span class="nav-links-span"><a href="b.html" data-page="def">b</a></span>
+      <span class="nav-links-span"><a href="c.html" data-page="ghi">c</a></span>
+      <span class="nav-links-span"><a href="d.html" data-page="jkl">d</a></span>
+      <span class="nav-links-span"><a href="e.html" data-page="mno">e</a></span>
+      <span class="nav-links-span"><a href="f.html" data-page="pqr">f</a></span>
+      <span class="nav-links-span"><a href="g.html" data-page="stu">g</a></span>
+      <span class="nav-links-span"><a href="h.html" data-page="vwx">h</a></span>
     </div>
-    <a class="nav-cta link-cta" href="i.html">i</a>
+    <a class="nav-cta link-cta" href="i.html" data-page="yz">i</a>
   </nav>
     </header>
     `;
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+this.querySelectorAll(".nav-link").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+    }
+});
   }
 }
 customElements.define('header-component', Header);
