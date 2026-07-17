@@ -1139,7 +1139,6 @@ header-component {
   z-index:2;
   margin:40px;
   display: flex;
-    flex-direction: column;
     gap: 40px;
 }
 .news-grid {
@@ -1162,7 +1161,7 @@ header-component {
 }
 .news-box {
   /* background:rgba(255,255,255,.1); */
-  width: auto;
+  /* width: auto; */
   background: #ffcad4;
   border:1px solid rgba(255,255,255,.16);
   border-radius:22px;
@@ -2250,17 +2249,18 @@ header-component {
           rituals, and everything we are building will be delivered directly to your inbox.
         </div>
       </div>
-
-       <!-- <h4 class="news-box-h4">Get the newsletter ✦</h4>
+      <div class="news-box">
+        <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="926cd1d5-16ee-4125-849d-9e8a4ef3dbeb"></script>
+        <!-- </div>
+        <h4 class="news-box-h4">Get the newsletter ✦</h4>
         <p class="news-box-p">Get issue drops, Journal updates, Martini Mondays and L&amp;M notes in your inbox.</p>
         <div class="form">
           <input class="input" placeholder="your@email.com" type="email">
-          <a class="btn light">Subscribe</a> -->
-        </div>
+          <a class="btn light">Subscribe</a>
+        </div> -->
       </div>
     </div>
-    <div class="news-box">
-        <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="926cd1d5-16ee-4125-849d-9e8a4ef3dbeb"></script>
+    
   </section>
 
   <footer-component></footer-component>
