@@ -188,14 +188,14 @@ header-component {
 .faq-answer{padding:0 19px 18px;color:#5a545e;font-size:12px;line-height:1.72}
 
 .cta-section{position:relative;overflow:hidden;background:var(--burgundy);color:#fff}
-.cta-grid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:34px;align-items:center}
+.cta-grid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:34px;align-items:start;}
 .cta-copy .section-kicker{color:var(--butter)}
 .cta-copy h2{font-family:'Playfair Display',serif;font-size:50px;line-height:1;margin:12px 0 14px;color:#fff;text-align:left}
 .cta-copy h2 em{font-style:italic;color:var(--blush)}
 .cta-copy p{max-width:560px;color:rgba(255,255,255,.78);font-size:15px;line-height:1.85}
-.enquiry-card{position:relative;padding:26px;border:2px solid #fff;border-radius:22px;background:rgba(255,255,255,.08)}
+.enquiry-card{position:relative;padding:26px;border:2px solid #fff;border-radius:22px;background:rgba(255,255,255)}
 .enquiry-card:before{content:'project enquiry';position:absolute;right:16px;top:-14px;padding:8px 12px;border-radius:999px;border:2px solid var(--noir);background:var(--butter);color:var(--noir);font-size:9px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;transform:rotate(4deg)}
-.enquiry-card h3{font-family:'Playfair Display',serif;font-size:28px;margin-bottom:6px}
+.enquiry-card h3{font-family:'Playfair Display',serif;font-size:28px;margin-bottom:6px;color:black}
 .enquiry-card>p{color:rgba(255,255,255,.72);font-size:12px;line-height:1.7;margin-bottom:15px}
 .form-grid{display:grid;gap:10px}
 .input{width:100%;padding:13px 15px;border:2px solid rgba(255,255,255,.35);border-radius:14px;background:rgba(255,255,255,.1);color:#fff;outline:none}
@@ -418,7 +418,10 @@ header-component {
 <section class="section cta-section" id="enquire">
 <div class="container cta-grid">
 <div class="cta-copy"><div class="section-kicker">Have a project in mind?</div><h2>Tell us what exists, what's missing, and what needs to feel <em>different.</em></h2><p>Share the service you're considering, the objective, your timeline and any existing material. We'll respond with the next practical step.</p></div>
-<form class="enquiry-card" id="enquiryForm"><h3>Start the conversation</h3><p>Connect this to your preferred email, CRM or form backend.</p><div class="form-grid"><input class="input" placeholder="Your name / brand" required="" type="text"/><input class="input" placeholder="Email address" required="" type="email"/><select class="input" required=""><option disabled="" selected="" value="">Service you are considering</option><option>Campaign Concept &amp; Creative Direction</option><option>Product Storytelling &amp; Collection Copy</option><option>Brand Partnership Kit</option><option>Founder Story &amp; Personal Brand Narrative</option><option>Brand Editorial Audit</option><option>Editorial Magazine &amp; Lookbook</option><option>Pitch Deck Story &amp; Design</option><option>90-Day Brand Marketing Roadmap</option><option>Full Brand Identity</option><option>I am not sure yet</option></select><textarea class="input" placeholder="What are you building, what already exists and what do you need help with?" required=""></textarea><button class="button light" type="submit">Send project enquiry</button><div class="form-status" id="formStatus">Ready to connect to your final email or form backend.</div></div></form>
+<form class="enquiry-card" id="enquiryForm"><h3>Start the conversation</h3>
+<iframe data-tally-src="https://tally.so/embed/81yXjo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="848" frameborder="0" marginheight="0" marginwidth="0" title="L&M Studio - Project Enquiry"></iframe>
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+  <!-- <p>Connect this to your preferred email, CRM or form backend.</p><div class="form-grid"><input class="input" placeholder="Your name / brand" required="" type="text"/><input class="input" placeholder="Email address" required="" type="email"/><select class="input" required=""><option disabled="" selected="" value="">Service you are considering</option><option>Campaign Concept &amp; Creative Direction</option><option>Product Storytelling &amp; Collection Copy</option><option>Brand Partnership Kit</option><option>Founder Story &amp; Personal Brand Narrative</option><option>Brand Editorial Audit</option><option>Editorial Magazine &amp; Lookbook</option><option>Pitch Deck Story &amp; Design</option><option>90-Day Brand Marketing Roadmap</option><option>Full Brand Identity</option><option>I am not sure yet</option></select><textarea class="input" placeholder="What are you building, what already exists and what do you need help with?" required=""></textarea><button class="button light" type="submit">Send project enquiry</button><div class="form-status" id="formStatus">Ready to connect to your final email or form backend.</div></div></form> -->
 </div></section>
 
 </main>
