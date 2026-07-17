@@ -3,19 +3,13 @@ class Header extends HTMLElement {
         super();
     }
 
-connectedCallback() {
-    this.innerHTML = `
-      <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&display=swap');
+    connectedCallback() {
+        this.innerHTML = `
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
             * { box-sizing:border-box; margin:0; padding:0; }
             html { scroll-behavior:smooth; }
-            body {
-            background:#FAF7F5;
-            font-family:'DM Sans',sans-serif;
-            color:#1a0a03;
-            overflow-x:hidden;
-            }
             a {
             text-decoration: none;
             color: inherit;
@@ -23,6 +17,8 @@ connectedCallback() {
 
             .nav {
             position:sticky;
+            top: 0;
+            z-index: 5000;
             height:64px;
             padding:0 38px;
             background:rgba(250,247,245,.94);
@@ -43,55 +39,59 @@ connectedCallback() {
             white-space:nowrap;
             }
 
-            .nav-links-span { cursor:pointer; color:#7c7480; transition:color 0.2s ease; text-decoration: none; }
-            .nav-links-span:hover { color:#be6c9e; }
-            .nav-links a.active { color: #6c0820; font-weight: 700; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
-            .nav-cta {
-            background:#6c0820;
-            color:white;
-            padding:10px 18px;
-            border-radius:999px;
-            font-size:11px;
-            font-weight:700;
-            letter-spacing:.08em;
-            text-transform:uppercase;
+            .nav-links a {
+            color: #7C7480;
+            text-decoration: none;
+            transition: color .2s ease;
+            padding-bottom: 6px;
+            border-bottom: 2px solid transparent;
             }
-        </style>
-    <header>
-      
-  <nav class="nav">
-    <!-- <div><a href="/"><span class="logoimg"><span class="visually-hidden">L&M</span></span></a></div> -->
-    <div><a href="/"><img style="margin-top:5px;" src="assets/L&M_Logo.svg" width="100" height="100"></a></div>
+
+            .nav-links a:hover {
+                color: #be6c9e;
+            }
+
+            .nav-links a.active {
+                color: #6c0820;
+                border-bottom-color: #6c0820;
+                font-weight: 700;
+            }
+
+            .nav-cta {
+    background: #6c0820;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+</style>
+<header>
+<nav class="nav">
+    <div><a href="/"><img style="margin-top:5px;" src="assets/L&M_Logo.svg" width="100" height="100"/></a></div>
     <div class="nav-links">
-      <a href="Magazine.html" data-page="mag">The Magazine</a></span>
-      <a href="Journal.html" data-page="jrn">L&M Journal</a></span>
-      <!-- <span class="nav-links-span"><a href="Universe-Catalog.html" data-page="uni">L&M Universe</a></span> -->
-      <a href="Martini-Mondays.html" data-page="mar">Martini Mondays</a></span>
-      <a href="Studio.html" data-page="stu">L&M Studio</a></span>
-      <a href="About.html" data-page="abt">About</a></span>
-      <a href="Contact.html" data-page="cnt">Contact</a></span>
-    </div>
-    <a class="nav-cta link-cta" href="Magazine.html">Read Issue 01</a>
-  </nav>
-    </header>
-    `;
-    const currentPath = window.location.pathname;
+    <a href="magazine.html">The Magazine</a>
+    <a href="journal.html">L&M Journal</a>
+    <a href="martini-mondays.html">Martini Mondays</a>
+    <a href="studio.html">L&M Studio</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</div>
+<a class="nav-cta link-cta" href="magazine.html">Read Issue 01</a>
+</nav>
+</header>`;
 
-this.querySelectorAll(".nav-links a").forEach(link => {
-    const linkPath = new URL(link.href).pathname;
+const currentPage = window.location.pathname;
 
-    if (linkPath === currentPath) {
-        link.classList.add("active");
+if (currentPage !== "/") {
+    this.querySelectorAll(".nav-links a").forEach(link => {
+        if (new URL(link.href).pathname === currentPage) {
+            link.classList.add("active");
+        }
+    });
+}
     }
-});
-//     const currentPage = window.location.pathname.split("/").pop() || "index.html";
-
-// this.querySelectorAll(".nav-links a").forEach(link => {
-//     if (link.getAttribute("href") === currentPage) {
-//         link.classList.add("active");
-//     }
-// });
-  }
-  
 }
 customElements.define('header-component', Header);
