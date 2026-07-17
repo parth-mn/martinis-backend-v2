@@ -56,8 +56,8 @@ a {
       <div class="footer-copy">© 2026 Lipsticks &amp; Martinis</div>
       <div class="footer-links">
         <span><a href="https://instagram.com/lipsticksandmartinis">Instagram</a></span>
-        <span><a href="Contact.html">Contact</a></span>
-        <span><a href="Legal.html">Privacy</a></span>
+        <span><a href="contact.html">Contact</a></span>
+        <span><a href="legal.html">Privacy</a></span>
       </div>
     </div>
   </footer>`;
