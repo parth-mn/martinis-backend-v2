@@ -1138,13 +1138,13 @@ header-component {
   position:relative;
   z-index:2;
   margin:40px;
-  display: flex;
-    gap: 40px;
+  gap: 40px;
 }
 .news-grid {
   display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:28px;
+  /* grid-template-columns:3fr 2fr; */
+  grid-template-columns: minmax(0, 1fr) 480px;
+  gap:48px;
   align-items:start;
 }
 .news-title {
