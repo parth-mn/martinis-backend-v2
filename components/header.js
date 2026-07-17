@@ -72,14 +72,14 @@ class Header extends HTMLElement {
 <nav class="nav">
     <div><a href="/"><img style="margin-top:5px;" src="assets/L&M_Logo.svg" width="100" height="100"/></a></div>
     <div class="nav-links">
-    <a href="magazine.html">The Magazine</a>
-    <a href="journal.html">L&M Journal</a>
-    <a href="martini-mondays.html">Martini Mondays</a>
-    <a href="studio.html">L&M Studio</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="magazine">The Magazine</a>
+    <a href="journal">L&M Journal</a>
+    <a href="martini-mondays">Martini Mondays</a>
+    <a href="studio">L&M Studio</a>
+    <a href="about">About</a>
+    <a href="contact">Contact</a>
 </div>
-<a class="nav-cta link-cta" href="magazine.html">Read Issue 01</a>
+<a class="nav-cta link-cta" href="magazine">Read Issue 01</a>
 </nav>
 </header>`;
 
