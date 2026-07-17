@@ -1123,8 +1123,7 @@ header-component {
   background:linear-gradient(135deg,#6c0820,#be6c9e);
   color:white;
   position:relative;
-  overflow:hidden;
-  min-height: 575px;
+  overflow:visible;
   padding: auto;
 }
 .newsletter-grid {
@@ -1144,7 +1143,7 @@ header-component {
   display:grid;
   grid-template-columns:1.1fr .9fr;
   gap:28px;
-  align-items:center;
+  align-items:start;
 }
 .news-title {
   font-family:'Playfair Display',serif;
@@ -1165,7 +1164,6 @@ header-component {
   border-radius:22px;
   padding:26px;
   backdrop-filter:blur(8px);
-  min-height: min-content;
 }
 .news-box-h4 {
   font-family:'Playfair Display',serif;
@@ -2238,7 +2236,7 @@ header-component {
   </section>
 
   <section class="section newsletter">
-    <div class="newsletter-grid"</div>
+    <div class="newsletter-grid"></div>
     <div class="container news-grid">
       <div>
         <div class="sec-eyebrow join">Join the L&amp;M newsletter</div>
