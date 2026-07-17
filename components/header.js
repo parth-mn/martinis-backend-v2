@@ -63,13 +63,13 @@ connectedCallback() {
     <!-- <div><a href="/"><span class="logoimg"><span class="visually-hidden">L&M</span></span></a></div> -->
     <div><a href="/"><img style="margin-top:5px;" src="assets/L&M_Logo.svg" width="100" height="100"></a></div>
     <div class="nav-links">
-      <span class="nav-links-span"><a href="Magazine.html" data-page="mag">The Magazine</a></span>
-      <span class="nav-links-span"><a href="Journal.html" data-page="jrn">L&M Journal</a></span>
+      <a href="Magazine.html" data-page="mag">The Magazine</a></span>
+      <a href="Journal.html" data-page="jrn">L&M Journal</a></span>
       <!-- <span class="nav-links-span"><a href="Universe-Catalog.html" data-page="uni">L&M Universe</a></span> -->
-      <span class="nav-links-span"><a href="Martini-Mondays.html" data-page="mar">Martini Mondays</a></span>
-      <span class="nav-links-span"><a href="Studio.html" data-page="stu">L&M Studio</a></span>
-      <span class="nav-links-span"><a href="About.html" data-page="abt">About</a></span>
-      <span class="nav-links-span"><a href="Contact.html" data-page="cnt">Contact</a></span>
+      <a href="Martini-Mondays.html" data-page="mar">Martini Mondays</a></span>
+      <a href="Studio.html" data-page="stu">L&M Studio</a></span>
+      <a href="About.html" data-page="abt">About</a></span>
+      <a href="Contact.html" data-page="cnt">Contact</a></span>
     </div>
     <a class="nav-cta link-cta" href="Magazine.html">Read Issue 01</a>
   </nav>
