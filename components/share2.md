@@ -60,37 +60,26 @@ connectedCallback() {
     <header>
       
   <nav class="nav">
-    <!-- <div><a href="/"><span class="logoimg"><span class="visually-hidden">L&M</span></span></a></div> -->
-    <div><a href="/"><img style="margin-top:5px;" src="assets/L&M_Logo.svg" width="100" height="100"></a></div>
+    <div><a href="/" data-page="ndx"><img style="margin-top:5px;" src="assets/Logo.svg" width="100" height="100"></a></div>
     <div class="nav-links">
-      <a href="Magazine.html" data-page="mag">The Magazine</a></span>
-      <a href="Journal.html" data-page="jrn">L&M Journal</a></span>
-      <!-- <span class="nav-links-span"><a href="Universe-Catalog.html" data-page="uni">L&M Universe</a></span> -->
-      <a href="Martini-Mondays.html" data-page="mar">Martini Mondays</a></span>
-      <a href="Studio.html" data-page="stu">L&M Studio</a></span>
-      <a href="About.html" data-page="abt">About</a></span>
-      <a href="Contact.html" data-page="cnt">Contact</a></span>
+      <a href="a.html" data-page="mag">a</a></span>
+      <a href="b.html" data-page="jrn">b</a></span>
+      <a href="c.html" data-page="mar">c</a></span>
+      <a href="d.html" data-page="stu">d</a></span>
+      <a href="e.html" data-page="abt">e</a></span>
+      <a href="f.html" data-page="cnt">f</a></span>
     </div>
-    <a class="nav-cta link-cta" href="Magazine.html">Read Issue 01</a>
+    <a class="nav-cta link-cta" href="g.html">g</a>
   </nav>
     </header>
     `;
-    const currentPath = window.location.pathname;
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
 this.querySelectorAll(".nav-links a").forEach(link => {
-    const linkPath = new URL(link.href).pathname;
-
-    if (linkPath === currentPath) {
+    if (link.getAttribute("href") === currentPage) {
         link.classList.add("active");
     }
 });
-//     const currentPage = window.location.pathname.split("/").pop() || "index.html";
-
-// this.querySelectorAll(".nav-links a").forEach(link => {
-//     if (link.getAttribute("href") === currentPage) {
-//         link.classList.add("active");
-//     }
-// });
   }
   
 }
