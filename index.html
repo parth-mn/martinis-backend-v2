@@ -7,7 +7,8 @@
   <!-- <link rel="stylesheet" href="styles.css"> -->
   <script src="components/header.js" type="text/javascript"></script>
   <script src="components/footer.js" type="text/javascript"></script>
-   <style>
+  <script src="components/newsletter-popup.js" type="text/javascript"></script>
+  <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&display=swap');
 
 * { box-sizing:border-box; margin:0; padding:0; }
@@ -22,7 +23,48 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.modal{
+    position:fixed;
+    inset:0;
 
+    background:rgba(0,0,0,.55);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+.hidden{
+    display:none;
+}
+
+.modal-content{
+    width:min(92vw,520px);
+
+    background:#fff8fb;
+
+    border-radius:24px;
+
+    padding:32px;
+
+    position:relative;
+
+    box-shadow:0 25px 80px rgba(0,0,0,.25);
+}
+
+.modal-close{
+    position:absolute;
+    top:18px;
+    right:18px;
+
+    border:none;
+    background:none;
+
+    font-size:30px;
+    cursor:pointer;
+}
 .topbar {
   background:#be6c9e;
   color:#fff;
@@ -1729,7 +1771,26 @@ header-component {
 }
    </style>
 </head>
+<div id="newsletter-modal" class="modal hidden">
+    <div class="modal-content">
 
+        <button class="modal-close">&times;</button>
+
+        <h2>Join the L&M Newsletter</h2>
+
+        <p>
+            Never miss an issue, Martini Monday, or a new L&M drop.
+        </p>
+
+        <div id="beehiiv-popup">
+            <script async
+                src="https://subscribe-forms.beehiiv.com/v3/loader.js"
+                data-beehiiv-form="926cd1d5-16ee-4125-849d-9e8a4ef3dbeb">
+            </script>
+        </div>
+
+    </div>
+</div>
 <body>
   <div class="topbar">✦ Launch Issue is live · Main Character Syndrome Kit · Read now at yourlnm.com ✦</div>
 
