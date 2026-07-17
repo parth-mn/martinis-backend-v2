@@ -20,6 +20,7 @@ a {
   padding:14px 56px;
   font-family: 'DM Sans',sans-serif;
   overflow-x: hidden;
+  margin-top: auto;
 }
 .footer-inner {
   max-width:1240px;

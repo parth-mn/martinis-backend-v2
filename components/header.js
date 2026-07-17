@@ -72,7 +72,7 @@ class Header extends HTMLElement {
 <nav class="nav">
     <div><a href="/"><img style="margin-top:5px;" src="assets/L&M_Logo.svg" width="100" height="100"/></a></div>
     <div class="nav-links">
-    <a href="magazine">The Magazine</a>
+    <a href="magazine.html">The Magazine</a>
     <a href="journal.html">L&M Journal</a>
     <a href="martini-mondays.html">Martini Mondays</a>
     <a href="studio.html">L&M Studio</a>
