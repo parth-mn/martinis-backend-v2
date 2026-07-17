@@ -1138,6 +1138,9 @@ header-component {
   position:relative;
   z-index:2;
   margin:40px;
+  display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 .news-grid {
   display:grid;
@@ -1153,16 +1156,17 @@ header-component {
 }
 .news-copy {
   color:rgba(255,255,255,.74);
-  max-width:650px;
+  /* max-width:650px; */
   font-size:15px;
   line-height:1.9;
 }
 .news-box {
   /* background:rgba(255,255,255,.1); */
+  width: 100%;
   background: #ffcad4;
   border:1px solid rgba(255,255,255,.16);
   border-radius:22px;
-  /* padding:26px; */
+  padding:26px;
   backdrop-filter:blur(8px);
 }
 .news-box-h4 {
@@ -2247,9 +2251,7 @@ header-component {
         </div>
       </div>
 
-      <div class="news-box">
-        <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="926cd1d5-16ee-4125-849d-9e8a4ef3dbeb"></script>
-        <!-- <h4 class="news-box-h4">Get the newsletter ✦</h4>
+       <!-- <h4 class="news-box-h4">Get the newsletter ✦</h4>
         <p class="news-box-p">Get issue drops, Journal updates, Martini Mondays and L&amp;M notes in your inbox.</p>
         <div class="form">
           <input class="input" placeholder="your@email.com" type="email">
@@ -2257,6 +2259,8 @@ header-component {
         </div>
       </div>
     </div>
+    <div class="news-box">
+        <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="926cd1d5-16ee-4125-849d-9e8a4ef3dbeb"></script>
   </section>
 
   <footer-component></footer-component>
