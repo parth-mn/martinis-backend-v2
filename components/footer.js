@@ -55,7 +55,7 @@ a {
       <div><a href="/"><img src="assets/L&M_Logo.svg" width="150" height="150"></a></div>
       <div class="footer-copy">© 2026 Lipsticks &amp; Martinis</div>
       <div class="footer-links">
-        <span><a href="https://instagram.com/lipsticksandmartinis">Instagram</a></span>
+        <span><a href="https://instagram.com/deepanshi_lnm">Instagram</a></span>
         <span><a href="contact.html">Contact</a></span>
         <span><a href="legal.html">Privacy</a></span>
       </div>
