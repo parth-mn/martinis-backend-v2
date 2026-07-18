@@ -53,7 +53,7 @@ a {
     <div class="footer-inner">
       <!-- <div class="logo-lower">L<span class="amp"> &amp; </span>M</div> -->
       <div><a href="/"><img src="assets/L&M_Logo.svg" width="150" height="150"></a></div>
-      <div class="footer-copy">© 2026 Lipsticks &amp; Martinis</div>
+      <div class="footer-copy">© 2026 Lipsticks &amp; Martinis<br><a target="_blank" href="https://icons8.com/icon/gJZYyr8uQHoG/martini">Martini</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></div>
       <div class="footer-links">
         <span><a href="https://instagram.com/deepanshi_lnm">Instagram</a></span>
         <span><a href="contact.html">Contact</a></span>
