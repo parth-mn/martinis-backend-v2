@@ -403,7 +403,7 @@ header-component {
   grid-template-columns:310px 1fr;
   gap:38px;
   align-items:center;
-  padding:58px 0;
+  padding:48px 16px;
 }
 .issue-cover-mini {
   width:284px;
@@ -449,7 +449,7 @@ header-component {
 
 .journal-launch-section{
   position:relative;
-  overflow:hidden;
+  overflow:visible;
   background:
     radial-gradient(circle at 8% 16%,rgba(255,202,212,.58),transparent 22%),
     radial-gradient(circle at 93% 78%,rgba(234,217,255,.60),transparent 25%),
@@ -1676,7 +1676,53 @@ header-component {
     grid-template-columns:1fr 1fr;
   }
 }
+@media (max-width:1024px) {
+.hero-shell{
+    grid-template-columns:1fr;
+    gap:50px;
+    text-align:center;
+}
+
+.hero-text{
+    margin:auto;
+}
+
+.hero-copy{
+    margin:auto;
+}
+
+.hero-actions{
+    justify-content:center;
+}
+
+.hero-visual{
+    justify-self:center;
+}
+/* all that is hidden */
+  .journal-launch-section {
+    visibility: hidden;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+
+  }
+  /* all that is hidden */
+}
 @media(max-width:760px) {
+  /* all that is hidden */
+  .journal-launch-section {
+    visibility: hidden;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+
+  }
+  /* all that is hidden */
+  .journal-launch-shell {
+   visibility: hidden;
+   height: 0;
+
+  }
   .journal-window{
     transform:none;
   }
@@ -2170,7 +2216,7 @@ header-component {
     </div>
   </section>
 
-  <section class="section route">
+  <!-- <section class="section route">
     <div class="container">
       <div class="sec-eyebrow">What does she need today?</div>
       <h2 class="sec-title">Find the blog your <span class="italic">mood needs</span>.</h2>
@@ -2202,7 +2248,7 @@ header-component {
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="section">
     <div class="container story-split">
@@ -2220,7 +2266,7 @@ header-component {
         <div class="polaroid">
           <div class="photo-box"><img src="assets/founderpicedited.jpg"></div>
           <div class="polaroid-label">Deepanshi ✦ Founder</div>
-          <div class="polaroid-button"><a class="nav-cta" href="About.html">Read about me →</a></div>
+          <div class="polaroid-button"><a class="nav-cta" href="about">Read about me →</a></div>
         </div>
 
         <div>

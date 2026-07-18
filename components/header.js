@@ -39,6 +39,14 @@ class Header extends HTMLElement {
             white-space:nowrap;
             }
 
+            .menu-toggle {
+            display:none;
+            background:none;
+            border:none;
+            font-size:28px;
+            cursor:pointer;
+            }
+
             .nav-links a {
             color: #7C7480;
             text-decoration: none;
@@ -58,14 +66,44 @@ class Header extends HTMLElement {
             }
 
             .nav-cta {
-    background: #6c0820;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 999px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: .08em;
-    text-transform: uppercase;
+            background: #6c0820;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            }
+
+    @media (max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav{
+        flex-wrap:wrap;
+        height:auto;
+        padding:16px;
+    }
+
+    .nav-links{
+        display:none;
+        width:100%;
+        flex-direction:column;
+        gap:16px;
+        margin-top:20px;
+    }
+
+    .nav-links.open{
+        display:flex;
+    }
+
+    .nav-cta{
+        display:none;
+    }
+
 }
 </style>
 <header>
@@ -80,6 +118,9 @@ class Header extends HTMLElement {
     <a href="contact">Contact</a>
 </div>
 <a class="nav-cta link-cta" href="https://heyzine.com/flip-book/issue01july18.html">Read Issue 01</a>
+<button class="menu-toggle" aria-label="Open menu">
+    ☰
+</button>
 </nav>
 </header>`;
 
@@ -92,6 +133,14 @@ if (currentPage !== "/") {
         }
     });
 }
+
+const menuButton = this.querySelector(".menu-toggle");
+const navLinks = this.querySelector(".nav-links");
+
+menuButton.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+});
+
     }
 }
 customElements.define('header-component', Header);
