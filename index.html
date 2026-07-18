@@ -597,7 +597,7 @@ header-component {
   border:1px solid rgba(255,255,255,.14);
   /* background:rgba(255,255,255,.07); */
   background: white;
-  color: --burg;
+  color: var(--burg);
   /* color:rgba(255,255,255,.76); */
   font-size:10px;
   font-weight:800;
@@ -1698,31 +1698,135 @@ header-component {
 .hero-visual{
     justify-self:center;
 }
-/* all that is hidden */
-  .journal-launch-section {
-    visibility: hidden;
-    height: 0;
-    display: flex;
-    flex-direction: column;
-
+.journal-launch-shell{
+    grid-template-columns:1fr;
+    gap:48px;
+    padding:42px;
   }
-  /* all that is hidden */
+
+  .journal-app-wrap,
+  .journal-launch-copy{
+    grid-column:auto;
+    grid-row:auto;
+  }
+
+  .journal-app-wrap{
+    min-height:auto;
+    order:1;
+  }
+
+  .journal-launch-copy{
+    order:2;
+    padding-left:0;
+    text-align:center;
+  }
+
+  .journal-launch-title{
+    font-size:52px;
+    max-width:none;
+  }
+
+  .journal-launch-title span{
+    font-size:56px;
+  }
+
+  .journal-launch-copytext{
+    margin:auto;
+  }
+
+  .journal-launch-manifesto{
+    justify-content:center;
+  }
+
+  .journal-launch-pills{
+    justify-content:center;
+  }
+
+  .journal-browser{
+    max-width:420px;
+    margin:auto;
+  }
+
+  .journal-feature-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
 }
 @media(max-width:760px) {
-  /* all that is hidden */
-  .journal-launch-section {
-    visibility: hidden;
-    height: 0;
-    display: flex;
-    flex-direction: column;
-
+  .journal-launch-shell{
+    padding:28px 20px;
+    border-radius:24px;
+    gap:34px;
   }
-  /* all that is hidden */
-  .journal-launch-shell {
-   visibility: hidden;
-   height: 0;
 
+  .journal-launch-title{
+    font-size:38px;
+    letter-spacing:-1px;
   }
+
+  .journal-launch-title span{
+    font-size:42px;
+  }
+
+  .journal-launch-copytext{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .journal-launch-manifesto{
+    font-size:20px;
+  }
+
+  .journal-launch-ribbon{
+    justify-content:center;
+  }
+
+  .journal-launch-pills{
+    justify-content:center;
+  }
+
+  .journal-browser{
+    width:100%;
+    max-width:340px;
+    transform:none;
+  }
+
+  .journal-app-screen{
+    padding:18px;
+  }
+
+  .journal-app-greeting h3{
+    font-size:24px;
+  }
+
+  .journal-date-sticker{
+    width:82px;
+    height:82px;
+    right:-2px;
+    top:-8px;
+  }
+
+  .journal-date-sticker b{
+    font-size:22px;
+  }
+
+  .journal-coming-sticker{
+    left:0;
+    bottom:-12px;
+    transform:none;
+    font-size:8px;
+    padding:8px 12px;
+  }
+
+  .journal-feature-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .journal-feature-card{
+    min-height:auto;
+  }
+
   .journal-window{
     transform:none;
   }
