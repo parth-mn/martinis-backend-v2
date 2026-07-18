@@ -394,6 +394,7 @@ h1 em {
   .feature-copy { padding: 28px; }
   .email-box { border-radius: 22px; flex-direction:column; }
   .email-box .btn { width:100%; }
+  .read-grid { grid-template-columns: 1fr;}
 }
 
 .read-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -406,8 +407,13 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline:3px solid v
   .ticker-track { animation:none; padding-left:0; }
   .btn { transition:none; }
 }
-@media (max-width: 920px) {
-  .read-grid { grid-template-columns:1fr; }
+@media (max-width: 760px) {
+  .newsletter-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+}
 }
 </style>
 <meta content="Explore The L&amp;M Magazine through interactive page-turn editions, downloadable PDFs, issue previews and the growing L&amp;M archive." name="description"/></head>
