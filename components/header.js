@@ -117,7 +117,7 @@ class Header extends HTMLElement {
     <a href="about">About</a>
     <a href="contact">Contact</a>
 </div>
-<a class="nav-cta link-cta" href="https://heyzine.com/flip-book/issue02august08.html">Read Issue 02</a>
+<a class="nav-cta link-cta" href="https://heyzine.com/flip-book/issue03august22.html">Read Issue 03</a>
 <button class="menu-toggle" aria-label="Open menu">
     ☰
 </button>
