@@ -2273,15 +2273,15 @@ header-component {
   <script>
     const contributors = [
       { name: "Deepanshi Srivastava", role: "Founder & Editor-in-Chief", photo: "assets/founderpicedited.jpg", position: "50% 36%" },
-      { name: "Pratishtha Agrawal", role: "Writer & Marketer", photo: "assets/contributors/pratishtha.jpeg  ", position: "50% 62%" },
-      { name: "Sama Meerza", role: "Beauty Journalist", photo: "assets/contributors/sama.jpg", position: "50% 42%" },
-      { name: "Shruti", role: "Cultural Writer & Critic", photo: "assets/contributors/shruti.jpeg", position: "50% 34%" },
-      { name: "Ishita Aggarwal", role: "Writer & Digital Creator", photo: "assets/contributors/ishita.jpg", position: "50% 58%" },
-      { name: "Shreyanshi", role: "Student & Writer", photo: "assets/contributors/shreyanshi.jpeg", position: "50% 40%" },
-      { name: "Swara Wankhede", role: "Writer, Builder & Student", photo: "assets/contributors/swara.jpeg", position: "50% 48%" },
-      { name: "Shereen Malani", role: "Writer", photo: "assets/contributors/shereen.jpeg", position: "50% 27%" },
-      { name: "Riya Sardesai", role: "Writer & Engineering Student", photo: "assets/contributors/riya-sardesai.jpeg", position: "50% 38%" },
-      { name: "Ria Khatoniar", role: "Software Engineer & Writer", photo: "assets/contributors/ria-khatoniar.jpeg", position: "50% 41%" }
+      { name: "Pratishtha Agrawal", role: "Writer & Marketer", photo: "assets/contributors/pratishtha.webp", position: "50% 62%" },
+      { name: "Sama Meerza", role: "Beauty Journalist", photo: "assets/contributors/sama.webp", position: "50% 42%" },
+      { name: "Shruti", role: "Cultural Writer & Critic", photo: "assets/contributors/shruti.webp", position: "50% 34%" },
+      { name: "Ishita Aggarwal", role: "Writer & Digital Creator", photo: "assets/contributors/ishita.webp", position: "50% 58%" },
+      { name: "Shreyanshi", role: "Student & Writer", photo: "assets/contributors/shreyanshi.webp", position: "50% 40%" },
+      { name: "Swara Wankhede", role: "Writer, Builder & Student", photo: "assets/contributors/swara.webp", position: "50% 48%" },
+      { name: "Shereen Malani", role: "Writer", photo: "assets/contributors/shereen.webp", position: "50% 27%" },
+      { name: "Riya Sardesai", role: "Writer & Engineering Student", photo: "assets/contributors/riya-sardesai.webp", position: "50% 38%" },
+      { name: "Ria Khatoniar", role: "Software Engineer & Writer", photo: "assets/contributors/ria-khatoniar.webp", position: "50% 41%" }
     ];
 
     const escapeHtml = (value) => String(value)
@@ -2294,7 +2294,7 @@ header-component {
     const cards = contributors.map((person, index) => `
       <a class="card" href="/contributors.html" target="_top" aria-label="Meet ${escapeHtml(person.name)}">
         <div class="portrait">
-          <img src="${escapeHtml(person.photo)}" alt="Portrait of ${escapeHtml(person.name)}" loading="lazy" style="object-position:${escapeHtml(person.position)}">
+          <img src="${escapeHtml(person.photo)}" alt="Portrait of ${escapeHtml(person.name)}" loading="eager" style="object-position:${escapeHtml(person.position)}">
           <span class="number">${String(index + 1).padStart(2, "0")} / 10</span>
         </div>
         <div class="details">
